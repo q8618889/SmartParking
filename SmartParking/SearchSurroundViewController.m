@@ -90,6 +90,15 @@
     
     return view;
 }
+-(void)btnSearch:(UIButton *)btn
+{
+    if ([_searchTextField.text isEqualToString:@""])
+    {
+        return;
+    }
+    _userChange = _searchTextField.text;
+    [_myTableView.header beginRefreshing];
+}
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section;
 {
     return 40;

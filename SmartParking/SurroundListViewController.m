@@ -89,6 +89,7 @@
 {
 //    创建的view  内容 包含按钮 和  滑动按钮位置
     SurrpundView * surrpund = [[[NSBundle mainBundle]loadNibNamed:@"SurrpundView" owner:nil options:nil]objectAtIndex:0];
+    [surrpund.searchButton addTarget:self action:@selector(searchButton:) forControlEvents:BUTTONTOUCHUP];
     [surrpund.eating  addTarget:self action:@selector(tools:) forControlEvents:BUTTONTOUCHUP];
     [surrpund.come  addTarget:self action:@selector(tools:) forControlEvents:BUTTONTOUCHUP];
     [surrpund.mrButton  addTarget:self action:@selector(tools:) forControlEvents:BUTTONTOUCHUP];
@@ -103,6 +104,16 @@
     }
     
     return surrpund;
+}
+-(void)searchButton:(UIButton *)btn
+{
+    SurrpundView * surrpund = (SurrpundView *)[btn superview];
+    if ([surrpund.searchTextField.text isEqualToString:@""])
+    {
+        return;
+    }
+    _userChange = surrpund.searchTextField.text;
+    [_myTableView.header beginRefreshing];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section;
 {
