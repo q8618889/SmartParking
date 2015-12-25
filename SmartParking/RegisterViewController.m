@@ -29,18 +29,25 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)registButton:(id)sender {
     
+    if ([_userName.text isEqualToString:@""]||[_passworldTfd.text isEqualToString:@""]||[_telephoneTfd.text isEqualToString:@""]) {
+        UIAlertView *aleat = [[UIAlertView alloc] initWithTitle:@"温馨提示"
+                                                       message:@"手机号/密码/用户名  不能为空!"
+                                                      delegate:self
+                                             cancelButtonTitle:@"确定"
+                                             otherButtonTitles:@"取消", nil];
+        [aleat show];
+    }else {
+        
+        [ScNewWorking getRegistWithUserName:_userName.text Password:_passworldTfd.text Number:_telephoneTfd.text block:^(NSMutableArray *array, NSString *error) {
+            
+            
+        }];
+        
+        
+    }
     
     
     

@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		421D2C331C2CD738000C000B /* libbaiduNaviSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 421D2C321C2CD738000C000B /* libbaiduNaviSDK.a */; settings = {ASSET_TAGS = (); }; };
+		421D2C371C2CD823000C000B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C351C2CD823000C000B /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
+		421D2C381C2CD823000C000B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 421D2C361C2CD823000C000B /* LoginViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		421D2C3B1C2CD882000C000B /* ScNewWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C3A1C2CD882000C000B /* ScNewWorking.m */; settings = {ASSET_TAGS = (); }; };
+		421D2C3F1C2CD8AB000C000B /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C3D1C2CD8AB000C000B /* RegisterViewController.m */; settings = {ASSET_TAGS = (); }; };
+		421D2C401C2CD8AB000C000B /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 421D2C3E1C2CD8AB000C000B /* RegisterViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		421D2C441C2CD8C3000C000B /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C421C2CD8C3000C000B /* ChangePasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
+		421D2C451C2CD8C3000C000B /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 421D2C431C2CD8C3000C000B /* ChangePasswordViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		421D2C4B1C2CD903000C000B /* UserLoginBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C481C2CD903000C000B /* UserLoginBaseClass.m */; settings = {ASSET_TAGS = (); }; };
+		421D2C4C1C2CD903000C000B /* UserLoginBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C4A1C2CD903000C000B /* UserLoginBody.m */; settings = {ASSET_TAGS = (); }; };
 		4243374C1C28ED39003EAAF5 /* libbaiduNaviSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4243374B1C28ED39003EAAF5 /* libbaiduNaviSDK.a */; };
-		429835D31C2A4B0A00EAC9B0 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 429835D11C2A4B0A00EAC9B0 /* RegisterViewController.m */; };
-		429835D41C2A4B0A00EAC9B0 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 429835D21C2A4B0A00EAC9B0 /* RegisterViewController.xib */; };
 		429835D61C2A8C6800EAC9B0 /* icon_777@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 429835D51C2A8C6800EAC9B0 /* icon_777@2x.png */; };
 		429835D81C2A8C7600EAC9B0 /* icon_999@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 429835D71C2A8C7600EAC9B0 /* icon_999@2x.png */; };
 		429835E11C2A921C00EAC9B0 /* InformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 429835DF1C2A921C00EAC9B0 /* InformationViewController.m */; };
 		429835E21C2A921C00EAC9B0 /* InformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 429835E01C2A921C00EAC9B0 /* InformationViewController.xib */; };
-		429835E61C2A94D500EAC9B0 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 429835E41C2A94D500EAC9B0 /* ChangePasswordViewController.m */; };
-		429835E71C2A94D500EAC9B0 /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 429835E51C2A94D500EAC9B0 /* ChangePasswordViewController.xib */; };
 		429835EB1C2A96F500EAC9B0 /* MyBookingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 429835E91C2A96F500EAC9B0 /* MyBookingsViewController.m */; };
 		429835EC1C2A96F500EAC9B0 /* MyBookingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 429835EA1C2A96F500EAC9B0 /* MyBookingsViewController.xib */; };
 		429835F01C2A974700EAC9B0 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 429835EE1C2A974700EAC9B0 /* AboutUsViewController.m */; };
 		429835F11C2A974700EAC9B0 /* AboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 429835EF1C2A974700EAC9B0 /* AboutUsViewController.xib */; };
-		42F9F0451C2946E20089B7E1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F9F0441C2946E20089B7E1 /* LoginViewController.m */; };
-		42F9F0471C2946E70089B7E1 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42F9F0461C2946E70089B7E1 /* LoginViewController.xib */; };
 		42F9F04A1C294AB90089B7E1 /* icon_user@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42F9F0481C294AB90089B7E1 /* icon_user@2x.png */; };
 		42F9F04B1C294AB90089B7E1 /* icon_password@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42F9F0491C294AB90089B7E1 /* icon_password@2x.png */; };
 		42F9F04E1C294AD80089B7E1 /* btn_2333@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42F9F04C1C294AD80089B7E1 /* btn_2333@2x.png */; };
@@ -157,7 +161,6 @@
 		59D1A5461C2BE5F100425800 /* MyNewWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D1A5451C2BE5F100425800 /* MyNewWorking.m */; };
 		59D1A5511C2BE63700425800 /* SurroundListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D1A54E1C2BE63700425800 /* SurroundListViewController.m */; };
 		59D1A5521C2BE63700425800 /* SearchSurroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D1A5501C2BE63700425800 /* SearchSurroundViewController.m */; };
-		59D1A5541C2BE64900425800 /* libbaiduNaviSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D1A5531C2BE64900425800 /* libbaiduNaviSDK.a */; };
 		59D1A5661C2BE64900425800 /* InfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D1A5641C2BE64900425800 /* InfoTableViewCell.m */; };
 		59D1A5671C2BE64900425800 /* InfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59D1A5651C2BE64900425800 /* InfoTableViewCell.xib */; };
 		59D1A56E1C2BE64900425800 /* b27_icon_star_gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59D1A5681C2BE64900425800 /* b27_icon_star_gray@2x.png */; };
@@ -227,27 +230,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		421D2C321C2CD738000C000B /* libbaiduNaviSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbaiduNaviSDK.a; sourceTree = "<group>"; };
+		421D2C341C2CD823000C000B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		421D2C351C2CD823000C000B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		421D2C361C2CD823000C000B /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		421D2C391C2CD882000C000B /* ScNewWorking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScNewWorking.h; sourceTree = "<group>"; };
+		421D2C3A1C2CD882000C000B /* ScNewWorking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScNewWorking.m; sourceTree = "<group>"; };
+		421D2C3C1C2CD8AB000C000B /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		421D2C3D1C2CD8AB000C000B /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		421D2C3E1C2CD8AB000C000B /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		421D2C411C2CD8C3000C000B /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
+		421D2C421C2CD8C3000C000B /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
+		421D2C431C2CD8C3000C000B /* ChangePasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangePasswordViewController.xib; sourceTree = "<group>"; };
+		421D2C471C2CD903000C000B /* UserLoginBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLoginBaseClass.h; sourceTree = "<group>"; };
+		421D2C481C2CD903000C000B /* UserLoginBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLoginBaseClass.m; sourceTree = "<group>"; };
+		421D2C491C2CD903000C000B /* UserLoginBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLoginBody.h; sourceTree = "<group>"; };
+		421D2C4A1C2CD903000C000B /* UserLoginBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLoginBody.m; sourceTree = "<group>"; };
 		4243374B1C28ED39003EAAF5 /* libbaiduNaviSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbaiduNaviSDK.a; sourceTree = "<group>"; };
-		429835D01C2A4B0A00EAC9B0 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
-		429835D11C2A4B0A00EAC9B0 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		429835D21C2A4B0A00EAC9B0 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		429835D51C2A8C6800EAC9B0 /* icon_777@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_777@2x.png"; sourceTree = "<group>"; };
 		429835D71C2A8C7600EAC9B0 /* icon_999@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_999@2x.png"; sourceTree = "<group>"; };
 		429835DE1C2A921C00EAC9B0 /* InformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationViewController.h; sourceTree = "<group>"; };
 		429835DF1C2A921C00EAC9B0 /* InformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationViewController.m; sourceTree = "<group>"; };
 		429835E01C2A921C00EAC9B0 /* InformationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationViewController.xib; sourceTree = "<group>"; };
-		429835E31C2A94D500EAC9B0 /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
-		429835E41C2A94D500EAC9B0 /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
-		429835E51C2A94D500EAC9B0 /* ChangePasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangePasswordViewController.xib; sourceTree = "<group>"; };
 		429835E81C2A96F500EAC9B0 /* MyBookingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBookingsViewController.h; sourceTree = "<group>"; };
 		429835E91C2A96F500EAC9B0 /* MyBookingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBookingsViewController.m; sourceTree = "<group>"; };
 		429835EA1C2A96F500EAC9B0 /* MyBookingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyBookingsViewController.xib; sourceTree = "<group>"; };
 		429835ED1C2A974700EAC9B0 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
 		429835EE1C2A974700EAC9B0 /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
 		429835EF1C2A974700EAC9B0 /* AboutUsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutUsViewController.xib; sourceTree = "<group>"; };
-		42F9F0431C2946DC0089B7E1 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		42F9F0441C2946E20089B7E1 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		42F9F0461C2946E70089B7E1 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		42F9F0481C294AB90089B7E1 /* icon_user@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_user@2x.png"; sourceTree = "<group>"; };
 		42F9F0491C294AB90089B7E1 /* icon_password@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_password@2x.png"; sourceTree = "<group>"; };
 		42F9F04C1C294AD80089B7E1 /* btn_2333@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_2333@2x.png"; sourceTree = "<group>"; };
@@ -481,7 +491,6 @@
 		59D1A54E1C2BE63700425800 /* SurroundListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SurroundListViewController.m; sourceTree = "<group>"; };
 		59D1A54F1C2BE63700425800 /* SearchSurroundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchSurroundViewController.h; sourceTree = "<group>"; };
 		59D1A5501C2BE63700425800 /* SearchSurroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchSurroundViewController.m; sourceTree = "<group>"; };
-		59D1A5531C2BE64900425800 /* libbaiduNaviSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbaiduNaviSDK.a; sourceTree = "<group>"; };
 		59D1A5631C2BE64900425800 /* InfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTableViewCell.h; sourceTree = "<group>"; };
 		59D1A5641C2BE64900425800 /* InfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoTableViewCell.m; sourceTree = "<group>"; };
 		59D1A5651C2BE64900425800 /* InfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoTableViewCell.xib; sourceTree = "<group>"; };
@@ -548,7 +557,7 @@
 				597EFE7C1C197BE2001574A4 /* libBaiduMobStatForSDK.a in Frameworks */,
 				4243374C1C28ED39003EAAF5 /* libbaiduNaviSDK.a in Frameworks */,
 				59E16A361C101D7400FA0363 /* CoreTelephony.framework in Frameworks */,
-				59D1A5541C2BE64900425800 /* libbaiduNaviSDK.a in Frameworks */,
+				421D2C331C2CD738000C000B /* libbaiduNaviSDK.a in Frameworks */,
 				597EFDFC1C197A9B001574A4 /* ImageIO.framework in Frameworks */,
 				59E16A281C101CAB00FA0363 /* CoreLocation.framework in Frameworks */,
 				597EFDFA1C197A7D001574A4 /* AudioToolbox.framework in Frameworks */,
@@ -584,6 +593,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		421D2C461C2CD8F7000C000B /* UserModel */ = {
+			isa = PBXGroup;
+			children = (
+				421D2C471C2CD903000C000B /* UserLoginBaseClass.h */,
+				421D2C481C2CD903000C000B /* UserLoginBaseClass.m */,
+				421D2C491C2CD903000C000B /* UserLoginBody.h */,
+				421D2C4A1C2CD903000C000B /* UserLoginBody.m */,
+			);
+			name = UserModel;
+			sourceTree = "<group>";
+		};
 		4243374D1C28F532003EAAF5 /* MYImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -645,9 +665,9 @@
 		429835DD1C2A917000EAC9B0 /* ChangePassword */ = {
 			isa = PBXGroup;
 			children = (
-				429835E31C2A94D500EAC9B0 /* ChangePasswordViewController.h */,
-				429835E41C2A94D500EAC9B0 /* ChangePasswordViewController.m */,
-				429835E51C2A94D500EAC9B0 /* ChangePasswordViewController.xib */,
+				421D2C411C2CD8C3000C000B /* ChangePasswordViewController.h */,
+				421D2C421C2CD8C3000C000B /* ChangePasswordViewController.m */,
+				421D2C431C2CD8C3000C000B /* ChangePasswordViewController.xib */,
 			);
 			name = ChangePassword;
 			sourceTree = "<group>";
@@ -655,9 +675,9 @@
 		42F9F0391C2944C80089B7E1 /* LoginVc */ = {
 			isa = PBXGroup;
 			children = (
-				42F9F0431C2946DC0089B7E1 /* LoginViewController.h */,
-				42F9F0441C2946E20089B7E1 /* LoginViewController.m */,
-				42F9F0461C2946E70089B7E1 /* LoginViewController.xib */,
+				421D2C341C2CD823000C000B /* LoginViewController.h */,
+				421D2C351C2CD823000C000B /* LoginViewController.m */,
+				421D2C361C2CD823000C000B /* LoginViewController.xib */,
 			);
 			name = LoginVc;
 			sourceTree = "<group>";
@@ -665,9 +685,9 @@
 		42F9F03A1C2944D50089B7E1 /* RegisterVc */ = {
 			isa = PBXGroup;
 			children = (
-				429835D01C2A4B0A00EAC9B0 /* RegisterViewController.h */,
-				429835D11C2A4B0A00EAC9B0 /* RegisterViewController.m */,
-				429835D21C2A4B0A00EAC9B0 /* RegisterViewController.xib */,
+				421D2C3C1C2CD8AB000C000B /* RegisterViewController.h */,
+				421D2C3D1C2CD8AB000C000B /* RegisterViewController.m */,
+				421D2C3E1C2CD8AB000C000B /* RegisterViewController.xib */,
 			);
 			name = RegisterVc;
 			sourceTree = "<group>";
@@ -782,7 +802,7 @@
 				597EFE4A1C197BE2001574A4 /* BaiduStatistics */,
 				597EFE6F1C197BE2001574A4 /* inc */,
 				597EFE7A1C197BE2001574A4 /* updatelog.txt */,
-				59D1A5531C2BE64900425800 /* libbaiduNaviSDK.a */,
+				421D2C321C2CD738000C000B /* libbaiduNaviSDK.a */,
 			);
 			path = BaiduNavi_iOSSDK_v2.0.5_Lib;
 			sourceTree = "<group>";
@@ -1010,6 +1030,7 @@
 				5992C6341C17C9320044E88A /* AnnPoinBaseClass.m */,
 				5992C6351C17C9320044E88A /* AnnPoinBody.h */,
 				5992C6361C17C9320044E88A /* AnnPoinBody.m */,
+				421D2C461C2CD8F7000C000B /* UserModel */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1050,6 +1071,8 @@
 				59D18F991C0ED4950044CE60 /* Tabbar */,
 				59D1A5441C2BE5F100425800 /* MyNewWorking.h */,
 				59D1A5451C2BE5F100425800 /* MyNewWorking.m */,
+				421D2C391C2CD882000C000B /* ScNewWorking.h */,
+				421D2C3A1C2CD882000C000B /* ScNewWorking.m */,
 			);
 			name = MyViewTool;
 			sourceTree = "<group>";
@@ -1397,6 +1420,7 @@
 				59E169E11C10100600FA0363 /* home-on@2x.png in Resources */,
 				5903FD8A1C23F94700740FBC /* btn_6.png in Resources */,
 				5907E30E1C28DE2F00717008 /* icon_2@2x.png in Resources */,
+				421D2C451C2CD8C3000C000B /* ChangePasswordViewController.xib in Resources */,
 				59E169ED1C10100600FA0363 /* shoppping-on@2x.png in Resources */,
 				597EFDF41C192046001574A4 /* colse1.png in Resources */,
 				5903FD801C23F94700740FBC /* btn_1.png in Resources */,
@@ -1416,8 +1440,6 @@
 				5903FD8C1C23F94700740FBC /* btn_7.png in Resources */,
 				5903FD851C23F94700740FBC /* btn_4_selected.png in Resources */,
 				5992C6461C181B410044E88A /* leftbox.png in Resources */,
-				429835D41C2A4B0A00EAC9B0 /* RegisterViewController.xib in Resources */,
-				429835E71C2A94D500EAC9B0 /* ChangePasswordViewController.xib in Resources */,
 				5992C64B1C1820F90044E88A /* pin_purple.png in Resources */,
 				5992C5AB1C1663160044E88A /* MassageTableViewCell.xib in Resources */,
 				59E169E21C10100600FA0363 /* home.png in Resources */,
@@ -1444,6 +1466,7 @@
 				5992C5FF1C16734D0044E88A /* SVProgressHUD.bundle in Resources */,
 				42F9F04F1C294AD80089B7E1 /* btn_2_selected333@2x.png in Resources */,
 				59E169DE1C10100600FA0363 /* bottom-bg.png in Resources */,
+				421D2C381C2CD823000C000B /* LoginViewController.xib in Resources */,
 				59E169FA1C10128800FA0363 /* my.png in Resources */,
 				59E169EE1C10100600FA0363 /* shoppping.png in Resources */,
 				59E16A181C10162800FA0363 /* search-on.png in Resources */,
@@ -1461,8 +1484,8 @@
 				5992C5A01C155DD30044E88A /* logo.png in Resources */,
 				59E169EC1C10100600FA0363 /* shoppping-on.png in Resources */,
 				5903FD6A1C23F56600740FBC /* SurrpundView.xib in Resources */,
-				42F9F0471C2946E70089B7E1 /* LoginViewController.xib in Resources */,
 				59659ADB1C27FF0300E4498C /* backButton.png in Resources */,
+				421D2C401C2CD8AB000C000B /* RegisterViewController.xib in Resources */,
 				59E2EC9B1C2240B300970346 /* louction.png in Resources */,
 				5992C64C1C1820F90044E88A /* pin_red.png in Resources */,
 				59D1A56F1C2BE64900425800 /* b27_icon_star_yellow@2x.png in Resources */,
@@ -1503,11 +1526,13 @@
 				5992C5C41C1671510044E88A /* AFHTTPRequestOperationManager.m in Sources */,
 				59D18FA21C0ED6FE0044CE60 /* SmartParkListViewController.m in Sources */,
 				5992C5C81C1671510044E88A /* AFURLConnectionOperation.m in Sources */,
+				421D2C3F1C2CD8AB000C000B /* RegisterViewController.m in Sources */,
 				597EFE821C197BE2001574A4 /* CDataScanner_Extensions.m in Sources */,
 				5992C62D1C1673950044E88A /* UIImage+GIF.m in Sources */,
 				5992C6291C1673950044E88A /* SDWebImageDownloaderOperation.m in Sources */,
 				59D1A53A1C2BE58A00425800 /* ChooseView.m in Sources */,
 				597EFE7F1C197BE2001574A4 /* CJSONDeserializer_BlocksExtensions.m in Sources */,
+				421D2C441C2CD8C3000C000B /* ChangePasswordViewController.m in Sources */,
 				5992C5F41C1673400044E88A /* MJRefreshGifHeader.m in Sources */,
 				597EFDF01C191DF0001574A4 /* PaoPaoView.m in Sources */,
 				5992C5FE1C16734D0044E88A /* SVProgressHUD.m in Sources */,
@@ -1522,7 +1547,9 @@
 				5992C5C51C1671510044E88A /* AFHTTPSessionManager.m in Sources */,
 				5907E3001C28DE0A00717008 /* MyTabCell.m in Sources */,
 				5992C5C31C1671510044E88A /* AFHTTPRequestOperation.m in Sources */,
+				421D2C371C2CD823000C000B /* LoginViewController.m in Sources */,
 				59D1A5431C2BE5DE00425800 /* MainViewController.m in Sources */,
+				421D2C3B1C2CD882000C000B /* ScNewWorking.m in Sources */,
 				59659ACB1C27E83C00E4498C /* ViewController.m in Sources */,
 				5992C5FA1C1673400044E88A /* UIView+MJExtension.m in Sources */,
 				5992C6261C1673950044E88A /* SDWebImageCompat.m in Sources */,
@@ -1530,7 +1557,6 @@
 				59D1A5511C2BE63700425800 /* SurroundListViewController.m in Sources */,
 				5992C62E1C1673950044E88A /* UIImage+MultiFormat.m in Sources */,
 				5992C5C71C1671510044E88A /* AFSecurityPolicy.m in Sources */,
-				429835E61C2A94D500EAC9B0 /* ChangePasswordViewController.m in Sources */,
 				5903FD681C23F52F00740FBC /* SurrpundView.m in Sources */,
 				5992C62F1C1673950044E88A /* UIImage+WebP.m in Sources */,
 				5992C62A1C1673950044E88A /* SDWebImageManager.m in Sources */,
@@ -1541,7 +1567,9 @@
 				5992C62B1C1673950044E88A /* SDWebImagePrefetcher.m in Sources */,
 				5992C6381C17C9320044E88A /* AnnPoinBaseClass.m in Sources */,
 				429835EB1C2A96F500EAC9B0 /* MyBookingsViewController.m in Sources */,
+				421D2C4B1C2CD903000C000B /* UserLoginBaseClass.m in Sources */,
 				59E2EC981C22400500970346 /* SurroundTableViewCell.m in Sources */,
+				421D2C4C1C2CD903000C000B /* UserLoginBody.m in Sources */,
 				59D1A5401C2BE5B500425800 /* NetWorking.m in Sources */,
 				5992C5C61C1671510044E88A /* AFNetworkReachabilityManager.m in Sources */,
 				5992C5D51C1672F00044E88A /* MyTool.m in Sources */,
@@ -1554,7 +1582,6 @@
 				597EFE891C197BE2001574A4 /* CJSONSerializer.m in Sources */,
 				5992C6301C1673950044E88A /* UIImageView+HighlightedWebCache.m in Sources */,
 				59D1A53D1C2BE59A00425800 /* MapViewController.mm in Sources */,
-				42F9F0451C2946E20089B7E1 /* LoginViewController.m in Sources */,
 				5992C6391C17C9320044E88A /* AnnPoinBody.m in Sources */,
 				59D190441C0EDF1F0044CE60 /* GTTabBarController.m in Sources */,
 				59D1A5521C2BE63700425800 /* SearchSurroundViewController.m in Sources */,
@@ -1563,7 +1590,6 @@
 				5992C62C1C1673950044E88A /* UIButton+WebCache.m in Sources */,
 				597EFE7D1C197BE2001574A4 /* CDataScanner.m in Sources */,
 				59D1A5711C2BE64900425800 /* InfoMessageViewController.m in Sources */,
-				429835D31C2A4B0A00EAC9B0 /* RegisterViewController.m in Sources */,
 				597EFE851C197BE2001574A4 /* NSScanner_Extensions.m in Sources */,
 				59531EAC1C0E91E200930C4E /* main.m in Sources */,
 				5992C6311C1673950044E88A /* UIImageView+WebCache.m in Sources */,

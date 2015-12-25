@@ -38,7 +38,7 @@ static AFHTTPSessionManager *_httpManager;
     [[self httpManager] POST:url parameters:[self dictionaryToJson:dataDictionary] success:^(NSURLSessionDataTask *task, id responseObject) {
         //NSString * responseString = [[NSString alloc] initWithData:responseObject   encoding:NSUTF8StringEncoding];
         NSMutableDictionary*dict= [NSJSONSerialization JSONObjectWithData:responseObject  options:NSJSONReadingAllowFragments error:nil];
-   //     NSLog(@"%@",[self dictionaryToJson:dict]);
+        NSLog(@"%@",[self dictionaryToJson:dict]);
         block(dict, @"success");
 
     } failure:^(NSURLSessionDataTask *task, NSError *error) {

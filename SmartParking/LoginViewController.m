@@ -33,7 +33,13 @@
 
 - (IBAction)LoginButton:(UIButton *)sender {
     
-    [self animationButton:sender];
+    [ScNewWorking getLoginWithUserName:_userName.text Password:_Password.text block:^(NSMutableArray *array, NSString *error) {
+        
+        
+        
+        
+        
+    }];
    
     
     
@@ -43,6 +49,8 @@
     
 }
 -(void)LoginMassage:(UIButton *)sender {
+    
+    
     
    
 }
