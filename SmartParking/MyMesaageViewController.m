@@ -19,27 +19,38 @@
     UIView          *topView;
     UIButton        *logInBtn;
     UIButton        *regist;
+    UITableView     *myTab;
+    BOOL  automaticLogin;
     
 }
 
 @end
  
 @implementation MyMesaageViewController
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"login"] isEqualToString:@"YES"]&&[[[NSUserDefaults standardUserDefaults]objectForKey:@"automaticLogin"]isEqualToString:@"YES"])
+    {
+        automaticLogin = YES;
+        [myTab reloadData];
 
+    }else{
+        automaticLogin = NO;
+        [myTab reloadData];
+
+    }
+
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.messageLabel.text = @"我的";
     self.navigationController.navigationBarHidden = YES;
 
     self.view.backgroundColor = [UIColor whiteColor];
+  
     
-    topView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, RECT_W, RECT_H / 4 - 20 )];
-    
-    UIImageView *topImg = [[UIImageView alloc] initWithFrame:topView.bounds];
-    topImg.image = [UIImage imageNamed:@"bg_1@2x"];
-    topImg.backgroundColor = [UIColor redColor];
-    [topView addSubview:topImg];
-    
-    UITableView *myTab = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, RECT_W, RECT_H - 118)];
+    myTab = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, RECT_W, RECT_H - 118)];
     myTab.delegate = self;
     myTab.rowHeight = 55;
     myTab.tableFooterView = [[UIView alloc] init];
@@ -47,21 +58,7 @@
     [self.view addSubview:myTab];
     
     
-    logInBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    logInBtn.frame = CGRectMake(25, topView.bounds.size.height / 2 - 15, 75, 30);
-    logInBtn.backgroundColor = [UIColor blueColor];
-    [logInBtn setTitle:@"登陆" forState:UIControlStateNormal];
-    logInBtn.titleLabel.font = [UIFont systemFontOfSize:16.0f];
-    [logInBtn addTarget:self action:@selector(logInBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-    [topView addSubview:logInBtn];
-    
-    regist = [UIButton buttonWithType:UIButtonTypeCustom];
-    regist.frame = CGRectMake(120, topView.bounds.size.height / 2 - 15, 75, 30);
-    regist.backgroundColor = [UIColor orangeColor];
-    [regist setTitle:@"注册" forState:UIControlStateNormal];
-    regist.titleLabel.font = [UIFont systemFontOfSize:16.0f];
-    [regist addTarget:self action:@selector(registBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-    [topView addSubview:regist];
+  
     
 }
 
@@ -74,13 +71,82 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
+    topView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, RECT_W, RECT_H / 4 - 20 )];
+    
+    UIImageView *topImg = [[UIImageView alloc] initWithFrame:topView.bounds];
+    topImg.image = [UIImage imageNamed:@"bg_1@2x"];
+    topImg.backgroundColor = [UIColor whiteColor];
+    
+    
+
+    [topView addSubview:topImg];
+    
+    if (automaticLogin == YES)
+    {
+        
+        UIButton * userhearder = [UIButton buttonWithType:UIButtonTypeCustom];
+        userhearder.frame = CGRectMake(20 , 5, RECT_H / 4 - 50, RECT_H / 4 - 50);
+        userhearder.backgroundColor = [UIColor redColor];
+        [topView addSubview:userhearder];
+        
+        
+        UILabel * userName = [[UILabel alloc]initWithFrame:CGRectMake(userhearder.frame.origin.y+userhearder.frame.size.width+20, userhearder.frame.origin.y+20, RECT_W-userhearder.frame.size.width-30, 30)];
+        userName.font = [UIFont systemFontOfSize:30.0f];
+       // userName.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"userName"];
+        userName.text  = @"昵   称";
+        [topView addSubview:userName];
+        
+        UILabel * userPhone = [[UILabel alloc]initWithFrame:CGRectMake(userName.frame.origin.x, userName.frame.origin.y+40, RECT_W-userhearder.frame.size.width-30, 30)];
+        userPhone.text = [NSString stringWithFormat:@"手机:%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"number"]];
+        userPhone.font = [UIFont systemFontOfSize:14.0f];
+        [topView addSubview:userPhone];
+        
+        topImg.image = [UIImage imageNamed:@""];
+                               
+        UIView * view = [[UIView alloc]initWithFrame:CGRectMake(0, topImg.frame.size.height-10, RECT_W, 10)];
+        view.backgroundColor = [UIColor lightGrayColor];
+        [topImg addSubview:view];
+                               
+        
+        
+        return topView;
+    }
+    logInBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    logInBtn.layer.cornerRadius = 3;
+    logInBtn.frame = CGRectMake(25, topView.bounds.size.height / 2 - 15, 75, 30);
+    logInBtn.backgroundColor = [UIColor colorWithRed:10/255.0 green:74/255.0 blue:146/255.0 alpha:1];
+    logInBtn.layer.shadowOffset = CGSizeMake(0, 3);
+    logInBtn.layer.shadowColor = [UIColor whiteColor].CGColor;
+    logInBtn.layer.shadowRadius = 20;
+    logInBtn.layer.shadowOpacity = 0.9;
+    [logInBtn setTitle:@"登陆" forState:UIControlStateNormal];
+    logInBtn.titleLabel.font = [UIFont systemFontOfSize:16.0f];
+    [logInBtn addTarget:self action:@selector(logInBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [topView addSubview:logInBtn];
+    
+    regist = [UIButton buttonWithType:UIButtonTypeCustom];
+    regist.frame = CGRectMake(120, topView.bounds.size.height / 2 - 15, 75, 30);
+    regist.backgroundColor = [UIColor colorWithRed:251/255.0 green:176/255.0 blue:12/255.0 alpha:1];
+    regist.layer.cornerRadius = 3;
+    regist.layer.shadowOffset = CGSizeMake(0,3);
+    regist.layer.shadowColor = [UIColor whiteColor].CGColor;
+    regist.layer.shadowRadius = 20;
+    regist.layer.shadowOpacity = 0.9;
+    [regist setTitle:@"注册" forState:UIControlStateNormal];
+    regist.titleLabel.font = [UIFont systemFontOfSize:16.0f];
+    [regist addTarget:self action:@selector(registBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [topView addSubview:regist];
     return topView;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 6;
+    
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"login"] isEqualToString:@"NO"]) {
+        return 4;
+    }
+    return 5;
     
 }
 
@@ -100,23 +166,28 @@
             cell.titleLab.text = @"修改密码";
             cell.leftImg.image = [UIImage imageNamed:@"icon_2@2x"];
             break;
+//        case 2:
+//            cell.titleLab.text = @"我的预约";
+//            cell.leftImg.image = [UIImage imageNamed:@"icon_3@2x"];
+//            break;
         case 2:
-            cell.titleLab.text = @"我的预约";
-            cell.leftImg.image = [UIImage imageNamed:@"icon_3@2x"];
-            break;
-        case 3:
             cell.titleLab.text = @"意见反馈";
             cell.leftImg.image = [UIImage imageNamed:@"icon_4@2x"];
             break;
-        case 4:
-            cell.titleLab.text = @"版本升级(1.2.1)";
-            cell.leftImg.image = [UIImage imageNamed:@"icon_5@2x"];
-            break;
-        case 5:
+
+        case 3:
             cell.titleLab.text = @"关于我们";
             cell.leftImg.image = [UIImage imageNamed:@"icon_6@2x"];
             break;
-            
+        case 4:
+            cell.titleLab.text = @"退出登陆";
+            cell.titleLab.textColor = [UIColor whiteColor];
+            cell.backgroundColor = [UIColor colorWithRed:10/255.0 green:74/255.0 blue:146/255.0 alpha:1];
+            cell.titleLab.font = [UIFont systemFontOfSize:16.0f];
+            cell.titleLab.textAlignment = NSTextAlignmentCenter;
+            cell.accessoryType=UITableViewCellAccessoryNone;
+
+            break;
         default:
             break;
     }
@@ -126,15 +197,25 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    if (automaticLogin == NO)
+    {
+        [self logInBtnClick:nil];
+        return;
+    }
     if (indexPath.row == 0) {
         InformationViewController *inf = [InformationViewController new];
         [self.navigationController pushViewController:inf animated:YES];
     }else if(indexPath.row == 1) {
         ChangePasswordViewController *cha = [ChangePasswordViewController new];
         [self.navigationController pushViewController:cha animated:YES];
-    }else if(indexPath.row == 5) {
+    }else if(indexPath.row == 3) {
         AboutUsViewController *abo = [AboutUsViewController new];
         [self.navigationController pushViewController:abo animated:YES];
+    }else if (indexPath.row == 4){
+       
+        [[NSUserDefaults standardUserDefaults] setObject:@"NO" forKey:@"login"];
+        automaticLogin = NO;
+        [myTab reloadData];
     }
     
     

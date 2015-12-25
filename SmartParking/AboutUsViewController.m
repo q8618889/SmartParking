@@ -16,8 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.logoimage.hidden = YES;
+    self.backButton.hidden = NO;
     // Do any additional setup after loading the view from its nib.
-    self.navigationController.navigationBarHidden = NO;
+    self.navigationController.navigationBarHidden = YES;
     self.view.backgroundColor = [UIColor colorWithRed:232.0f / 255.0f green:234.0f / 255.0f blue:235.0f / 255.0f alpha:1];
 }
 

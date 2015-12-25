@@ -16,8 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.navigationController.navigationBarHidden = NO;
+    self.logoimage.hidden = YES;
+    self.backButton.hidden = NO;
+    self.navigationController.navigationBarHidden = YES;
     self.view.backgroundColor = [UIColor colorWithRed:232.0f / 255.0f green:234.0f / 255.0f blue:235.0f / 255.0f alpha:1];
     [[self.bgView layer]setCornerRadius:5.0];//圆角
     [[self.zhuCe layer]setCornerRadius:4.0f];
@@ -40,12 +41,20 @@
                                              otherButtonTitles:@"取消", nil];
         [aleat show];
     }else {
-        
-        [ScNewWorking getRegistWithUserName:_telephoneTfd.text Password:_passworldTfd.text Number:_telephoneTfd.text block:^(NSMutableArray *array, NSString *error) {
-            
-            
+        [SVProgressHUD show];
+        [ScNewWorking getRegistWithUserName:_telephoneTfd.text Password:_passworldTfd.text Number:_telephoneTfd.text block:^(NSMutableDictionary *dictionary, NSString *error) {
+            if ([error isEqualToString:@"error"])
+            {
+                [SVProgressHUD dismissWithError:@"网络错误请稍后再试!"];
+                return ;
+            }else if ([[dictionary objectForKey:@"message"] isEqualToString:@"user exists"]){
+                
+                 [SVProgressHUD dismissWithError:@"用户已存在!"];
+            }else if ([[dictionary objectForKey:@"message"] isEqualToString:@"register success"]){
+            [SVProgressHUD dismissWithSuccess:@"注册成功!"];
+                [self.navigationController popViewControllerAnimated:YES];
+            }
         }];
-        
         
     }
     

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : MainViewController
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UIButton *automaticlogin;
 @property (weak, nonatomic) IBOutlet UIButton *rememberPasswords;

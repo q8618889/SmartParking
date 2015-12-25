@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InformationViewController : UIViewController
+@interface InformationViewController : MainViewController
+@property (strong, nonatomic) IBOutlet UITextField *userName;
+@property (strong, nonatomic) IBOutlet UITextField *passWorld;
+
+@property (strong, nonatomic) IBOutlet UITextField *nickName;
+- (IBAction)sendNerWorking:(UIButton *)sender;
 
 @end

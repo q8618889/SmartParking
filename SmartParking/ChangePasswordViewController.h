@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ChangePasswordViewController : UIViewController
+#import "PooCodeView.h"
+@interface ChangePasswordViewController : MainViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *password;
 @property (weak, nonatomic) IBOutlet UITextField *onePassword;
 @property (weak, nonatomic) IBOutlet UITextField *resumeLoad;
 @property (weak, nonatomic) IBOutlet UITextField *yanZhengMa;
+@property (strong, nonatomic) IBOutlet PooCodeView *pooView;
 
 
 

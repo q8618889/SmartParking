@@ -16,6 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.logoimage.hidden = YES;
+    self.backButton.hidden = NO;
+    self.navigationController.navigationBarHidden = YES;
+
     // Do any additional setup after loading the view from its nib.
 }
 

@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		421D2C331C2CD738000C000B /* libbaiduNaviSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 421D2C321C2CD738000C000B /* libbaiduNaviSDK.a */; settings = {ASSET_TAGS = (); }; };
-		421D2C371C2CD823000C000B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C351C2CD823000C000B /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
-		421D2C381C2CD823000C000B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 421D2C361C2CD823000C000B /* LoginViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		421D2C3B1C2CD882000C000B /* ScNewWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C3A1C2CD882000C000B /* ScNewWorking.m */; settings = {ASSET_TAGS = (); }; };
-		421D2C3F1C2CD8AB000C000B /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C3D1C2CD8AB000C000B /* RegisterViewController.m */; settings = {ASSET_TAGS = (); }; };
-		421D2C401C2CD8AB000C000B /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 421D2C3E1C2CD8AB000C000B /* RegisterViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		421D2C441C2CD8C3000C000B /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C421C2CD8C3000C000B /* ChangePasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
-		421D2C451C2CD8C3000C000B /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 421D2C431C2CD8C3000C000B /* ChangePasswordViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		421D2C4B1C2CD903000C000B /* UserLoginBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C481C2CD903000C000B /* UserLoginBaseClass.m */; settings = {ASSET_TAGS = (); }; };
-		421D2C4C1C2CD903000C000B /* UserLoginBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C4A1C2CD903000C000B /* UserLoginBody.m */; settings = {ASSET_TAGS = (); }; };
-		421D2C511C2CE916000C000B /* SmartParkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C4F1C2CE916000C000B /* SmartParkTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		421D2C521C2CE916000C000B /* SmartParkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 421D2C501C2CE916000C000B /* SmartParkTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		421D2C331C2CD738000C000B /* libbaiduNaviSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 421D2C321C2CD738000C000B /* libbaiduNaviSDK.a */; };
+		421D2C371C2CD823000C000B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C351C2CD823000C000B /* LoginViewController.m */; };
+		421D2C381C2CD823000C000B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 421D2C361C2CD823000C000B /* LoginViewController.xib */; };
+		421D2C3B1C2CD882000C000B /* ScNewWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C3A1C2CD882000C000B /* ScNewWorking.m */; };
+		421D2C3F1C2CD8AB000C000B /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C3D1C2CD8AB000C000B /* RegisterViewController.m */; };
+		421D2C401C2CD8AB000C000B /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 421D2C3E1C2CD8AB000C000B /* RegisterViewController.xib */; };
+		421D2C441C2CD8C3000C000B /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C421C2CD8C3000C000B /* ChangePasswordViewController.m */; };
+		421D2C451C2CD8C3000C000B /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 421D2C431C2CD8C3000C000B /* ChangePasswordViewController.xib */; };
+		421D2C4B1C2CD903000C000B /* UserLoginBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C481C2CD903000C000B /* UserLoginBaseClass.m */; };
+		421D2C4C1C2CD903000C000B /* UserLoginBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C4A1C2CD903000C000B /* UserLoginBody.m */; };
+		421D2C511C2CE916000C000B /* SmartParkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C4F1C2CE916000C000B /* SmartParkTableViewCell.m */; };
+		421D2C521C2CE916000C000B /* SmartParkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 421D2C501C2CE916000C000B /* SmartParkTableViewCell.xib */; };
 		4243374C1C28ED39003EAAF5 /* libbaiduNaviSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4243374B1C28ED39003EAAF5 /* libbaiduNaviSDK.a */; };
 		429835D61C2A8C6800EAC9B0 /* icon_777@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 429835D51C2A8C6800EAC9B0 /* icon_777@2x.png */; };
 		429835D81C2A8C7600EAC9B0 /* icon_999@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 429835D71C2A8C7600EAC9B0 /* icon_999@2x.png */; };
@@ -71,6 +71,7 @@
 		59531ED01C0E91E300930C4E /* SmartParkingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59531ECF1C0E91E300930C4E /* SmartParkingUITests.m */; };
 		59659ACB1C27E83C00E4498C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59659ACA1C27E83C00E4498C /* ViewController.m */; };
 		59659ADB1C27FF0300E4498C /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 59659ADA1C27FF0300E4498C /* backButton.png */; };
+		596FCB541C2D367300C1826D /* PooCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 596FCB531C2D367300C1826D /* PooCodeView.m */; };
 		597E00051C1A59D0001574A4 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 597E00041C1A59D0001574A4 /* CoreMotion.framework */; };
 		597EFDF01C191DF0001574A4 /* PaoPaoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 597EFDEF1C191DF0001574A4 /* PaoPaoView.m */; };
 		597EFDF21C191E01001574A4 /* PaopaoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 597EFDF11C191E01001574A4 /* PaopaoView.xib */; };
@@ -318,6 +319,8 @@
 		59659AC91C27E83C00E4498C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		59659ACA1C27E83C00E4498C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		59659ADA1C27FF0300E4498C /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton.png; sourceTree = "<group>"; };
+		596FCB521C2D367300C1826D /* PooCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PooCodeView.h; sourceTree = "<group>"; };
+		596FCB531C2D367300C1826D /* PooCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PooCodeView.m; sourceTree = "<group>"; };
 		597E00041C1A59D0001574A4 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		597E000D1C1AD5EB001574A4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		597EFDEE1C191DF0001574A4 /* PaoPaoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaoPaoView.h; sourceTree = "<group>"; };
@@ -680,6 +683,8 @@
 		429835DD1C2A917000EAC9B0 /* ChangePassword */ = {
 			isa = PBXGroup;
 			children = (
+				596FCB521C2D367300C1826D /* PooCodeView.h */,
+				596FCB531C2D367300C1826D /* PooCodeView.m */,
 				421D2C411C2CD8C3000C000B /* ChangePasswordViewController.h */,
 				421D2C421C2CD8C3000C000B /* ChangePasswordViewController.m */,
 				421D2C431C2CD8C3000C000B /* ChangePasswordViewController.xib */,
@@ -1556,6 +1561,7 @@
 				5992C5F71C1673400044E88A /* MJRefreshLegendHeader.m in Sources */,
 				5992C6241C1673950044E88A /* NSData+ImageContentType.m in Sources */,
 				5992C5F81C1673400044E88A /* UIScrollView+MJExtension.m in Sources */,
+				596FCB541C2D367300C1826D /* PooCodeView.m in Sources */,
 				59531EAF1C0E91E200930C4E /* AppDelegate.m in Sources */,
 				5992C6321C1673950044E88A /* UIView+WebCacheOperation.m in Sources */,
 				5907E3041C28DE1B00717008 /* MyMesaageViewController.m in Sources */,

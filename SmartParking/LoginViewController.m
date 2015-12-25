@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-
+#import "UserLoginBody.h"
 @interface LoginViewController ()
 
 
@@ -18,11 +18,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationController.navigationBarHidden = NO;
+   
+    
+    self.logoimage.hidden = YES;
+    self.backButton.hidden = NO;
+    self.navigationController.navigationBarHidden = YES;
     self.view.backgroundColor = [UIColor colorWithRed:232.0f / 255.0f green:234.0f / 255.0f blue:235.0f / 255.0f alpha:1];
     
     [[self.BgView layer]setCornerRadius:5.0];//圆角
     [[self.loginButton layer]setCornerRadius:4.0f];
+    
+    [self.rememberPasswords setImage:[UIImage imageNamed:@"btn_2_selected333"] forState:UIControlStateSelected];
+    [self.automaticlogin setImage:[UIImage imageNamed:@"btn_2_selected333"] forState:UIControlStateSelected];
+    
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"rememberPasswords"] isEqualToString:@"YES"]) {
+        _userName.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"userName"];
+        _Password.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"passwd"];
+        _rememberPasswords.selected = YES;
+    }
+  
+    _automaticlogin.selected = YES;
+    
+    
     
 }
 -(void)animationTopic
@@ -32,20 +49,65 @@
 }
 
 - (IBAction)LoginButton:(UIButton *)sender {
-    
-    [ScNewWorking getLoginWithUserName:_userName.text Password:_Password.text block:^(NSMutableArray *array, NSString *error) {
-        
-        
-        
-        
-        
+    [SVProgressHUD show];
+    [ScNewWorking getLoginWithUserName:_userName.text Password:_Password.text block:^(NSMutableDictionary *dictionary, NSString *error) {
+        if ([error isEqualToString:@"error"])
+        {
+            [SVProgressHUD dismissWithError:@"网络错误请稍后再试!"];
+            return ;
+        }
+        if ([[dictionary objectForKey:@"message"]isEqualToString:@"password is incorrect"])
+        {
+            [SVProgressHUD dismissWithError:@"密码错误!"];
+            return;
+        }else if ([[dictionary objectForKey:@"message"]isEqualToString:@"no this user"])
+        {
+            [SVProgressHUD dismissWithError:@"账户不存在!"];
+            return;
+        }else if ([[dictionary objectForKey:@"message"]isEqualToString:@"login successfully"]){
+            [SVProgressHUD dismissWithSuccess:@"登陆成功!"];
+            UserLoginBody * body = [[UserLoginBody alloc]initWithDictionary:[dictionary objectForKey:@"body"]];
+            
+            [[NSUserDefaults standardUserDefaults] setObject:body.userName forKey:@"userName"];
+            [[NSUserDefaults standardUserDefaults] setObject:body.passwd forKey:@"passwd"];
+            [[NSUserDefaults standardUserDefaults] setObject:body.number forKey:@"number"];
+             [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%0.f",body.bodyIdentifier] forKey:@"id"];
+            
+            
+            [[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:@"login"];
+            
+            
+            
+            
+            
+       
+            if (_rememberPasswords.selected == NO)
+            {
+                [[NSUserDefaults standardUserDefaults]setObject:@"NO" forKey:@"rememberPasswords"];
+            }else{
+                [[NSUserDefaults standardUserDefaults]setObject:@"YES" forKey:@"rememberPasswords"];
+                
+            }
+            
+            
+            if (_automaticlogin.selected == NO)
+            {
+                [[NSUserDefaults standardUserDefaults]setObject:@"NO" forKey:@"automaticLogin"];
+            }else{
+                [[NSUserDefaults standardUserDefaults]setObject:@"YES" forKey:@"automaticLogin"];
+                
+            }
+            
+            
+            
+            [self.navigationController popViewControllerAnimated:YES];
+        }
     }];
    
     
     
 }
 -(void)animationButton:(UIButton *)sender {
-    
     
 }
 -(void)LoginMassage:(UIButton *)sender {
@@ -66,6 +128,7 @@
     {
         sender.selected = NO;
     }else{
+
         sender.selected = YES;
     }
 }
@@ -74,6 +137,7 @@
     {
         sender.selected = NO;
     }else{
+
         sender.selected = YES;
     }
 }

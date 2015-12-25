@@ -14,12 +14,12 @@ typedef void(^DATAARRAY)(NSMutableArray  * array,NSString       * error);
 typedef void(^DATADICT)(NSMutableDictionary  * dictionary,NSString       * error);
 
 //用户登录接口
-+(void)getLoginWithUserName:(NSString *)userName Password:(NSString *)password block:(DATAARRAY)block;
++(void)getLoginWithUserName:(NSString *)userName Password:(NSString *)password block:(DATADICT)block;
 
 //用户注册接口
-+(void)getRegistWithUserName:(NSString *)userName Password:(NSString *)password Number:(NSString *)number block:(DATAARRAY)block;
++(void)getRegistWithUserName:(NSString *)userName Password:(NSString *)password Number:(NSString *)number block:(DATADICT)block;
 
 //用户修改密码就扣
-+(void)getuserChangePasswordUserName:(NSString *)userName NewPassword:(NSString *)newPassword Number:(NSString *)number block:(DATAARRAY)block;
++(void)getuserChangePasswordUserName:(NSString *)userName NewPassword:(NSString *)newPassword Number:(NSString *)number block:(DATADICT)block;
 
 @end
