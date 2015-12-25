@@ -143,11 +143,11 @@
     NSString * latitude = [[NSUserDefaults standardUserDefaults]objectForKey:@"latitude"];
     NSString * longitude = [[NSUserDefaults standardUserDefaults]objectForKey:@"longitude"];
     
-    info.userlatitude = latitude.floatValue;
-    info.userlatitude = longitude.floatValue;
+    info.userlatitude = latitude.doubleValue;
+    info.userlongitude = longitude.doubleValue;
     
     info.poilatitude = poi.pt.latitude;
-    info.poilatitude = poi.pt.longitude;
+    info.poilongitude = poi.pt.longitude;
     [self.navigationController pushViewController:info animated:YES];
     
 }

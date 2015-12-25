@@ -11,11 +11,11 @@
 
 @interface InfoMessageViewController : MainViewController
 @property (nonatomic,copy)NSString * uid;
-@property (nonatomic,assign) CGFloat  userlatitude, userlongitude;
+@property (nonatomic,assign) double  userlatitude, userlongitude;
 
 @property (nonatomic,copy)NSString * poiTopic,*poiPhone,*poiNumber,*poiAddress;
 
-@property (nonatomic,assign) CGFloat  poilatitude, poilongitude;
+@property (nonatomic,assign) double  poilatitude, poilongitude;
 @property (nonatomic,strong)CWStarRateView * starRateView;
 
 @end

@@ -10,7 +10,9 @@
 #import "MapViewController.h"
 #import "CWStarRateView.h"
 #import "InfoTableViewCell.h"
-@interface InfoMessageViewController ()<BMKPoiSearchDelegate,UITableViewDataSource,UITableViewDelegate>
+#import "BNCoreServices.h"
+
+@interface InfoMessageViewController ()<BMKPoiSearchDelegate,UITableViewDataSource,UITableViewDelegate,BNNaviUIManagerDelegate,BNNaviRoutePlanDelegate>
 {
   //  BMKShareURLSearch * _searcher;
     BMKPoiSearch   * _searcher;
@@ -126,6 +128,7 @@
         cell.address.text = _poiAddress;
         cell.phone.text = _poiPhone;
         cell.number.text = [NSString stringWithFormat:@"%@km",_poiNumber];
+        [cell.dhButton addTarget:self action:@selector(dhButton:) forControlEvents:BUTTONTOUCHUP];
         return cell;
 
     }else if (indexPath.row == 1)
@@ -155,6 +158,47 @@
         return cell;
 
     }
+}
+-(void)dhButton:(UIButton *)btn
+{
+    [self startNaviWithLongitude:_poilongitude latitude:_poilatitude];
+    
+}
+//发起导航
+- (void)startNaviWithLongitude:(double)longitude latitude:(double)latitude;
+{
+    //节点数组
+    NSMutableArray *nodesArray = [[NSMutableArray alloc]    initWithCapacity:2];
+    
+    //起点
+    BNRoutePlanNode *startNode = [[BNRoutePlanNode alloc] init];
+    startNode.pos = [[BNPosition alloc] init];
+    startNode.pos.x = _userlongitude;
+    startNode.pos.y = _userlatitude;
+    startNode.pos.eType = BNCoordinate_BaiduMapSDK;
+    [nodesArray addObject:startNode];
+    
+    //终点
+    BNRoutePlanNode *endNode = [[BNRoutePlanNode alloc] init];
+    endNode.pos = [[BNPosition alloc] init];
+    endNode.pos.x = longitude;
+    endNode.pos.y = latitude;
+    endNode.pos.eType = BNCoordinate_BaiduMapSDK;
+    [nodesArray addObject:endNode];
+    //发起路径规划
+    [BNCoreServices_RoutePlan startNaviRoutePlan:BNRoutePlanMode_Recommend naviNodes:nodesArray time:nil delegete:self userInfo:nil];
+}
+//算路成功回调
+-(void)routePlanDidFinished:(NSDictionary *)userInfo
+{
+    NSLog(@"算路成功");
+    
+    //路径规划成功，开始导航
+    [BNCoreServices_UI showNaviUI: BN_NaviTypeReal delegete:self isNeedLandscape:YES];
+}
+-(void)onExitNaviUI:(NSDictionary*)extraInfo;
+{
+    [BNCoreServices ReleaseInstance];
 }
 /*
 #pragma mark - Navigation
