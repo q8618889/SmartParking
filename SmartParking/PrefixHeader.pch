@@ -1,0 +1,57 @@
+//
+//  PrefixHeader.pch
+//  Hqpp
+//
+//  Created by 苏聪 on 15/5/4.
+//  Copyright (c) 2015年 ddzn. All rights reserved.
+//
+
+#ifndef Hqpp_PrefixHeader_pch
+#define Hqpp_PrefixHeader_pch
+
+
+#define RECT_W [UIScreen mainScreen].bounds.size.width
+#define RECT_H [UIScreen mainScreen].bounds.size.height
+#define USERDEFAULTS [NSUserDefaults standardUserDefaults]
+#define IsEmptyString(str) (([str isKindOfClass:[NSNull class]] || str == nil || [str length]<=0)? YES : NO )
+
+#define URLAllIPs @"http://218.94.120.222:9095"
+#define WEB_SERVER_IP @"http://www.iotclouddashboard.com"
+#define MAXURlS @"http://192.168.1.99:8080"
+#define ALY @"http://121.43.107.160:8080"
+#define BUTTONTOUCHUP UIControlEventTouchUpInside
+#define MASSAGEWORK_ERROR @"出现错误,请重试!"
+#define MASSAGEWORK_SUCCESS @"加载成功!"
+
+
+
+#define isRetina ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750,1334), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone6P ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242,2208), [[UIScreen mainScreen] currentMode].size) : NO)
+#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+#define NSUSERDEFAULTS(KEY) [[NSUserDefaults standardUserDefaults]objectForKey:(KEY)]
+#define KNOTIFICATION_LOGINCHANGE @"loginStateChange"
+
+#define CHATVIEWBACKGROUNDCOLOR [UIColor colorWithRed:0.936 green:0.932 blue:0.907 alpha:1]
+#import <UIKit/UIKit.h>
+#import "MyTool.h"
+#import "GTTabBarController.h"
+#import "MyNewWorking.h"
+#import "MainViewController.h"
+#import "MJRefresh.h"
+#import "SVProgressHUD.h"
+#import "SDWebImage/UIImageView+WebCache.h"
+#import "DataModels.h"
+
+
+
+
+
+
+
+
+#endif
