@@ -15,7 +15,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *telephoneTfd;
 @property (weak, nonatomic) IBOutlet UITextField *passworldTfd;
 @property (weak, nonatomic) IBOutlet UITextField *repeatTfd;
-@property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UIView *bgView;
 
 @property (weak, nonatomic) IBOutlet UIButton *zhuCe;

@@ -8,7 +8,7 @@
 
 #import "SmartParkListViewController.h"
 
-@interface SmartParkListViewController ()
+@interface SmartParkListViewController () <UITableViewDataSource,UITableViewDelegate>
 
 @end
 
@@ -19,23 +19,28 @@
     self.messageLabel.text = @"停车场";
 
     self.navigationController.navigationBarHidden = YES;
-    self.view.backgroundColor = [UIColor grayColor];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    UITableView *tabView = [[UITableView alloc] initWithFrame:CGRectMake(0, 84, RECT_W, RECT_H - 84 - 64)];
+    tabView.delegate = self;
+    tabView.dataSource = self;
+    tabView.rowHeight = 120.0f;
+    [self.view addSubview:tabView];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+#pragma - mark UItableView代理方法 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    
+    return 4;
+    
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+    return nil;
+    
 }
-*/
-
 @end

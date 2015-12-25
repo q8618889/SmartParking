@@ -11,7 +11,6 @@
                 <outlet property="passworldTfd" destination="Nl2-NO-Ams" id="JLe-tY-lwf"/>
                 <outlet property="repeatTfd" destination="aUO-Nf-yPX" id="8hL-Xg-3kq"/>
                 <outlet property="telephoneTfd" destination="6f4-kF-ycv" id="V2c-hl-tlB"/>
-                <outlet property="userName" destination="xfJ-rp-oCS" id="mLk-BQ-aMf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="zhuCe" destination="Xi9-Dl-e1r" id="qkk-QG-hVJ"/>
             </connections>
@@ -22,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" id="uHE-pi-CsA">
-                    <rect key="frame" x="10" y="64" width="300" height="160"/>
+                    <rect key="frame" x="10" y="64" width="300" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_999.png" id="tlC-34-cSV">
@@ -37,11 +36,6 @@
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_777.png" id="Ubz-Kt-cKn">
                             <rect key="frame" x="16" y="14" width="17" height="15"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <animations/>
-                        </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_user.png" id="vYT-fS-uDT">
-                            <rect key="frame" x="16" y="132" width="17" height="15"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <animations/>
                         </imageView>
@@ -66,13 +60,6 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="昵       称" textAlignment="natural" minimumFontSize="17" id="xfJ-rp-oCS">
-                            <rect key="frame" x="41" y="131" width="251" height="20"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <animations/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
                     </subviews>
                     <animations/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -88,12 +75,6 @@
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <animations/>
                     <color key="backgroundColor" red="0.8795967487373737" green="0.8795967487373737" blue="0.8795967487373737" alpha="1" colorSpace="calibratedRGB"/>
-                </view>
-                <view contentMode="scaleToFill" id="CvJ-iq-Tjp">
-                    <rect key="frame" x="10" y="184" width="300" height="1"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                    <animations/>
-                    <color key="backgroundColor" red="0.85085227272727271" green="0.85085227272727271" blue="0.85085227272727271" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Xi9-Dl-e1r">
                     <rect key="frame" x="10" y="263" width="300" height="30"/>
@@ -119,6 +100,5 @@
         <image name="icon_777.png" width="20" height="20"/>
         <image name="icon_999.png" width="20" height="20"/>
         <image name="icon_password.png" width="20" height="20"/>
-        <image name="icon_user.png" width="20" height="20"/>
     </resources>
 </document>

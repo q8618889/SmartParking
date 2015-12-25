@@ -17,6 +17,8 @@
 		421D2C451C2CD8C3000C000B /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 421D2C431C2CD8C3000C000B /* ChangePasswordViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		421D2C4B1C2CD903000C000B /* UserLoginBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C481C2CD903000C000B /* UserLoginBaseClass.m */; settings = {ASSET_TAGS = (); }; };
 		421D2C4C1C2CD903000C000B /* UserLoginBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C4A1C2CD903000C000B /* UserLoginBody.m */; settings = {ASSET_TAGS = (); }; };
+		421D2C511C2CE916000C000B /* SmartParkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C4F1C2CE916000C000B /* SmartParkTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		421D2C521C2CE916000C000B /* SmartParkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 421D2C501C2CE916000C000B /* SmartParkTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		4243374C1C28ED39003EAAF5 /* libbaiduNaviSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4243374B1C28ED39003EAAF5 /* libbaiduNaviSDK.a */; };
 		429835D61C2A8C6800EAC9B0 /* icon_777@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 429835D51C2A8C6800EAC9B0 /* icon_777@2x.png */; };
 		429835D81C2A8C7600EAC9B0 /* icon_999@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 429835D71C2A8C7600EAC9B0 /* icon_999@2x.png */; };
@@ -246,6 +248,9 @@
 		421D2C481C2CD903000C000B /* UserLoginBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLoginBaseClass.m; sourceTree = "<group>"; };
 		421D2C491C2CD903000C000B /* UserLoginBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLoginBody.h; sourceTree = "<group>"; };
 		421D2C4A1C2CD903000C000B /* UserLoginBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLoginBody.m; sourceTree = "<group>"; };
+		421D2C4E1C2CE916000C000B /* SmartParkTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartParkTableViewCell.h; sourceTree = "<group>"; };
+		421D2C4F1C2CE916000C000B /* SmartParkTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartParkTableViewCell.m; sourceTree = "<group>"; };
+		421D2C501C2CE916000C000B /* SmartParkTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmartParkTableViewCell.xib; sourceTree = "<group>"; };
 		4243374B1C28ED39003EAAF5 /* libbaiduNaviSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbaiduNaviSDK.a; sourceTree = "<group>"; };
 		429835D51C2A8C6800EAC9B0 /* icon_777@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_777@2x.png"; sourceTree = "<group>"; };
 		429835D71C2A8C7600EAC9B0 /* icon_999@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_999@2x.png"; sourceTree = "<group>"; };
@@ -602,6 +607,16 @@
 				421D2C4A1C2CD903000C000B /* UserLoginBody.m */,
 			);
 			name = UserModel;
+			sourceTree = "<group>";
+		};
+		421D2C4D1C2CE8E5000C000B /* SmartParkContorllerCell */ = {
+			isa = PBXGroup;
+			children = (
+				421D2C4E1C2CE916000C000B /* SmartParkTableViewCell.h */,
+				421D2C4F1C2CE916000C000B /* SmartParkTableViewCell.m */,
+				421D2C501C2CE916000C000B /* SmartParkTableViewCell.xib */,
+			);
+			name = SmartParkContorllerCell;
 			sourceTree = "<group>";
 		};
 		4243374D1C28F532003EAAF5 /* MYImage */ = {
@@ -1103,6 +1118,7 @@
 		59D18F8F1C0EC5ED0044CE60 /* SmartPark */ = {
 			isa = PBXGroup;
 			children = (
+				421D2C4D1C2CE8E5000C000B /* SmartParkContorllerCell */,
 				59D18FA01C0ED6FE0044CE60 /* SmartParkListViewController.h */,
 				59D18FA11C0ED6FE0044CE60 /* SmartParkListViewController.m */,
 			);
@@ -1497,6 +1513,7 @@
 				59E169E31C10100600FA0363 /* home@2x.png in Resources */,
 				59E2EC991C22400500970346 /* SurroundTableViewCell.xib in Resources */,
 				5903FD8D1C23F94700740FBC /* btn_8_selected.png in Resources */,
+				421D2C521C2CE916000C000B /* SmartParkTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1579,6 +1596,7 @@
 				597EFE801C197BE2001574A4 /* CJSONSerialization.m in Sources */,
 				5992C6271C1673950044E88A /* SDWebImageDecoder.m in Sources */,
 				5992C5F61C1673400044E88A /* MJRefreshLegendFooter.m in Sources */,
+				421D2C511C2CE916000C000B /* SmartParkTableViewCell.m in Sources */,
 				597EFE891C197BE2001574A4 /* CJSONSerializer.m in Sources */,
 				5992C6301C1673950044E88A /* UIImageView+HighlightedWebCache.m in Sources */,
 				59D1A53D1C2BE59A00425800 /* MapViewController.mm in Sources */,
