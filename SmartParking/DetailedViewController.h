@@ -11,5 +11,6 @@
 
 @interface DetailedViewController : UIViewController
 
+@property (nonatomic,retain)NSArray   *bc;
 
 @end

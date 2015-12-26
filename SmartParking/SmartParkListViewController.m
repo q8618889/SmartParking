@@ -69,6 +69,9 @@
     [cell.leftImgView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",ann.pictureUri]]];
     cell.titLab.text = ann.name;
     cell.oneLab.text = [NSString stringWithFormat:@"总车位:%.0f,剩余:%.0f",ann.portCount,ann.portLeftCount];
+    if (ann.number == nil) {
+        ann.number = [NSString stringWithFormat:@"暂无联系方式"];
+    }
     cell.twoLab.text = [NSString stringWithFormat:@"联系电话:%@",ann.number];
     if (ann.type == 0) {
         _type = [NSString stringWithFormat:@"室内停车场"];
@@ -86,8 +89,30 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    DetailedViewController *de = [DetailedViewController new];
-    [self.navigationController pushViewController:de animated:YES];
+    CGFloat centerLongitude = _mapView.region.center.longitude;
+    CGFloat  centerLatitude  = _mapView.region.center.latitude;
+    [MyNewWorking getParkingMessageWithLongitude:[NSString stringWithFormat:@"%f",centerLongitude] latitude:[NSString stringWithFormat:@"%f",centerLatitude] radius:[NSString stringWithFormat:@"%f",[self mapViewZoomLevel:_mapView.zoomLevel]] block:^(NSMutableArray *array, NSString *error) {
+        [_tabView.header endRefreshing];
+        _mutArry =(NSMutableArray *)_bc.body;
+        _bc = array[0];
+        NSLog(@"___%@",_bc.body);
+        DetailedViewController *de = [DetailedViewController new];
+        de.bc = _bc.body;
+        [self.navigationController pushViewController:de animated:YES];
+        
+        
+        if (_bc.body.count < 1)
+        {
+            return ;
+        }
+        [self createAnn:_bc];
+        
+        [_tabView reloadData];
+        
+        
+    }];
+    
+    
     
 }
 

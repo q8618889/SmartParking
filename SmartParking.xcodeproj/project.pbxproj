@@ -633,12 +633,12 @@
 				426F293C1C2E24DB00B01355 /* SmartParkTableViewCell.h */,
 				426F293D1C2E24DB00B01355 /* SmartParkTableViewCell.m */,
 				426F293E1C2E24DB00B01355 /* SmartParkTableViewCell.xib */,
-				426F294F1C2E259A00B01355 /* DetailedDropTableViewCell.h */,
-				426F29501C2E259A00B01355 /* DetailedDropTableViewCell.m */,
-				426F29511C2E259A00B01355 /* DetailedDropTableViewCell.xib */,
 				426F29521C2E259A00B01355 /* DetailedTopTableViewCell.h */,
 				426F29531C2E259A00B01355 /* DetailedTopTableViewCell.m */,
 				426F29541C2E259A00B01355 /* DetailedTopTableViewCell.xib */,
+				426F294F1C2E259A00B01355 /* DetailedDropTableViewCell.h */,
+				426F29501C2E259A00B01355 /* DetailedDropTableViewCell.m */,
+				426F29511C2E259A00B01355 /* DetailedDropTableViewCell.xib */,
 			);
 			name = SmartParkContorllerCell;
 			sourceTree = "<group>";
