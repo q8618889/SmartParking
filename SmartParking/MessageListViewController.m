@@ -145,8 +145,19 @@
 //        }
 //    }];
     [ScNewWorking getNewMessageWithPageSize:page longitude:_locService.userLocation.location.coordinate.longitude latitude:_locService.userLocation.location.coordinate.latitude radius:20000.0001 block:^(NSMutableArray *array, NSString *error) {
+       
         if ([error isEqualToString:@"error"])
         {
+            if (page == 1)
+            {
+                [_myTableView.header endRefreshing];
+
+            }else{
+                [_myTableView.footer endRefreshing];
+
+            }
+
+            [SVProgressHUD show];
             [SVProgressHUD dismissWithError:@"网络错误请稍后再试!"];
             
             return ;
