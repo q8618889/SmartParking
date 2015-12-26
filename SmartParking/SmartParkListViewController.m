@@ -94,8 +94,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CGFloat centerLongitude = _mapView.region.center.longitude;
-    CGFloat  centerLatitude  = _mapView.region.center.latitude;
+    CGFloat centerLongitude = _locService.userLocation.location.coordinate.longitude;
+    CGFloat  centerLatitude  =  _locService.userLocation.location.coordinate.latitude;
     [MyNewWorking getParkingMessageWithLongitude:[NSString stringWithFormat:@"%f",centerLongitude] latitude:[NSString stringWithFormat:@"%f",centerLatitude] radius:[NSString stringWithFormat:@"%f",[self mapViewZoomLevel:_mapView.zoomLevel]] block:^(NSMutableArray *array, NSString *error) {
         [_tabView.header endRefreshing];
         _mutArry =(NSMutableArray *)_bc.body;
@@ -124,8 +124,8 @@
 -(void)loadData {
     
     
-    CGFloat centerLongitude = _mapView.region.center.longitude;
-    CGFloat  centerLatitude  = _mapView.region.center.latitude;
+    CGFloat centerLongitude = _locService.userLocation.location.coordinate.longitude;
+    CGFloat  centerLatitude  =  _locService.userLocation.location.coordinate.latitude;
     [MyNewWorking getParkingMessageWithLongitude:[NSString stringWithFormat:@"%f",centerLongitude] latitude:[NSString stringWithFormat:@"%f",centerLatitude] radius:@"20000.0001" block:^(NSMutableArray *array, NSString *error) {
         [_tabView.header endRefreshing];
         _mutArry =(NSMutableArray *)_bc.body;

@@ -133,6 +133,7 @@
     self.window.rootViewController = self.mainTabBarController;
     [fourthViewController getDelegate];
     [firstViewController getDelegate];
+    [secondViewController createLocService];
 }
 
 - (void)loadingViewAnimation {
