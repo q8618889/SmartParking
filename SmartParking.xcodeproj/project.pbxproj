@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		421D2C331C2CD738000C000B /* libbaiduNaviSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 421D2C321C2CD738000C000B /* libbaiduNaviSDK.a */; };
 		421D2C371C2CD823000C000B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C351C2CD823000C000B /* LoginViewController.m */; };
 		421D2C381C2CD823000C000B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 421D2C361C2CD823000C000B /* LoginViewController.xib */; };
 		421D2C3B1C2CD882000C000B /* ScNewWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C3A1C2CD882000C000B /* ScNewWorking.m */; };
@@ -17,9 +16,19 @@
 		421D2C451C2CD8C3000C000B /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 421D2C431C2CD8C3000C000B /* ChangePasswordViewController.xib */; };
 		421D2C4B1C2CD903000C000B /* UserLoginBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C481C2CD903000C000B /* UserLoginBaseClass.m */; };
 		421D2C4C1C2CD903000C000B /* UserLoginBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C4A1C2CD903000C000B /* UserLoginBody.m */; };
-		421D2C511C2CE916000C000B /* SmartParkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C4F1C2CE916000C000B /* SmartParkTableViewCell.m */; };
-		421D2C521C2CE916000C000B /* SmartParkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 421D2C501C2CE916000C000B /* SmartParkTableViewCell.xib */; };
 		4243374C1C28ED39003EAAF5 /* libbaiduNaviSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4243374B1C28ED39003EAAF5 /* libbaiduNaviSDK.a */; };
+		426F293B1C2E207700B01355 /* libbaiduNaviSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 426F293A1C2E207600B01355 /* libbaiduNaviSDK.a */; settings = {ASSET_TAGS = (); }; };
+		426F293F1C2E24DB00B01355 /* SmartParkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 426F293D1C2E24DB00B01355 /* SmartParkTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		426F29401C2E24DB00B01355 /* SmartParkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 426F293E1C2E24DB00B01355 /* SmartParkTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		426F29431C2E24F600B01355 /* SmartParkListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426F29421C2E24F600B01355 /* SmartParkListViewController.m */; settings = {ASSET_TAGS = (); }; };
+		426F29481C2E255500B01355 /* AnnPoinBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 426F29451C2E255500B01355 /* AnnPoinBaseClass.m */; settings = {ASSET_TAGS = (); }; };
+		426F29491C2E255500B01355 /* AnnPoinBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 426F29471C2E255500B01355 /* AnnPoinBody.m */; settings = {ASSET_TAGS = (); }; };
+		426F294D1C2E257700B01355 /* DetailedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426F294B1C2E257700B01355 /* DetailedViewController.m */; settings = {ASSET_TAGS = (); }; };
+		426F294E1C2E257700B01355 /* DetailedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 426F294C1C2E257700B01355 /* DetailedViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		426F29551C2E259A00B01355 /* DetailedDropTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 426F29501C2E259A00B01355 /* DetailedDropTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		426F29561C2E259A00B01355 /* DetailedDropTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 426F29511C2E259A00B01355 /* DetailedDropTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		426F29571C2E259A00B01355 /* DetailedTopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 426F29531C2E259A00B01355 /* DetailedTopTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		426F29581C2E259A00B01355 /* DetailedTopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 426F29541C2E259A00B01355 /* DetailedTopTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		429835D61C2A8C6800EAC9B0 /* icon_777@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 429835D51C2A8C6800EAC9B0 /* icon_777@2x.png */; };
 		429835D81C2A8C7600EAC9B0 /* icon_999@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 429835D71C2A8C7600EAC9B0 /* icon_999@2x.png */; };
 		429835E11C2A921C00EAC9B0 /* InformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 429835DF1C2A921C00EAC9B0 /* InformationViewController.m */; };
@@ -147,13 +156,10 @@
 		5992C6301C1673950044E88A /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5992C61E1C1673950044E88A /* UIImageView+HighlightedWebCache.m */; };
 		5992C6311C1673950044E88A /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5992C6201C1673950044E88A /* UIImageView+WebCache.m */; };
 		5992C6321C1673950044E88A /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5992C6221C1673950044E88A /* UIView+WebCacheOperation.m */; };
-		5992C6381C17C9320044E88A /* AnnPoinBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5992C6341C17C9320044E88A /* AnnPoinBaseClass.m */; };
-		5992C6391C17C9320044E88A /* AnnPoinBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 5992C6361C17C9320044E88A /* AnnPoinBody.m */; };
 		5992C6461C181B410044E88A /* leftbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 5992C6451C181B410044E88A /* leftbox.png */; };
 		5992C64A1C1820F90044E88A /* pin_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 5992C6471C1820F90044E88A /* pin_green.png */; };
 		5992C64B1C1820F90044E88A /* pin_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 5992C6481C1820F90044E88A /* pin_purple.png */; };
 		5992C64C1C1820F90044E88A /* pin_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 5992C6491C1820F90044E88A /* pin_red.png */; };
-		59D18FA21C0ED6FE0044CE60 /* SmartParkListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D18FA11C0ED6FE0044CE60 /* SmartParkListViewController.m */; };
 		59D18FA51C0ED7080044CE60 /* MessageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D18FA41C0ED7080044CE60 /* MessageListViewController.m */; };
 		59D190431C0EDF1F0044CE60 /* GTTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D190401C0EDF1F0044CE60 /* GTTabBar.m */; };
 		59D190441C0EDF1F0044CE60 /* GTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D190421C0EDF1F0044CE60 /* GTTabBarController.m */; };
@@ -233,7 +239,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		421D2C321C2CD738000C000B /* libbaiduNaviSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbaiduNaviSDK.a; sourceTree = "<group>"; };
 		421D2C341C2CD823000C000B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		421D2C351C2CD823000C000B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		421D2C361C2CD823000C000B /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -249,10 +254,26 @@
 		421D2C481C2CD903000C000B /* UserLoginBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLoginBaseClass.m; sourceTree = "<group>"; };
 		421D2C491C2CD903000C000B /* UserLoginBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLoginBody.h; sourceTree = "<group>"; };
 		421D2C4A1C2CD903000C000B /* UserLoginBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLoginBody.m; sourceTree = "<group>"; };
-		421D2C4E1C2CE916000C000B /* SmartParkTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartParkTableViewCell.h; sourceTree = "<group>"; };
-		421D2C4F1C2CE916000C000B /* SmartParkTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartParkTableViewCell.m; sourceTree = "<group>"; };
-		421D2C501C2CE916000C000B /* SmartParkTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmartParkTableViewCell.xib; sourceTree = "<group>"; };
 		4243374B1C28ED39003EAAF5 /* libbaiduNaviSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbaiduNaviSDK.a; sourceTree = "<group>"; };
+		426F293A1C2E207600B01355 /* libbaiduNaviSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbaiduNaviSDK.a; sourceTree = "<group>"; };
+		426F293C1C2E24DB00B01355 /* SmartParkTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartParkTableViewCell.h; sourceTree = "<group>"; };
+		426F293D1C2E24DB00B01355 /* SmartParkTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartParkTableViewCell.m; sourceTree = "<group>"; };
+		426F293E1C2E24DB00B01355 /* SmartParkTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmartParkTableViewCell.xib; sourceTree = "<group>"; };
+		426F29411C2E24F600B01355 /* SmartParkListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartParkListViewController.h; sourceTree = "<group>"; };
+		426F29421C2E24F600B01355 /* SmartParkListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartParkListViewController.m; sourceTree = "<group>"; };
+		426F29441C2E255500B01355 /* AnnPoinBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnPoinBaseClass.h; sourceTree = "<group>"; };
+		426F29451C2E255500B01355 /* AnnPoinBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnPoinBaseClass.m; sourceTree = "<group>"; };
+		426F29461C2E255500B01355 /* AnnPoinBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnPoinBody.h; sourceTree = "<group>"; };
+		426F29471C2E255500B01355 /* AnnPoinBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnPoinBody.m; sourceTree = "<group>"; };
+		426F294A1C2E257700B01355 /* DetailedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailedViewController.h; sourceTree = "<group>"; };
+		426F294B1C2E257700B01355 /* DetailedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailedViewController.m; sourceTree = "<group>"; };
+		426F294C1C2E257700B01355 /* DetailedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailedViewController.xib; sourceTree = "<group>"; };
+		426F294F1C2E259A00B01355 /* DetailedDropTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailedDropTableViewCell.h; sourceTree = "<group>"; };
+		426F29501C2E259A00B01355 /* DetailedDropTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailedDropTableViewCell.m; sourceTree = "<group>"; };
+		426F29511C2E259A00B01355 /* DetailedDropTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailedDropTableViewCell.xib; sourceTree = "<group>"; };
+		426F29521C2E259A00B01355 /* DetailedTopTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailedTopTableViewCell.h; sourceTree = "<group>"; };
+		426F29531C2E259A00B01355 /* DetailedTopTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailedTopTableViewCell.m; sourceTree = "<group>"; };
+		426F29541C2E259A00B01355 /* DetailedTopTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailedTopTableViewCell.xib; sourceTree = "<group>"; };
 		429835D51C2A8C6800EAC9B0 /* icon_777@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_777@2x.png"; sourceTree = "<group>"; };
 		429835D71C2A8C7600EAC9B0 /* icon_999@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_999@2x.png"; sourceTree = "<group>"; };
 		429835DE1C2A921C00EAC9B0 /* InformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationViewController.h; sourceTree = "<group>"; };
@@ -467,18 +488,12 @@
 		5992C6201C1673950044E88A /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		5992C6211C1673950044E88A /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		5992C6221C1673950044E88A /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
-		5992C6331C17C9320044E88A /* AnnPoinBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnPoinBaseClass.h; sourceTree = "<group>"; };
-		5992C6341C17C9320044E88A /* AnnPoinBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnPoinBaseClass.m; sourceTree = "<group>"; };
-		5992C6351C17C9320044E88A /* AnnPoinBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnPoinBody.h; sourceTree = "<group>"; };
-		5992C6361C17C9320044E88A /* AnnPoinBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnPoinBody.m; sourceTree = "<group>"; };
 		5992C6371C17C9320044E88A /* DataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModels.h; sourceTree = "<group>"; };
 		5992C6451C181B410044E88A /* leftbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftbox.png; sourceTree = "<group>"; };
 		5992C6471C1820F90044E88A /* pin_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_green.png; sourceTree = "<group>"; };
 		5992C6481C1820F90044E88A /* pin_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_purple.png; sourceTree = "<group>"; };
 		5992C6491C1820F90044E88A /* pin_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_red.png; sourceTree = "<group>"; };
 		59D18F9F1C0ED53A0044CE60 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		59D18FA01C0ED6FE0044CE60 /* SmartParkListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartParkListViewController.h; sourceTree = "<group>"; };
-		59D18FA11C0ED6FE0044CE60 /* SmartParkListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartParkListViewController.m; sourceTree = "<group>"; };
 		59D18FA31C0ED7080044CE60 /* MessageListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageListViewController.h; sourceTree = "<group>"; };
 		59D18FA41C0ED7080044CE60 /* MessageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListViewController.m; sourceTree = "<group>"; };
 		59D1903F1C0EDF1F0044CE60 /* GTTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTTabBar.h; sourceTree = "<group>"; };
@@ -565,7 +580,7 @@
 				597EFE7C1C197BE2001574A4 /* libBaiduMobStatForSDK.a in Frameworks */,
 				4243374C1C28ED39003EAAF5 /* libbaiduNaviSDK.a in Frameworks */,
 				59E16A361C101D7400FA0363 /* CoreTelephony.framework in Frameworks */,
-				421D2C331C2CD738000C000B /* libbaiduNaviSDK.a in Frameworks */,
+				426F293B1C2E207700B01355 /* libbaiduNaviSDK.a in Frameworks */,
 				597EFDFC1C197A9B001574A4 /* ImageIO.framework in Frameworks */,
 				59E16A281C101CAB00FA0363 /* CoreLocation.framework in Frameworks */,
 				597EFDFA1C197A7D001574A4 /* AudioToolbox.framework in Frameworks */,
@@ -615,9 +630,15 @@
 		421D2C4D1C2CE8E5000C000B /* SmartParkContorllerCell */ = {
 			isa = PBXGroup;
 			children = (
-				421D2C4E1C2CE916000C000B /* SmartParkTableViewCell.h */,
-				421D2C4F1C2CE916000C000B /* SmartParkTableViewCell.m */,
-				421D2C501C2CE916000C000B /* SmartParkTableViewCell.xib */,
+				426F293C1C2E24DB00B01355 /* SmartParkTableViewCell.h */,
+				426F293D1C2E24DB00B01355 /* SmartParkTableViewCell.m */,
+				426F293E1C2E24DB00B01355 /* SmartParkTableViewCell.xib */,
+				426F294F1C2E259A00B01355 /* DetailedDropTableViewCell.h */,
+				426F29501C2E259A00B01355 /* DetailedDropTableViewCell.m */,
+				426F29511C2E259A00B01355 /* DetailedDropTableViewCell.xib */,
+				426F29521C2E259A00B01355 /* DetailedTopTableViewCell.h */,
+				426F29531C2E259A00B01355 /* DetailedTopTableViewCell.m */,
+				426F29541C2E259A00B01355 /* DetailedTopTableViewCell.xib */,
 			);
 			name = SmartParkContorllerCell;
 			sourceTree = "<group>";
@@ -822,7 +843,7 @@
 				597EFE4A1C197BE2001574A4 /* BaiduStatistics */,
 				597EFE6F1C197BE2001574A4 /* inc */,
 				597EFE7A1C197BE2001574A4 /* updatelog.txt */,
-				421D2C321C2CD738000C000B /* libbaiduNaviSDK.a */,
+				426F293A1C2E207600B01355 /* libbaiduNaviSDK.a */,
 			);
 			path = BaiduNavi_iOSSDK_v2.0.5_Lib;
 			sourceTree = "<group>";
@@ -1046,10 +1067,10 @@
 		5992C63A1C17C9370044E88A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5992C6331C17C9320044E88A /* AnnPoinBaseClass.h */,
-				5992C6341C17C9320044E88A /* AnnPoinBaseClass.m */,
-				5992C6351C17C9320044E88A /* AnnPoinBody.h */,
-				5992C6361C17C9320044E88A /* AnnPoinBody.m */,
+				426F29441C2E255500B01355 /* AnnPoinBaseClass.h */,
+				426F29451C2E255500B01355 /* AnnPoinBaseClass.m */,
+				426F29461C2E255500B01355 /* AnnPoinBody.h */,
+				426F29471C2E255500B01355 /* AnnPoinBody.m */,
 				421D2C461C2CD8F7000C000B /* UserModel */,
 			);
 			name = Model;
@@ -1124,8 +1145,11 @@
 			isa = PBXGroup;
 			children = (
 				421D2C4D1C2CE8E5000C000B /* SmartParkContorllerCell */,
-				59D18FA01C0ED6FE0044CE60 /* SmartParkListViewController.h */,
-				59D18FA11C0ED6FE0044CE60 /* SmartParkListViewController.m */,
+				426F294A1C2E257700B01355 /* DetailedViewController.h */,
+				426F294B1C2E257700B01355 /* DetailedViewController.m */,
+				426F294C1C2E257700B01355 /* DetailedViewController.xib */,
+				426F29411C2E24F600B01355 /* SmartParkListViewController.h */,
+				426F29421C2E24F600B01355 /* SmartParkListViewController.m */,
 			);
 			name = SmartPark;
 			sourceTree = "<group>";
@@ -1427,6 +1451,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				426F29581C2E259A00B01355 /* DetailedTopTableViewCell.xib in Resources */,
 				5903FD831C23F94700740FBC /* btn_3_selected.png in Resources */,
 				597EFE8C1C197BE2001574A4 /* updatelog.txt in Resources */,
 				59E16A001C1012B100FA0363 /* topic-on.png in Resources */,
@@ -1455,6 +1480,7 @@
 				59E16A021C1012B100FA0363 /* topic.png in Resources */,
 				5907E3111C28DE2F00717008 /* icon_5@2x.png in Resources */,
 				5907E3121C28DE2F00717008 /* icon_6@2x.png in Resources */,
+				426F29561C2E259A00B01355 /* DetailedDropTableViewCell.xib in Resources */,
 				59531EB71C0E91E200930C4E /* Assets.xcassets in Resources */,
 				597EFE7B1C197BE2001574A4 /* baiduNaviSDK.bundle in Resources */,
 				5903FD811C23F94700740FBC /* btn_2_selected.png in Resources */,
@@ -1483,6 +1509,7 @@
 				597EFDF81C19587F001574A4 /* bg_box2.png in Resources */,
 				5907E30F1C28DE2F00717008 /* icon_3@2x.png in Resources */,
 				5903FD871C23F94700740FBC /* btn_5_selected.png in Resources */,
+				426F294E1C2E257700B01355 /* DetailedViewController.xib in Resources */,
 				597EFDF21C191E01001574A4 /* PaopaoView.xib in Resources */,
 				5992C5FF1C16734D0044E88A /* SVProgressHUD.bundle in Resources */,
 				42F9F04F1C294AD80089B7E1 /* btn_2_selected333@2x.png in Resources */,
@@ -1518,7 +1545,7 @@
 				59E169E31C10100600FA0363 /* home@2x.png in Resources */,
 				59E2EC991C22400500970346 /* SurroundTableViewCell.xib in Resources */,
 				5903FD8D1C23F94700740FBC /* btn_8_selected.png in Resources */,
-				421D2C521C2CE916000C000B /* SmartParkTableViewCell.xib in Resources */,
+				426F29401C2E24DB00B01355 /* SmartParkTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1546,8 +1573,8 @@
 				597EFE841C197BE2001574A4 /* NSDictionary_JSONExtensions.m in Sources */,
 				59D190431C0EDF1F0044CE60 /* GTTabBar.m in Sources */,
 				5992C5C41C1671510044E88A /* AFHTTPRequestOperationManager.m in Sources */,
-				59D18FA21C0ED6FE0044CE60 /* SmartParkListViewController.m in Sources */,
 				5992C5C81C1671510044E88A /* AFURLConnectionOperation.m in Sources */,
+				426F293F1C2E24DB00B01355 /* SmartParkTableViewCell.m in Sources */,
 				421D2C3F1C2CD8AB000C000B /* RegisterViewController.m in Sources */,
 				597EFE821C197BE2001574A4 /* CDataScanner_Extensions.m in Sources */,
 				5992C62D1C1673950044E88A /* UIImage+GIF.m in Sources */,
@@ -1560,6 +1587,7 @@
 				5992C5FE1C16734D0044E88A /* SVProgressHUD.m in Sources */,
 				5992C5F71C1673400044E88A /* MJRefreshLegendHeader.m in Sources */,
 				5992C6241C1673950044E88A /* NSData+ImageContentType.m in Sources */,
+				426F29571C2E259A00B01355 /* DetailedTopTableViewCell.m in Sources */,
 				5992C5F81C1673400044E88A /* UIScrollView+MJExtension.m in Sources */,
 				596FCB541C2D367300C1826D /* PooCodeView.m in Sources */,
 				59531EAF1C0E91E200930C4E /* AppDelegate.m in Sources */,
@@ -1573,6 +1601,7 @@
 				421D2C371C2CD823000C000B /* LoginViewController.m in Sources */,
 				59D1A5431C2BE5DE00425800 /* MainViewController.m in Sources */,
 				421D2C3B1C2CD882000C000B /* ScNewWorking.m in Sources */,
+				426F29551C2E259A00B01355 /* DetailedDropTableViewCell.m in Sources */,
 				59659ACB1C27E83C00E4498C /* ViewController.m in Sources */,
 				5992C5FA1C1673400044E88A /* UIView+MJExtension.m in Sources */,
 				5992C6261C1673950044E88A /* SDWebImageCompat.m in Sources */,
@@ -1587,8 +1616,8 @@
 				59D1A5461C2BE5F100425800 /* MyNewWorking.m in Sources */,
 				5992C6251C1673950044E88A /* SDImageCache.m in Sources */,
 				597EFE871C197BE2001574A4 /* CJSONDeserializer.m in Sources */,
+				426F294D1C2E257700B01355 /* DetailedViewController.m in Sources */,
 				5992C62B1C1673950044E88A /* SDWebImagePrefetcher.m in Sources */,
-				5992C6381C17C9320044E88A /* AnnPoinBaseClass.m in Sources */,
 				429835EB1C2A96F500EAC9B0 /* MyBookingsViewController.m in Sources */,
 				421D2C4B1C2CD903000C000B /* UserLoginBaseClass.m in Sources */,
 				59E2EC981C22400500970346 /* SurroundTableViewCell.m in Sources */,
@@ -1602,11 +1631,11 @@
 				597EFE801C197BE2001574A4 /* CJSONSerialization.m in Sources */,
 				5992C6271C1673950044E88A /* SDWebImageDecoder.m in Sources */,
 				5992C5F61C1673400044E88A /* MJRefreshLegendFooter.m in Sources */,
-				421D2C511C2CE916000C000B /* SmartParkTableViewCell.m in Sources */,
 				597EFE891C197BE2001574A4 /* CJSONSerializer.m in Sources */,
+				426F29481C2E255500B01355 /* AnnPoinBaseClass.m in Sources */,
 				5992C6301C1673950044E88A /* UIImageView+HighlightedWebCache.m in Sources */,
+				426F29491C2E255500B01355 /* AnnPoinBody.m in Sources */,
 				59D1A53D1C2BE59A00425800 /* MapViewController.mm in Sources */,
-				5992C6391C17C9320044E88A /* AnnPoinBody.m in Sources */,
 				59D190441C0EDF1F0044CE60 /* GTTabBarController.m in Sources */,
 				59D1A5521C2BE63700425800 /* SearchSurroundViewController.m in Sources */,
 				5992C5F21C1673400044E88A /* MJRefreshFooter.m in Sources */,
@@ -1624,6 +1653,7 @@
 				5992C6281C1673950044E88A /* SDWebImageDownloader.m in Sources */,
 				5992C5F11C1673400044E88A /* MJRefreshConst.m in Sources */,
 				5992C5F51C1673400044E88A /* MJRefreshHeader.m in Sources */,
+				426F29431C2E24F600B01355 /* SmartParkListViewController.m in Sources */,
 				597EFE7E1C197BE2001574A4 /* CFilteringJSONSerializer.m in Sources */,
 				5992C5F31C1673400044E88A /* MJRefreshGifFooter.m in Sources */,
 				429835F01C2A974700EAC9B0 /* AboutUsViewController.m in Sources */,
