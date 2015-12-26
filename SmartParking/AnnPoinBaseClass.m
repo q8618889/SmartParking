@@ -1,7 +1,7 @@
 //
 //  AnnPoinBaseClass.m
 //
-//  Created by SCMac  on 15/12/25
+//  Created by   on 15/12/26
 //  Copyright (c) 2015 __MyCompanyName__. All rights reserved.
 //
 

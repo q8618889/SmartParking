@@ -1,7 +1,7 @@
 //
 //  AnnPoinBody.m
 //
-//  Created by SCMac  on 15/12/25
+//  Created by   on 15/12/26
 //  Copyright (c) 2015 __MyCompanyName__. All rights reserved.
 //
 
@@ -14,7 +14,7 @@ NSString *const kAnnPoinBodyPortLeftCount = @"portLeftCount";
 NSString *const kAnnPoinBodyPosition = @"position";
 NSString *const kAnnPoinBodyStatus = @"status";
 NSString *const kAnnPoinBodyIsFree = @"isFree";
-NSString *const kAnnPoinBodyDescription = @"description";
+NSString *const kAnnPoinBodyCharge2 = @"charge2";
 NSString *const kAnnPoinBodyLatitude = @"latitude";
 NSString *const kAnnPoinBodyMapAddr = @"mapAddr";
 NSString *const kAnnPoinBodyAlias = @"alias";
@@ -30,7 +30,7 @@ NSString *const kAnnPoinBodyNumber = @"number";
 NSString *const kAnnPoinBodyLongitude = @"longitude";
 NSString *const kAnnPoinBodyCharge1 = @"charge1";
 NSString *const kAnnPoinBodyCharge = @"charge";
-NSString *const kAnnPoinBodyCharge2 = @"charge2";
+NSString *const kAnnPoinBodyDescription = @"description";
 
 
 @interface AnnPoinBody ()
@@ -47,7 +47,7 @@ NSString *const kAnnPoinBodyCharge2 = @"charge2";
 @synthesize position = _position;
 @synthesize status = _status;
 @synthesize isFree = _isFree;
-@synthesize bodyDescription = _bodyDescription;
+@synthesize charge2 = _charge2;
 @synthesize latitude = _latitude;
 @synthesize mapAddr = _mapAddr;
 @synthesize alias = _alias;
@@ -63,7 +63,7 @@ NSString *const kAnnPoinBodyCharge2 = @"charge2";
 @synthesize longitude = _longitude;
 @synthesize charge1 = _charge1;
 @synthesize charge = _charge;
-@synthesize charge2 = _charge2;
+@synthesize bodyDescription = _bodyDescription;
 
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict
@@ -84,7 +84,7 @@ NSString *const kAnnPoinBodyCharge2 = @"charge2";
             self.position = [self objectOrNilForKey:kAnnPoinBodyPosition fromDictionary:dict];
             self.status = [[self objectOrNilForKey:kAnnPoinBodyStatus fromDictionary:dict] doubleValue];
             self.isFree = [[self objectOrNilForKey:kAnnPoinBodyIsFree fromDictionary:dict] doubleValue];
-            self.bodyDescription = [self objectOrNilForKey:kAnnPoinBodyDescription fromDictionary:dict];
+            self.charge2 = [[self objectOrNilForKey:kAnnPoinBodyCharge2 fromDictionary:dict] doubleValue];
             self.latitude = [[self objectOrNilForKey:kAnnPoinBodyLatitude fromDictionary:dict] doubleValue];
             self.mapAddr = [self objectOrNilForKey:kAnnPoinBodyMapAddr fromDictionary:dict];
             self.alias = [self objectOrNilForKey:kAnnPoinBodyAlias fromDictionary:dict];
@@ -100,7 +100,7 @@ NSString *const kAnnPoinBodyCharge2 = @"charge2";
             self.longitude = [[self objectOrNilForKey:kAnnPoinBodyLongitude fromDictionary:dict] doubleValue];
             self.charge1 = [[self objectOrNilForKey:kAnnPoinBodyCharge1 fromDictionary:dict] doubleValue];
             self.charge = [[self objectOrNilForKey:kAnnPoinBodyCharge fromDictionary:dict] doubleValue];
-            self.charge2 = [[self objectOrNilForKey:kAnnPoinBodyCharge2 fromDictionary:dict] doubleValue];
+            self.bodyDescription = [self objectOrNilForKey:kAnnPoinBodyDescription fromDictionary:dict];
 
     }
     
@@ -117,7 +117,7 @@ NSString *const kAnnPoinBodyCharge2 = @"charge2";
     [mutableDict setValue:self.position forKey:kAnnPoinBodyPosition];
     [mutableDict setValue:[NSNumber numberWithDouble:self.status] forKey:kAnnPoinBodyStatus];
     [mutableDict setValue:[NSNumber numberWithDouble:self.isFree] forKey:kAnnPoinBodyIsFree];
-    [mutableDict setValue:self.bodyDescription forKey:kAnnPoinBodyDescription];
+    [mutableDict setValue:[NSNumber numberWithDouble:self.charge2] forKey:kAnnPoinBodyCharge2];
     [mutableDict setValue:[NSNumber numberWithDouble:self.latitude] forKey:kAnnPoinBodyLatitude];
     [mutableDict setValue:self.mapAddr forKey:kAnnPoinBodyMapAddr];
     [mutableDict setValue:self.alias forKey:kAnnPoinBodyAlias];
@@ -133,7 +133,7 @@ NSString *const kAnnPoinBodyCharge2 = @"charge2";
     [mutableDict setValue:[NSNumber numberWithDouble:self.longitude] forKey:kAnnPoinBodyLongitude];
     [mutableDict setValue:[NSNumber numberWithDouble:self.charge1] forKey:kAnnPoinBodyCharge1];
     [mutableDict setValue:[NSNumber numberWithDouble:self.charge] forKey:kAnnPoinBodyCharge];
-    [mutableDict setValue:[NSNumber numberWithDouble:self.charge2] forKey:kAnnPoinBodyCharge2];
+    [mutableDict setValue:self.bodyDescription forKey:kAnnPoinBodyDescription];
 
     return [NSDictionary dictionaryWithDictionary:mutableDict];
 }
@@ -163,7 +163,7 @@ NSString *const kAnnPoinBodyCharge2 = @"charge2";
     self.position = [aDecoder decodeObjectForKey:kAnnPoinBodyPosition];
     self.status = [aDecoder decodeDoubleForKey:kAnnPoinBodyStatus];
     self.isFree = [aDecoder decodeDoubleForKey:kAnnPoinBodyIsFree];
-    self.bodyDescription = [aDecoder decodeObjectForKey:kAnnPoinBodyDescription];
+    self.charge2 = [aDecoder decodeDoubleForKey:kAnnPoinBodyCharge2];
     self.latitude = [aDecoder decodeDoubleForKey:kAnnPoinBodyLatitude];
     self.mapAddr = [aDecoder decodeObjectForKey:kAnnPoinBodyMapAddr];
     self.alias = [aDecoder decodeObjectForKey:kAnnPoinBodyAlias];
@@ -179,7 +179,7 @@ NSString *const kAnnPoinBodyCharge2 = @"charge2";
     self.longitude = [aDecoder decodeDoubleForKey:kAnnPoinBodyLongitude];
     self.charge1 = [aDecoder decodeDoubleForKey:kAnnPoinBodyCharge1];
     self.charge = [aDecoder decodeDoubleForKey:kAnnPoinBodyCharge];
-    self.charge2 = [aDecoder decodeDoubleForKey:kAnnPoinBodyCharge2];
+    self.bodyDescription = [aDecoder decodeObjectForKey:kAnnPoinBodyDescription];
     return self;
 }
 
@@ -192,7 +192,7 @@ NSString *const kAnnPoinBodyCharge2 = @"charge2";
     [aCoder encodeObject:_position forKey:kAnnPoinBodyPosition];
     [aCoder encodeDouble:_status forKey:kAnnPoinBodyStatus];
     [aCoder encodeDouble:_isFree forKey:kAnnPoinBodyIsFree];
-    [aCoder encodeObject:_bodyDescription forKey:kAnnPoinBodyDescription];
+    [aCoder encodeDouble:_charge2 forKey:kAnnPoinBodyCharge2];
     [aCoder encodeDouble:_latitude forKey:kAnnPoinBodyLatitude];
     [aCoder encodeObject:_mapAddr forKey:kAnnPoinBodyMapAddr];
     [aCoder encodeObject:_alias forKey:kAnnPoinBodyAlias];
@@ -208,7 +208,7 @@ NSString *const kAnnPoinBodyCharge2 = @"charge2";
     [aCoder encodeDouble:_longitude forKey:kAnnPoinBodyLongitude];
     [aCoder encodeDouble:_charge1 forKey:kAnnPoinBodyCharge1];
     [aCoder encodeDouble:_charge forKey:kAnnPoinBodyCharge];
-    [aCoder encodeDouble:_charge2 forKey:kAnnPoinBodyCharge2];
+    [aCoder encodeObject:_bodyDescription forKey:kAnnPoinBodyDescription];
 }
 
 - (id)copyWithZone:(NSZone *)zone
@@ -223,7 +223,7 @@ NSString *const kAnnPoinBodyCharge2 = @"charge2";
         copy.position = [self.position copyWithZone:zone];
         copy.status = self.status;
         copy.isFree = self.isFree;
-        copy.bodyDescription = [self.bodyDescription copyWithZone:zone];
+        copy.charge2 = self.charge2;
         copy.latitude = self.latitude;
         copy.mapAddr = [self.mapAddr copyWithZone:zone];
         copy.alias = [self.alias copyWithZone:zone];
@@ -239,7 +239,7 @@ NSString *const kAnnPoinBodyCharge2 = @"charge2";
         copy.longitude = self.longitude;
         copy.charge1 = self.charge1;
         copy.charge = self.charge;
-        copy.charge2 = self.charge2;
+        copy.bodyDescription = [self.bodyDescription copyWithZone:zone];
     }
     
     return copy;

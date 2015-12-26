@@ -162,11 +162,11 @@
     info.poiAddress = poi.address;
     info.poiNumber = [NSString stringWithFormat:@"%0.2f",[self distanceBetweenOrderBy:_userlatitude :poi.pt.latitude :_userlongitude :poi.pt.longitude]/1000];
     
-        NSString * latitude = [[NSUserDefaults standardUserDefaults]objectForKey:@"latitude"];
-        NSString * longitude = [[NSUserDefaults standardUserDefaults]objectForKey:@"longitude"];
-    
-    info.userlatitude = latitude.doubleValue;
-    info.userlongitude = longitude.doubleValue;
+//        NSString * latitude = [[NSUserDefaults standardUserDefaults]objectForKey:@"latitude"];
+//        NSString * longitude = [[NSUserDefaults standardUserDefaults]objectForKey:@"longitude"];
+//    
+    info.userlatitude = _userlatitude;
+    info.userlongitude = _userlatitude;
     
     info.poilatitude = poi.pt.latitude;
     info.poilongitude = poi.pt.longitude;
@@ -245,8 +245,9 @@
 -(void)getDelegate
 {
     GTTabBarController * gtt = (GTTabBarController *)[UIApplication sharedApplication].delegate.window.rootViewController;
-    MapViewController * map =(MapViewController *) [gtt getViewcontrollerWithIndex:2];
-   
+    UINavigationController * nav =(UINavigationController *) [gtt getViewcontrollerWithIndex:2];
+    MapViewController * map = nav.viewControllers[0];
+     
     map.delegate =self;
     gtt.delegate = self;
     [self createLocService];

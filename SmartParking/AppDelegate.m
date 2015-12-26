@@ -100,7 +100,11 @@
     fiveNavigationController.navigationBar.barStyle = UIBarStyleBlack;
     //fiveNavigationController.tabBarItem.title = @"one";
     fiveNavigationController.tabBarItem.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"5" ofType:@"png"]];
-    fiveNavigationController.delegate = self;    NSArray *ctrlArr = [NSArray arrayWithObjects:oneNavigationController,twoNavigationController,thirdViewController,fourNavigationController,fiveNavigationController,nil];
+    fiveNavigationController.delegate = self;
+    
+    
+    
+    NSArray *ctrlArr = [NSArray arrayWithObjects:oneNavigationController,twoNavigationController,threeNavigationController,fourNavigationController,fiveNavigationController,nil];
     
     NSMutableDictionary *imgDic = [NSMutableDictionary dictionaryWithCapacity:3];
     [imgDic setObject:[UIImage imageNamed:@"home.png"] forKey:@"Default"];

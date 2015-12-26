@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "AnnPoinBody.h"
 
-@interface DetailedViewController : UIViewController
+@interface DetailedViewController : MainViewController
+{
 
+}
 @property (nonatomic,retain)NSArray   *bc;
+@property (nonatomic,retain)    AnnPoinBody *ann;
 
 @end

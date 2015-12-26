@@ -49,6 +49,8 @@
         [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"id"];
         [[NSUserDefaults standardUserDefaults] setObject:@"NO" forKey:@"automaticLogin"];
         [[NSUserDefaults  standardUserDefaults] setObject:@"No" forKey:@"login"];
+        [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"uploadPicture"];
+        [[NSUserDefaults  standardUserDefaults] setObject:@"昵称" forKey:@"nickName"];
 
         
     }

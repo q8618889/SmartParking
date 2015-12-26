@@ -1,7 +1,7 @@
 //
 //  AnnPoinBody.h
 //
-//  Created by SCMac  on 15/12/25
+//  Created by   on 15/12/26
 //  Copyright (c) 2015 __MyCompanyName__. All rights reserved.
 //
 
@@ -17,7 +17,7 @@
 @property (nonatomic, strong) NSString *position;
 @property (nonatomic, assign) double status;
 @property (nonatomic, assign) double isFree;
-@property (nonatomic, strong) NSString *bodyDescription;
+@property (nonatomic, assign) double charge2;
 @property (nonatomic, assign) double latitude;
 @property (nonatomic, strong) NSString *mapAddr;
 @property (nonatomic, strong) NSString *alias;
@@ -33,7 +33,7 @@
 @property (nonatomic, assign) double longitude;
 @property (nonatomic, assign) double charge1;
 @property (nonatomic, assign) double charge;
-@property (nonatomic, assign) double charge2;
+@property (nonatomic, strong) NSString *bodyDescription;
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
 - (instancetype)initWithDictionary:(NSDictionary *)dict;

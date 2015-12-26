@@ -56,4 +56,22 @@
         block(dataArray,error);
     }];
 }
+
++(void)getUpdateUserUserName:(NSString *)userName nickname:(NSString *)nickname block:(DATADICT)block
+{
+    
+    [NetWorking addNetWorking:[MyTool dictionaryWithdataArray:@[userName,nickname] Array:@[@"userName",@"nickname"]] url:[NSString stringWithFormat:@"%@/park/update/user",WEB_SERVER_IP] block:^(NSMutableDictionary *dictionary, NSString *error) {
+        
+        block(dictionary,error);
+    }];
+}
+
++(void)getUploadImage:(NSString *)userName nickname:(NSString *)nickname block:(DATADICT)block
+{
+    
+    [NetWorking addNetWorking:[MyTool dictionaryWithdataArray:@[userName,nickname] Array:@[@"userName",@"nickname"]] url:[NSString stringWithFormat:@"%@/park/upload",WEB_SERVER_IP] block:^(NSMutableDictionary *dictionary, NSString *error) {
+        
+        block(dictionary,error);
+    }];
+}
 @end

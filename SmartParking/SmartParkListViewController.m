@@ -48,6 +48,7 @@
     _tabView.delegate = self;
     _tabView.dataSource = self;
     _tabView.rowHeight = 120.0f;
+    _tabView.tableFooterView = [[UIView alloc]init];
     [self.view addSubview:_tabView];
     
     [MyTool RefreshingWithTableView:_tabView target:(UIView *)self];
@@ -72,7 +73,7 @@
     }
     
     AnnPoinBody *ann = _mutArry[indexPath.row];
-    [cell.leftImgView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",ann.pictureUri]]];
+    [cell.leftImgView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",ann.pictureUri]]placeholderImage:[UIImage imageNamed:@"bg_1"]];
     cell.titLab.text = ann.name;
     cell.oneLab.text = [NSString stringWithFormat:@"总车位:%.0f,剩余:%.0f",ann.portCount,ann.portLeftCount];
     if (ann.number == nil) {
@@ -95,30 +96,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CGFloat centerLongitude = _locService.userLocation.location.coordinate.longitude;
-    CGFloat  centerLatitude  =  _locService.userLocation.location.coordinate.latitude;
-    [MyNewWorking getParkingMessageWithLongitude:[NSString stringWithFormat:@"%f",centerLongitude] latitude:[NSString stringWithFormat:@"%f",centerLatitude] radius:[NSString stringWithFormat:@"%f",[self mapViewZoomLevel:_mapView.zoomLevel]] block:^(NSMutableArray *array, NSString *error) {
-        [_tabView.header endRefreshing];
-        _mutArry =(NSMutableArray *)_bc.body;
-        _bc = array[0];
-        NSLog(@"___%@",_bc.body);
+
+        AnnPoinBody *ann = _mutArry[indexPath.row];
         DetailedViewController *de = [DetailedViewController new];
-        de.bc = _bc.body;
+        de.ann = ann;
         [self.navigationController pushViewController:de animated:YES];
-        
-        
-        if (_bc.body.count < 1)
-        {
-            return ;
-        }
-        
-        [_tabView reloadData];
-        
-        
-    }];
-    
-    
-    
+
 }
 
 #pragma  - mark 下拉刷新
@@ -232,6 +215,7 @@
     
     
 }
+
 #pragma mark  用户位置更新
 - (void)didUpdateBMKUserLocation:(BMKUserLocation *)userLocation;
 {
@@ -240,7 +224,24 @@
 -(void)loadMoreData {
     
     
-    
+    CGFloat centerLongitude = _locService.userLocation.location.coordinate.longitude;
+    CGFloat  centerLatitude  =  _locService.userLocation.location.coordinate.latitude;
+    [MyNewWorking getParkingMessageWithLongitude:[NSString stringWithFormat:@"%f",centerLongitude] latitude:[NSString stringWithFormat:@"%f",centerLatitude] radius:@"20000.0001" block:^(NSMutableArray *array, NSString *error) {
+        [_tabView.footer endRefreshing];
+        _bc = array[0];
+        _mutArry =(NSMutableArray *)_bc.body;
+        NSLog(@"___%@",_bc.body);
+        
+        
+        if (_bc.body.count < 1)
+        {
+            return ;
+        }
+        
+        [_tabView reloadData];
+        
+        
+    }];
     
 }
 

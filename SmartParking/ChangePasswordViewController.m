@@ -44,7 +44,7 @@
             [SVProgressHUD dismissWithError:@"网络错误请稍后再试!"];
             return ;
         }else{
-            [SVProgressHUD dismissWithError:@"修改成功请重新登陆!"];
+            [SVProgressHUD dismissWithSuccess:@"修改成功请重新登陆!"];
             [[NSUserDefaults standardUserDefaults] setObject:@"NO" forKey:@"login"];
             [self.navigationController popViewControllerAnimated:YES];
             return ;

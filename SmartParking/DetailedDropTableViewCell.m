@@ -11,6 +11,8 @@
 @implementation DetailedDropTableViewCell
 
 - (void)awakeFromNib {
+    self.navigationBtn.layer.cornerRadius = 3;
+    self.zbywBtn.layer.cornerRadius = 3;
     // Initialization code
 }
 
@@ -24,5 +26,7 @@
 }
 
 - (IBAction)zbywBtn:(id)sender {
+    
+    
 }
 @end

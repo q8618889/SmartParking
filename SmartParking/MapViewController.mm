@@ -11,6 +11,7 @@
 #import "PaoPaoView.h"
 #import "SurroundListViewController.h"
 #import "BNCoreServices.h"
+#import "DetailedViewController.h"
 
 @interface MapViewController ()<BMKLocationServiceDelegate,UIScrollViewDelegate,BNNaviRoutePlanDelegate,BNNaviUIManagerDelegate>
 {
@@ -26,6 +27,7 @@
     
     BOOL   _mooen;
     NSMutableArray  * _annArray;
+    
 }
 
 
@@ -46,7 +48,7 @@
 - (void)viewDidLoad {
 
     [super viewDidLoad];
-    
+    self.navigationController.navigationBarHidden = YES;
     
    
     
@@ -311,7 +313,6 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:YES];
     [_mapView viewWillDisappear];
     _mapView.delegate = nil; // 不用时，置nil
      _locService.delegate = nil;
@@ -504,8 +505,9 @@
     paopao.zbywButton.tag =number1.integerValue;
     
     
-    
-    
+    [paopao.infoMessage addTarget:self action:@selector(infoMessage:) forControlEvents:BUTTONTOUCHUP];
+    paopao.infoMessage.tag =number1.integerValue;
+
     [paopao.zbywButton addTarget:self action:@selector(zbywButton:) forControlEvents:BUTTONTOUCHUP];
     NSString * number = [NSString stringWithFormat:@"%@",array[7]];
     paopao.dhButton.tag =number.integerValue;
@@ -539,6 +541,16 @@
     }
     annotationView.paopaoView = pView;
 }
+-(void)infoMessage:(UIButton *)btn
+{
+    AnnPoinBody *ann = _bc.body[btn.tag];
+    DetailedViewController *de = [[DetailedViewController alloc]init];
+    de.ann = ann;
+    [self.navigationController pushViewController:de animated:YES];
+//    [self presentViewController:de animated:YES completion:^{
+//        
+//    }];
+}
 -(void)closeButton:(UIButton *)btn
 {
     [self createAnn:_bc];
@@ -555,8 +567,8 @@
     
     AnnPoinBody * body = _bc.body[btn.tag];
     gtt.selectedIndex = 3;
-//    SurroundListViewController *vc =gtt.viewControllers[3];
-//    vc.isParking = YES;
+   // SurroundListViewController *vc =gtt.viewControllers[3];
+  //  vc.isParking = YES;
     [self.delegate getloctionWithlatitude:[NSString stringWithFormat:@"%f",body.latitude] longitude:[NSString stringWithFormat:@"%f",body.longitude]];
     
     
