@@ -22,5 +22,6 @@
     BMKMapView* _mapView;
     
 }
+-(void)createLocService;
 
 @end

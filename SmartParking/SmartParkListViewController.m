@@ -12,7 +12,7 @@
 #import "DetailedViewController.h"
 
 
-@interface SmartParkListViewController () <UITableViewDataSource,UITableViewDelegate> {
+@interface SmartParkListViewController () <UITableViewDataSource,UITableViewDelegate,BMKLocationServiceDelegate> {
     
     
     CGFloat             _userlatitude;
@@ -24,6 +24,11 @@
     UITableView        *_tabView;
     NSMutableArray     *_dataArray;
     NSString           *_type;
+    
+    
+    
+    BMKLocationService * _locService;
+
     
     
 }
@@ -105,7 +110,6 @@
         {
             return ;
         }
-        [self createAnn:_bc];
         
         [_tabView reloadData];
         
@@ -122,7 +126,7 @@
     
     CGFloat centerLongitude = _mapView.region.center.longitude;
     CGFloat  centerLatitude  = _mapView.region.center.latitude;
-    [MyNewWorking getParkingMessageWithLongitude:[NSString stringWithFormat:@"%f",centerLongitude] latitude:[NSString stringWithFormat:@"%f",centerLatitude] radius:[NSString stringWithFormat:@"%f",[self mapViewZoomLevel:_mapView.zoomLevel]] block:^(NSMutableArray *array, NSString *error) {
+    [MyNewWorking getParkingMessageWithLongitude:[NSString stringWithFormat:@"%f",centerLongitude] latitude:[NSString stringWithFormat:@"%f",centerLatitude] radius:@"20000.0001" block:^(NSMutableArray *array, NSString *error) {
         [_tabView.header endRefreshing];
         _mutArry =(NSMutableArray *)_bc.body;
         _bc = array[0];
@@ -133,37 +137,11 @@
         {
             return ;
         }
-        [self createAnn:_bc];
         
         [_tabView reloadData];
         
         
     }];
-    
-}
-
--(void)createAnn:(AnnPoinBaseClass *)bc
-{
-    NSArray* array = [NSArray arrayWithArray:_mapView.annotations];
-    [_mapView removeAnnotations:array];
-    _annArray = [NSMutableArray array];
-    for (NSInteger i = 0 ; i < bc.body.count; i++)
-    {
-        
-        AnnPoinBody * body = bc.body[i];
-        BMKPointAnnotation* annotation = [[BMKPointAnnotation alloc]init];
-        CLLocationCoordinate2D coor;
-        coor.latitude = body.latitude;
-        coor.longitude = body.longitude;
-        annotation.coordinate = coor;
-        annotation.title = [NSString stringWithFormat:@"%0.f",body.portLeftCount];
-        annotation.subtitle =[NSString stringWithFormat:@"%@,%0.f,%0.f,%@,%0.f,%f,%f,%ld",body.name,body.portCount,body.portLeftCount,body.position,body.type,body.latitude,body.longitude,(long)i];
-        [_annArray addObject:annotation];
-        [_mapView addAnnotation:annotation];
-        
-        
-    }
-    
     
 }
 
@@ -218,7 +196,46 @@
     return 1000;
     
 }
-
+-(void)getUserLoction;
+{
+    
+    
+    
+    
+    
+    [self didUpdateBMKUserLocation:_locService.userLocation];
+    
+    
+    [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%f,",_locService.userLocation.location.coordinate.latitude] forKey:@"latitude"];
+    [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%f,",_locService.userLocation.location.coordinate.longitude] forKey:@"longitude"];
+    
+    
+    
+    //
+    //    NSString * latitude = [[NSUserDefaults standardUserDefaults]objectForKey:@"latitude"];
+    //    NSString * longitude = [[NSUserDefaults standardUserDefaults]objectForKey:@"longitude"];
+    
+    
+    
+    
+    //    CLLocationCoordinate2D  clocation = CLLocationCoordinate2DMake(latitude.floatValue, longitude.floatValue);
+    [_tabView.header beginRefreshing];
+}
+-(void)createLocService
+{
+    //初始化BMKLocationService
+    _locService = [[BMKLocationService alloc]init];
+    _locService.delegate = self;
+    //启动LocationService
+    [_locService startUserLocationService];
+    
+    
+}
+#pragma mark  用户位置更新
+- (void)didUpdateBMKUserLocation:(BMKUserLocation *)userLocation;
+{
+    
+}
 -(void)loadMoreData {
     
     
