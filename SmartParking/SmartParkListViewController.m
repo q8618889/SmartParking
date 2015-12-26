@@ -52,6 +52,7 @@
     
     [MyTool RefreshingWithTableView:_tabView target:(UIView *)self];
     [_tabView.header beginRefreshing];
+    [self getUserLoction];
     
 }
 
