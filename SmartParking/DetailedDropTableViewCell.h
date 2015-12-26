@@ -10,4 +10,16 @@
 
 @interface DetailedDropTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *contentLab;
+
+@property (weak, nonatomic) IBOutlet UILabel *addressLab;
+
+- (IBAction)navigationBtn:(id)sender;
+
+- (IBAction)zbywBtn:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIButton *zbywBtn;
+
+@property (weak, nonatomic) IBOutlet UIButton *navigationBtn;
+
 @end

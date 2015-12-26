@@ -15,6 +15,7 @@
     
     UITableView        *_tabView;
     NSString           *_type;
+    float              _labelHeight;
 }
 
 @end
@@ -29,7 +30,6 @@
     _tabView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, RECT_W, RECT_H - 64 - 64)];
     _tabView.delegate = self;
     _tabView.dataSource = self;
-    _tabView.rowHeight = 140.0f;
     [self.view addSubview:_tabView];
     
     
@@ -44,7 +44,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     AnnPoinBody *ann = _bc[indexPath.row];
-    if (indexPath.section == 0) {
+    if (indexPath.row == 0) {
         DetailedTopTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"SurroundCl"];
         if (cell == nil){
             cell = [[[NSBundle mainBundle]loadNibNamed:@"DetailedTopTableViewCell" owner:nil options:nil]objectAtIndex:0];
@@ -67,6 +67,7 @@
         cell.fiveLab.text = [NSString stringWithFormat:@"价    格:%.0f",ann.charge];
         
         return cell;
+        
     }else {
         
         DetailedDropTableViewCell * dropCell = [tableView dequeueReusableCellWithIdentifier:@"SurroundCell"];
@@ -78,7 +79,32 @@
         
     }
     
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    if (indexPath.section == 0) {
+        return 140.0f;
+    }else {
+        return _labelHeight+230;
+    }
     
 }
+
+- (void)resetContent:(UILabel *)lab{
+    
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc]initWithString:lab.text];;
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc]init];
+    
+    [paragraphStyle setLineSpacing:3];
+    [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, lab.text.length)];
+    lab.attributedText = attributedString;
+    //调节高度
+    CGSize size = CGSizeMake(RECT_W-34, MAXFLOAT);
+    
+    CGSize labelSize = [lab sizeThatFits:size];
+    _labelHeight = ceilf(labelSize.height);
+}
+
+
 @end
