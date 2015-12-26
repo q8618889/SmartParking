@@ -9,6 +9,7 @@
 #import "MessageListViewController.h"
 #import "MassageTableViewCell.h"
 #import "MapViewController.h"
+#import "NewInfoViewController.h"
 @interface MessageListViewController ()<UITableViewDataSource,UITableViewDelegate,BMKLocationServiceDelegate,GTTabBarControllerDelegate>
 {
     UITableView * _myTableView;
@@ -76,6 +77,16 @@
    // [cell.titleImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",obj.fileUrl]]placeholderImage:[UIImage imageNamed:@"newimgemoren.jpg"]];
     return cell;
 
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    MassageTableViewCell * cell  =[tableView cellForRowAtIndexPath:indexPath];
+    NewInfoViewController * info = [[NewInfoViewController alloc]init];
+    info.topic =cell.title.text;
+    info.WebImage =cell.titleImage.image;
+    info.content = cell.infoMassage.text;
+    info.date = cell.numberLook.text;
+    [self.navigationController pushViewController:info animated:YES];
 }
 -(void)createLocService
 {

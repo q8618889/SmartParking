@@ -80,6 +80,10 @@
 		59531ED01C0E91E300930C4E /* SmartParkingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59531ECF1C0E91E300930C4E /* SmartParkingUITests.m */; };
 		59533E8B1C2E5D9300B7E52C /* NewsMessageBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 59533E881C2E5D9300B7E52C /* NewsMessageBaseClass.m */; };
 		59533E8C1C2E5D9300B7E52C /* NewsMessageBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 59533E8A1C2E5D9300B7E52C /* NewsMessageBody.m */; };
+		59533E931C2E743B00B7E52C /* FTCoreTextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 59533E8E1C2E743B00B7E52C /* FTCoreTextStyle.m */; };
+		59533E941C2E743B00B7E52C /* FTCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59533E901C2E743B00B7E52C /* FTCoreTextView.m */; };
+		59533E951C2E743B00B7E52C /* CusScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59533E921C2E743B00B7E52C /* CusScrollView.m */; };
+		59533E981C2E746D00B7E52C /* NewInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59533E971C2E746D00B7E52C /* NewInfoViewController.m */; };
 		59659ACB1C27E83C00E4498C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59659ACA1C27E83C00E4498C /* ViewController.m */; };
 		59659ADB1C27FF0300E4498C /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 59659ADA1C27FF0300E4498C /* backButton.png */; };
 		596FCB541C2D367300C1826D /* PooCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 596FCB531C2D367300C1826D /* PooCodeView.m */; };
@@ -343,6 +347,14 @@
 		59533E881C2E5D9300B7E52C /* NewsMessageBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsMessageBaseClass.m; sourceTree = "<group>"; };
 		59533E891C2E5D9300B7E52C /* NewsMessageBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsMessageBody.h; sourceTree = "<group>"; };
 		59533E8A1C2E5D9300B7E52C /* NewsMessageBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsMessageBody.m; sourceTree = "<group>"; };
+		59533E8D1C2E743B00B7E52C /* FTCoreTextStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCoreTextStyle.h; sourceTree = "<group>"; };
+		59533E8E1C2E743B00B7E52C /* FTCoreTextStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCoreTextStyle.m; sourceTree = "<group>"; };
+		59533E8F1C2E743B00B7E52C /* FTCoreTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCoreTextView.h; sourceTree = "<group>"; };
+		59533E901C2E743B00B7E52C /* FTCoreTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCoreTextView.m; sourceTree = "<group>"; };
+		59533E911C2E743B00B7E52C /* CusScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CusScrollView.h; sourceTree = "<group>"; };
+		59533E921C2E743B00B7E52C /* CusScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CusScrollView.m; sourceTree = "<group>"; };
+		59533E961C2E746D00B7E52C /* NewInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewInfoViewController.h; sourceTree = "<group>"; };
+		59533E971C2E746D00B7E52C /* NewInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewInfoViewController.m; sourceTree = "<group>"; };
 		59659AC91C27E83C00E4498C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		59659ACA1C27E83C00E4498C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		59659ADA1C27FF0300E4498C /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton.png; sourceTree = "<group>"; };
@@ -1167,6 +1179,14 @@
 		59D18F901C0EC6070044CE60 /* NewMessage */ = {
 			isa = PBXGroup;
 			children = (
+				59533E8D1C2E743B00B7E52C /* FTCoreTextStyle.h */,
+				59533E8E1C2E743B00B7E52C /* FTCoreTextStyle.m */,
+				59533E8F1C2E743B00B7E52C /* FTCoreTextView.h */,
+				59533E901C2E743B00B7E52C /* FTCoreTextView.m */,
+				59533E911C2E743B00B7E52C /* CusScrollView.h */,
+				59533E921C2E743B00B7E52C /* CusScrollView.m */,
+				59533E961C2E746D00B7E52C /* NewInfoViewController.h */,
+				59533E971C2E746D00B7E52C /* NewInfoViewController.m */,
 				5992C5AC1C1663180044E88A /* MassageCell */,
 				59D18FA31C0ED7080044CE60 /* MessageListViewController.h */,
 				59D18FA41C0ED7080044CE60 /* MessageListViewController.m */,
@@ -1597,6 +1617,7 @@
 				5992C5FE1C16734D0044E88A /* SVProgressHUD.m in Sources */,
 				5992C5F71C1673400044E88A /* MJRefreshLegendHeader.m in Sources */,
 				59533E8B1C2E5D9300B7E52C /* NewsMessageBaseClass.m in Sources */,
+				59533E981C2E746D00B7E52C /* NewInfoViewController.m in Sources */,
 				59533E8C1C2E5D9300B7E52C /* NewsMessageBody.m in Sources */,
 				5992C6241C1673950044E88A /* NSData+ImageContentType.m in Sources */,
 				426F29571C2E259A00B01355 /* DetailedTopTableViewCell.m in Sources */,
@@ -1617,11 +1638,13 @@
 				59659ACB1C27E83C00E4498C /* ViewController.m in Sources */,
 				5992C5FA1C1673400044E88A /* UIView+MJExtension.m in Sources */,
 				5992C6261C1673950044E88A /* SDWebImageCompat.m in Sources */,
+				59533E931C2E743B00B7E52C /* FTCoreTextStyle.m in Sources */,
 				597EFE8A1C197BE2001574A4 /* CSerializedJSONData.m in Sources */,
 				59D1A5511C2BE63700425800 /* SurroundListViewController.m in Sources */,
 				5992C62E1C1673950044E88A /* UIImage+MultiFormat.m in Sources */,
 				5992C5C71C1671510044E88A /* AFSecurityPolicy.m in Sources */,
 				5903FD681C23F52F00740FBC /* SurrpundView.m in Sources */,
+				59533E951C2E743B00B7E52C /* CusScrollView.m in Sources */,
 				5992C62F1C1673950044E88A /* UIImage+WebP.m in Sources */,
 				5992C62A1C1673950044E88A /* SDWebImageManager.m in Sources */,
 				597EFE831C197BE2001574A4 /* NSCharacterSet_Extensions.m in Sources */,
@@ -1652,6 +1675,7 @@
 				59D1A5521C2BE63700425800 /* SearchSurroundViewController.m in Sources */,
 				5992C5F21C1673400044E88A /* MJRefreshFooter.m in Sources */,
 				597EFE811C197BE2001574A4 /* CJSONSerializedData.m in Sources */,
+				59533E941C2E743B00B7E52C /* FTCoreTextView.m in Sources */,
 				5992C62C1C1673950044E88A /* UIButton+WebCache.m in Sources */,
 				597EFE7D1C197BE2001574A4 /* CDataScanner.m in Sources */,
 				59D1A5711C2BE64900425800 /* InfoMessageViewController.m in Sources */,
