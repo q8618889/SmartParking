@@ -9,5 +9,5 @@
 #import "ViewController.h"
 
 @interface MessageListViewController : MainViewController
-
+-(void)getDelegate;
 @end

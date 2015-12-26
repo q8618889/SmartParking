@@ -17,18 +17,18 @@
 		421D2C4B1C2CD903000C000B /* UserLoginBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C481C2CD903000C000B /* UserLoginBaseClass.m */; };
 		421D2C4C1C2CD903000C000B /* UserLoginBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C4A1C2CD903000C000B /* UserLoginBody.m */; };
 		4243374C1C28ED39003EAAF5 /* libbaiduNaviSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4243374B1C28ED39003EAAF5 /* libbaiduNaviSDK.a */; };
-		426F293B1C2E207700B01355 /* libbaiduNaviSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 426F293A1C2E207600B01355 /* libbaiduNaviSDK.a */; settings = {ASSET_TAGS = (); }; };
-		426F293F1C2E24DB00B01355 /* SmartParkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 426F293D1C2E24DB00B01355 /* SmartParkTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		426F29401C2E24DB00B01355 /* SmartParkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 426F293E1C2E24DB00B01355 /* SmartParkTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		426F29431C2E24F600B01355 /* SmartParkListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426F29421C2E24F600B01355 /* SmartParkListViewController.m */; settings = {ASSET_TAGS = (); }; };
-		426F29481C2E255500B01355 /* AnnPoinBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 426F29451C2E255500B01355 /* AnnPoinBaseClass.m */; settings = {ASSET_TAGS = (); }; };
-		426F29491C2E255500B01355 /* AnnPoinBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 426F29471C2E255500B01355 /* AnnPoinBody.m */; settings = {ASSET_TAGS = (); }; };
-		426F294D1C2E257700B01355 /* DetailedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426F294B1C2E257700B01355 /* DetailedViewController.m */; settings = {ASSET_TAGS = (); }; };
-		426F294E1C2E257700B01355 /* DetailedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 426F294C1C2E257700B01355 /* DetailedViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		426F29551C2E259A00B01355 /* DetailedDropTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 426F29501C2E259A00B01355 /* DetailedDropTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		426F29561C2E259A00B01355 /* DetailedDropTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 426F29511C2E259A00B01355 /* DetailedDropTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		426F29571C2E259A00B01355 /* DetailedTopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 426F29531C2E259A00B01355 /* DetailedTopTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		426F29581C2E259A00B01355 /* DetailedTopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 426F29541C2E259A00B01355 /* DetailedTopTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		426F293B1C2E207700B01355 /* libbaiduNaviSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 426F293A1C2E207600B01355 /* libbaiduNaviSDK.a */; };
+		426F293F1C2E24DB00B01355 /* SmartParkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 426F293D1C2E24DB00B01355 /* SmartParkTableViewCell.m */; };
+		426F29401C2E24DB00B01355 /* SmartParkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 426F293E1C2E24DB00B01355 /* SmartParkTableViewCell.xib */; };
+		426F29431C2E24F600B01355 /* SmartParkListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426F29421C2E24F600B01355 /* SmartParkListViewController.m */; };
+		426F29481C2E255500B01355 /* AnnPoinBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 426F29451C2E255500B01355 /* AnnPoinBaseClass.m */; };
+		426F29491C2E255500B01355 /* AnnPoinBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 426F29471C2E255500B01355 /* AnnPoinBody.m */; };
+		426F294D1C2E257700B01355 /* DetailedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426F294B1C2E257700B01355 /* DetailedViewController.m */; };
+		426F294E1C2E257700B01355 /* DetailedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 426F294C1C2E257700B01355 /* DetailedViewController.xib */; };
+		426F29551C2E259A00B01355 /* DetailedDropTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 426F29501C2E259A00B01355 /* DetailedDropTableViewCell.m */; };
+		426F29561C2E259A00B01355 /* DetailedDropTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 426F29511C2E259A00B01355 /* DetailedDropTableViewCell.xib */; };
+		426F29571C2E259A00B01355 /* DetailedTopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 426F29531C2E259A00B01355 /* DetailedTopTableViewCell.m */; };
+		426F29581C2E259A00B01355 /* DetailedTopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 426F29541C2E259A00B01355 /* DetailedTopTableViewCell.xib */; };
 		429835D61C2A8C6800EAC9B0 /* icon_777@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 429835D51C2A8C6800EAC9B0 /* icon_777@2x.png */; };
 		429835D81C2A8C7600EAC9B0 /* icon_999@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 429835D71C2A8C7600EAC9B0 /* icon_999@2x.png */; };
 		429835E11C2A921C00EAC9B0 /* InformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 429835DF1C2A921C00EAC9B0 /* InformationViewController.m */; };
@@ -78,6 +78,8 @@
 		59531EB71C0E91E200930C4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59531EB61C0E91E200930C4E /* Assets.xcassets */; };
 		59531EC51C0E91E200930C4E /* SmartParkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59531EC41C0E91E200930C4E /* SmartParkingTests.m */; };
 		59531ED01C0E91E300930C4E /* SmartParkingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59531ECF1C0E91E300930C4E /* SmartParkingUITests.m */; };
+		59533E8B1C2E5D9300B7E52C /* NewsMessageBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 59533E881C2E5D9300B7E52C /* NewsMessageBaseClass.m */; };
+		59533E8C1C2E5D9300B7E52C /* NewsMessageBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 59533E8A1C2E5D9300B7E52C /* NewsMessageBody.m */; };
 		59659ACB1C27E83C00E4498C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59659ACA1C27E83C00E4498C /* ViewController.m */; };
 		59659ADB1C27FF0300E4498C /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 59659ADA1C27FF0300E4498C /* backButton.png */; };
 		596FCB541C2D367300C1826D /* PooCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 596FCB531C2D367300C1826D /* PooCodeView.m */; };
@@ -337,6 +339,10 @@
 		59531ECB1C0E91E200930C4E /* SmartParkingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartParkingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59531ECF1C0E91E300930C4E /* SmartParkingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmartParkingUITests.m; sourceTree = "<group>"; };
 		59531ED11C0E91E300930C4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59533E871C2E5D9300B7E52C /* NewsMessageBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsMessageBaseClass.h; sourceTree = "<group>"; };
+		59533E881C2E5D9300B7E52C /* NewsMessageBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsMessageBaseClass.m; sourceTree = "<group>"; };
+		59533E891C2E5D9300B7E52C /* NewsMessageBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsMessageBody.h; sourceTree = "<group>"; };
+		59533E8A1C2E5D9300B7E52C /* NewsMessageBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsMessageBody.m; sourceTree = "<group>"; };
 		59659AC91C27E83C00E4498C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		59659ACA1C27E83C00E4498C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		59659ADA1C27FF0300E4498C /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton.png; sourceTree = "<group>"; };
@@ -1071,6 +1077,10 @@
 				426F29451C2E255500B01355 /* AnnPoinBaseClass.m */,
 				426F29461C2E255500B01355 /* AnnPoinBody.h */,
 				426F29471C2E255500B01355 /* AnnPoinBody.m */,
+				59533E871C2E5D9300B7E52C /* NewsMessageBaseClass.h */,
+				59533E881C2E5D9300B7E52C /* NewsMessageBaseClass.m */,
+				59533E891C2E5D9300B7E52C /* NewsMessageBody.h */,
+				59533E8A1C2E5D9300B7E52C /* NewsMessageBody.m */,
 				421D2C461C2CD8F7000C000B /* UserModel */,
 			);
 			name = Model;
@@ -1586,6 +1596,8 @@
 				597EFDF01C191DF0001574A4 /* PaoPaoView.m in Sources */,
 				5992C5FE1C16734D0044E88A /* SVProgressHUD.m in Sources */,
 				5992C5F71C1673400044E88A /* MJRefreshLegendHeader.m in Sources */,
+				59533E8B1C2E5D9300B7E52C /* NewsMessageBaseClass.m in Sources */,
+				59533E8C1C2E5D9300B7E52C /* NewsMessageBody.m in Sources */,
 				5992C6241C1673950044E88A /* NSData+ImageContentType.m in Sources */,
 				426F29571C2E259A00B01355 /* DetailedTopTableViewCell.m in Sources */,
 				5992C5F81C1673400044E88A /* UIScrollView+MJExtension.m in Sources */,

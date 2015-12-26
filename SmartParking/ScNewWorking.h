@@ -21,5 +21,6 @@ typedef void(^DATADICT)(NSMutableDictionary  * dictionary,NSString       * error
 
 //用户修改密码就扣
 +(void)getuserChangePasswordUserName:(NSString *)userName NewPassword:(NSString *)newPassword Number:(NSString *)number block:(DATADICT)block;
-
+//获取新闻列表
++(void)getNewMessageWithPageSize:(NSInteger)page  longitude:(double)longitude latitude:(double)latitude radius:(double)radius block:(DATAARRAY)block;
 @end

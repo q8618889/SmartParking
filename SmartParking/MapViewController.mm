@@ -303,6 +303,7 @@
     _mapView.userTrackingMode = BMKUserTrackingModeFollow;
 
 
+
 }
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];

@@ -78,8 +78,8 @@ static AFHTTPSessionManager *_httpManager;
     
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:&parseError];
     
-    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-    
+    NSString * str = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
+    return str;
 }
 + (void)cancelAllOperation
 {

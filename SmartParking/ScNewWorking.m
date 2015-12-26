@@ -39,5 +39,21 @@
         block(dictionary,error);
     }];
 }
-
++(void)getNewMessageWithPageSize:(NSInteger)page  longitude:(double)longitude latitude:(double)latitude radius:(double)radius block:(DATAARRAY)block;
+{
+    NSMutableArray * dataArray = [NSMutableArray array];
+    NSNumber * numberPage = [NSNumber numberWithInteger:page];
+    NSNumber * numberLongitude = [NSNumber numberWithDouble:longitude];
+    NSNumber * numberLatitude = [NSNumber numberWithDouble:latitude];
+    NSNumber * numberRadius = [NSNumber numberWithDouble:radius];
+    NSNumber * pageSize = [NSNumber numberWithDouble:10];
+    [NetWorking addNetWorking:[MyTool dictionaryWithdataArray:@[@"dynamicnews",pageSize,numberPage,numberLongitude,numberLatitude,numberRadius]Array:@[@"dynamicNews",@"pageSize",@"offset",@"longitude",@"latitude",@"radius"]] url:[NSString stringWithFormat:@"%@/park/dynamicNews/queryList",WEB_SERVER_IP] block:^(NSMutableDictionary *dictionary, NSString *error) {
+        
+        
+        NewsMessageBaseClass * bc = [[NewsMessageBaseClass alloc]initWithDictionary:dictionary];
+        [dataArray addObject:bc];
+        NSLog(@"%@",dictionary);
+        block(dataArray,error);
+    }];
+}
 @end

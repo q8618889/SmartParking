@@ -132,6 +132,7 @@
     
     self.window.rootViewController = self.mainTabBarController;
     [fourthViewController getDelegate];
+    [firstViewController getDelegate];
 }
 
 - (void)loadingViewAnimation {
