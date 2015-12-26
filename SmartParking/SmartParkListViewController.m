@@ -129,8 +129,8 @@
     CGFloat  centerLatitude  =  _locService.userLocation.location.coordinate.latitude;
     [MyNewWorking getParkingMessageWithLongitude:[NSString stringWithFormat:@"%f",centerLongitude] latitude:[NSString stringWithFormat:@"%f",centerLatitude] radius:@"20000.0001" block:^(NSMutableArray *array, NSString *error) {
         [_tabView.header endRefreshing];
-       _bc.body = _mutArry;
         _bc = array[0];
+         _mutArry =(NSMutableArray *)_bc.body;
         NSLog(@"___%@",_bc.body);
         
        
