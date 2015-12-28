@@ -11,4 +11,5 @@
 @interface SurroundListViewController : MainViewController
 @property(nonatomic,assign)BOOL    isParking;
 -(void)getDelegate;
+-(void)getloctionWithlatitude:(NSString *)latitude longitude:(NSString *)longitude;
 @end

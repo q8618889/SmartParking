@@ -9,8 +9,9 @@
 #import "DetailedViewController.h"
 #import "DetailedTopTableViewCell.h"
 #import "DetailedDropTableViewCell.h"
-
-@interface DetailedViewController () <UITableViewDataSource,UITableViewDelegate> {
+#import "SurroundListViewController.h"
+#import "BNCoreServices.h"
+@interface DetailedViewController () <UITableViewDataSource,UITableViewDelegate,BNNaviRoutePlanDelegate,BNNaviUIManagerDelegate> {
     
     
     UITableView        *_tabView;
@@ -93,14 +94,61 @@
         [self resetContent:dropCell.contentLab];
         
         [dropCell.zbywBtn addTarget:self action:@selector(zbywBtn:) forControlEvents:BUTTONTOUCHUP];
-        
+        [dropCell.navigationBtn addTarget:self action:@selector(dhButton:) forControlEvents:BUTTONTOUCHUP];
         return dropCell;
         
     }
     
 }
+//导航button
+-(void)dhButton:(UIButton *)btn
+{
+    
+    [self startNaviWithLongitude:_ann.longitude latitude:_ann.latitude];
+}
+//发起导航
+- (void)startNaviWithLongitude:(double)longitude latitude:(double)latitude;
+{
+    //节点数组
+    NSMutableArray *nodesArray = [[NSMutableArray alloc]    initWithCapacity:2];
+    
+    //起点
+    BNRoutePlanNode *startNode = [[BNRoutePlanNode alloc] init];
+    startNode.pos = [[BNPosition alloc] init];
+    startNode.pos.x = _userlongitude;
+    startNode.pos.y = _userlatitude;
+    startNode.pos.eType = BNCoordinate_BaiduMapSDK;
+    [nodesArray addObject:startNode];
+    
+    //终点
+    BNRoutePlanNode *endNode = [[BNRoutePlanNode alloc] init];
+    endNode.pos = [[BNPosition alloc] init];
+    endNode.pos.x = longitude;
+    endNode.pos.y = latitude;
+    endNode.pos.eType = BNCoordinate_BaiduMapSDK;
+    [nodesArray addObject:endNode];
+    //发起路径规划
+    [BNCoreServices_RoutePlan startNaviRoutePlan:BNRoutePlanMode_Recommend naviNodes:nodesArray time:nil delegete:self userInfo:nil];
+}
+//算路成功回调
+-(void)routePlanDidFinished:(NSDictionary *)userInfo
+{
+    NSLog(@"算路成功");
+    
+    //路径规划成功，开始导航
+    [BNCoreServices_UI showNaviUI: BN_NaviTypeReal delegete:self isNeedLandscape:YES];
+}
+-(void)onExitNaviUI:(NSDictionary*)extraInfo;
+{
+    [BNCoreServices ReleaseInstance];
+}
 -(void)zbywBtn:(UIButton *)btn
 {
+    GTTabBarController * gtt = (GTTabBarController *)[UIApplication sharedApplication].delegate.window.rootViewController;
+    UINavigationController * nav =(UINavigationController *) [gtt getViewcontrollerWithIndex:3];
+    gtt.selectedIndex =3;
+    SurroundListViewController * sur = nav.viewControllers[0];
+    [sur getloctionWithlatitude:[NSString stringWithFormat:@"%f",_ann.latitude] longitude:[NSString stringWithFormat:@"%f",_ann.longitude]];
 
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

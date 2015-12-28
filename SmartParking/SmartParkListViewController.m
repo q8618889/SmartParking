@@ -28,6 +28,9 @@
     
     
     BMKLocationService * _locService;
+    
+    UITextField * _searchTextField;
+
 
     
     
@@ -44,7 +47,7 @@
     self.navigationController.navigationBarHidden = YES;
     self.view.backgroundColor = [UIColor whiteColor];
     
-    _tabView = [[UITableView alloc] initWithFrame:CGRectMake(0, 124, RECT_W, RECT_H - 124 - 64)];
+    _tabView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, RECT_W, RECT_H - 118)];
     _tabView.delegate = self;
     _tabView.dataSource = self;
     _tabView.rowHeight = 120.0f;
@@ -59,7 +62,33 @@
 
 
 #pragma - mark UItableView代理方法 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section;
+{
+    return 40;
+}
+- (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section;
+{
+    UIView * view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, RECT_W, 40)];
+    view.backgroundColor = [UIColor whiteColor];
+    if (_searchTextField == nil)
+    {
+        _searchTextField  =[[UITextField alloc]initWithFrame:CGRectMake(5, 5, RECT_W-70, 30)];
+    }
+    UIButton * btn = [[UIButton alloc]initWithFrame:CGRectMake(_searchTextField.frame.origin.x+_searchTextField.frame.size.width-5,5, 58, 30)];
+    [btn setTitle:@"搜索" forState:0];
+    [btn setBackgroundImage:[UIImage imageNamed:@"searchButton"] forState:0];
+    [btn addTarget:self action:@selector(btnSearch:) forControlEvents:BUTTONTOUCHUP];
+    
+    _searchTextField.placeholder= @"输入关键字";
+    _searchTextField.borderStyle = UITextBorderStyleRoundedRect;
+    [view addSubview:_searchTextField];
+    [view addSubview:btn];
+    
+    return view;
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     
     return _mutArry.count;
@@ -100,10 +129,38 @@
         AnnPoinBody *ann = _mutArry[indexPath.row];
         DetailedViewController *de = [DetailedViewController new];
         de.ann = ann;
+    de.userlatitude = _locService.userLocation.location.coordinate.latitude;
+    de.userlongitude = _locService.userLocation.location.coordinate.longitude;
         [self.navigationController pushViewController:de animated:YES];
 
 }
+-(void)btnSearch:(UIButton  *)btn
+{
+    [self.view endEditing:YES];
 
+    if ([_searchTextField.text isEqualToString:@""]) {
+        [_tabView.header beginRefreshing];
+    }
+    [SVProgressHUD show];
+    [MyNewWorking searchParkingMessageWithLongitude:[NSString stringWithFormat:@"%f",_locService.userLocation.location.coordinate.longitude] latitude:[NSString stringWithFormat:@"%f",_locService.userLocation.location.coordinate.latitude] portLeftCount:@"" distance:@"" parkingName:_searchTextField.text block:^(NSMutableArray *array, NSString *error) {
+        
+        [SVProgressHUD dismiss];
+        _bc = array[0];
+        _mutArry =(NSMutableArray *)_bc.body;
+     
+        _bc = array[0];
+        if (_bc.body.count < 1)
+        {
+            return ;
+        }
+        [_tabView reloadData];
+        
+        
+        
+        
+    }];
+
+}
 #pragma  - mark 下拉刷新
 -(void)loadData {
     

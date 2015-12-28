@@ -15,5 +15,7 @@
 }
 @property (nonatomic,retain)NSArray   *bc;
 @property (nonatomic,retain)    AnnPoinBody *ann;
+@property (nonatomic,assign)double  userlatitude;
+@property (nonatomic,assign)double  userlongitude;
 
 @end

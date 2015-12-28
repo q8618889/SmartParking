@@ -167,6 +167,8 @@
 
 -(void)sendNetWorking:(UIButton *)btn
 {
+    [self.view endEditing:YES];
+
     _isChoose = YES;
     if (btn != nil)
     {
@@ -200,6 +202,8 @@
 }
 -(void)clearNetWorking:(UIButton *)btn
 {
+    [self.view endEditing:YES];
+
     _isChoose = NO;
     [self netWorking];
 }
@@ -356,6 +360,7 @@
 - (void)mapView:(BMKMapView *)mapView onClickedMapBlank:(CLLocationCoordinate2D)coordinate {
     _choose.alpha = 0;
     _isOpenPaopao = NO;
+    [self.view endEditing:YES];
     NSLog(@"map view: click blank");
 }
 
@@ -546,6 +551,8 @@
     AnnPoinBody *ann = _bc.body[btn.tag];
     DetailedViewController *de = [[DetailedViewController alloc]init];
     de.ann = ann;
+    de.userlatitude = _locService.userLocation.location.coordinate.latitude;
+    de.userlongitude = _locService.userLocation.location.coordinate.longitude;
     [self.navigationController pushViewController:de animated:YES];
 //    [self presentViewController:de animated:YES completion:^{
 //        

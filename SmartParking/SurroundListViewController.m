@@ -113,6 +113,7 @@
         return;
     }
     _userChange = surrpund.searchTextField.text;
+    [self.view endEditing:YES];
     [_myTableView.header beginRefreshing];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section;
