@@ -236,6 +236,12 @@ static GTTabBarController *gtTabBarController;
 #pragma mark - Private methods
 - (void)displayViewAtIndex:(NSUInteger)index
 {
+    
+    GTTabBarController * gtt = (GTTabBarController *)[UIApplication sharedApplication].delegate.window.rootViewController;
+    UINavigationController * nav =(UINavigationController *) [gtt getViewcontrollerWithIndex:index];
+    UIViewController * vc = nav.viewControllers[0];
+    [vc.navigationController popToRootViewControllerAnimated:YES];
+    
     if (index == 3)
     {
         [self.delegate getUserLoction];
@@ -270,11 +276,11 @@ static GTTabBarController *gtTabBarController;
 	}
     
     // Notify the delegate, the viewcontroller has been changed.
-    if ([self.delegate respondsToSelector:@selector(tabBarController:didSelectViewController::)])
+    if ([self.delegate respondsToSelector:@selector(tabBarController:didSelectViewController:)])
     {
         [self.delegate tabBarController:self didSelectViewController:selectedVC];
     }
-    
+
 }
 -(UIViewController *)getViewcontrollerWithIndex:(NSInteger)index;
 {

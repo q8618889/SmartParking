@@ -43,7 +43,13 @@
         AnnPoinBaseClass * bc = [AnnPoinBaseClass modelObjectWithDictionary:dictionary];
         [dataArray addObject:bc];
         NSLog(@"%@",dictionary);
-        block(dataArray,error);
+        if (bc.body.count < 1)
+        {
+            block(dataArray,@"count");
+
+        }else{
+            block(dataArray,error);
+        }
     }];
 }
 @end

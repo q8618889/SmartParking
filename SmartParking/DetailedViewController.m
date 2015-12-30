@@ -27,6 +27,7 @@
     [super viewDidLoad];
     self.logoimage.hidden = YES;
     self.backButton.hidden = NO;
+    self.messageLabel.text = _ann.name;
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationController.navigationBarHidden = YES;
     _tabView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, RECT_W, RECT_H - 64 - 64)];

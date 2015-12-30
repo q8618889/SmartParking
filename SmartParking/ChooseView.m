@@ -50,7 +50,7 @@
         
         
         UILabel * secondLabel =[[UILabel alloc]initWithFrame:CGRectMake(20, 60, 100, 30)];
-        secondLabel.text = @"最近距离数>=";
+        secondLabel.text = @"最近距离数<=";
         secondLabel.textColor = RGBACOLOR(112, 113, 114, 1);
         secondLabel.font = [UIFont systemFontOfSize:15.0f];
         [self addSubview:secondLabel];

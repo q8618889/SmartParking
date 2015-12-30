@@ -54,9 +54,10 @@
     [self.view addSubview:_logoimage];
     
     //    标题
-    _messageLabel = [[UILabel alloc]initWithFrame:CGRectMake(_logoimage.frame.size.width+_logoimage.frame.origin.x+5, 25, 130, 30)];
+    _messageLabel = [[UILabel alloc]initWithFrame:CGRectMake(RECT_W/2-(RECT_W-70)/2, 25, RECT_W-70, 30)];
     _messageLabel.font = [UIFont systemFontOfSize:23.0f];
     _messageLabel.textColor = [UIColor whiteColor];
+    _messageLabel.textAlignment =NSTextAlignmentCenter;
     [self.view addSubview:_messageLabel];
     
 }

@@ -43,7 +43,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.messageLabel.text = @"停车场";
-
+    
     self.navigationController.navigationBarHidden = YES;
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -146,15 +146,18 @@
     [SVProgressHUD show];
     [MyNewWorking searchParkingMessageWithLongitude:[NSString stringWithFormat:@"%f",_locService.userLocation.location.coordinate.longitude] latitude:[NSString stringWithFormat:@"%f",_locService.userLocation.location.coordinate.latitude] portLeftCount:@"" distance:@"" parkingName:_searchTextField.text block:^(NSMutableArray *array, NSString *error) {
         
-        [SVProgressHUD dismiss];
-        _bc = array[0];
-        _mutArry =(NSMutableArray *)_bc.body;
-     
+       
         _bc = array[0];
         if (_bc.body.count < 1)
         {
+            [SVProgressHUD dismissWithError:@"没有搜索到结果!"];
             return ;
         }
+        [SVProgressHUD dismiss];
+
+        _mutArry =(NSMutableArray *)_bc.body;
+       
+    
         [_tabView reloadData];
         
         

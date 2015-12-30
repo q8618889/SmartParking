@@ -177,6 +177,5 @@
 }
 
 - (void)tabBarController:(GTTabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
-
 }
 @end

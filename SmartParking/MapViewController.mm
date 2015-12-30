@@ -179,15 +179,19 @@
     
     CGFloat centerLongitude = _mapView.region.center.longitude;
     CGFloat  centerLatitude  = _mapView.region.center.latitude;
-
     [MyNewWorking searchParkingMessageWithLongitude:[NSString stringWithFormat:@"%f",centerLongitude] latitude:[NSString stringWithFormat:@"%f",centerLatitude] portLeftCount:_choose.firstTextField.text distance:_choose.secondTextField.text parkingName:_choose.thirdTextField.text block:^(NSMutableArray *array, NSString *error) {
-        
-          
-        _bc = array[0];
-        if (_bc.body.count < 1)
+        if ([error isEqualToString:@"error"])
         {
+            [SVProgressHUD show];
+            [SVProgressHUD dismissWithError:@"网络错误,请稍后重试!"];
+            return ;
+        }else if ([error isEqualToString:@"count"])
+        {
+            [SVProgressHUD show];
+            [SVProgressHUD dismissWithError:@"没有搜索到结果!"];
             return ;
         }
+        _bc = array[0];
         
         [self createAnn:_bc];
         if (_mooen == YES)
@@ -203,8 +207,17 @@
 -(void)clearNetWorking:(UIButton *)btn
 {
     [self.view endEditing:YES];
-
+    [SVProgressHUD show];
+    [SVProgressHUD dismissWithSuccess:@"重置成功"];
     _isChoose = NO;
+    
+    _choose.alpha = 0;
+    [self.view endEditing:YES];
+    
+    _choose.firstTextField.text = @"";
+    _choose.secondTextField.text =@"";
+    _choose.thirdTextField.text = @"";
+    
     [self netWorking];
 }
 //用户定位

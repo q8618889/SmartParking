@@ -48,7 +48,7 @@
     _myTableView.delegate =self;
     _myTableView.dataSource = self;
     _myTableView.rowHeight = 140;
-    
+    _myTableView.tableFooterView = [[UIView alloc]init];
     [self.view addSubview:_myTableView];
     
     [MyTool RefreshingWithTableView:_myTableView target:(UIView *)self];

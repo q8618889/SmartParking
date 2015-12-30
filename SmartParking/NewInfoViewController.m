@@ -23,7 +23,7 @@ static const CGFloat kBasicTextSize = 12.0f;
     self.logoimage.hidden = YES;
     self.backButton.hidden = NO;    // self.titleLabel.text = _titleName;
     
-    
+self.messageLabel.text = @"动态信息";
     
     [self createView];
     [self createText];
