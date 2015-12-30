@@ -58,6 +58,7 @@ static AFHTTPSessionManager *_httpManager;
      } success:^(NSURLSessionDataTask *task, id responseObject) {
           //NSString * responseString = [[NSString alloc] initWithData:responseObject   encoding:NSUTF8StringEncoding];
          NSMutableDictionary*dict= [NSJSONSerialization JSONObjectWithData:responseObject  options:NSJSONReadingAllowFragments error:nil];
+         NSLog(@"%@",dict);
 
          block(dict,nil);
      } failure:^(NSURLSessionDataTask *task, NSError *error) {

@@ -16,7 +16,6 @@
 		421D2C4B1C2CD903000C000B /* UserLoginBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C481C2CD903000C000B /* UserLoginBaseClass.m */; };
 		421D2C4C1C2CD903000C000B /* UserLoginBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C4A1C2CD903000C000B /* UserLoginBody.m */; };
 		4243374C1C28ED39003EAAF5 /* libbaiduNaviSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4243374B1C28ED39003EAAF5 /* libbaiduNaviSDK.a */; };
-		426F293B1C2E207700B01355 /* libbaiduNaviSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 426F293A1C2E207600B01355 /* libbaiduNaviSDK.a */; };
 		426F293F1C2E24DB00B01355 /* SmartParkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 426F293D1C2E24DB00B01355 /* SmartParkTableViewCell.m */; };
 		426F29401C2E24DB00B01355 /* SmartParkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 426F293E1C2E24DB00B01355 /* SmartParkTableViewCell.xib */; };
 		426F29431C2E24F600B01355 /* SmartParkListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426F29421C2E24F600B01355 /* SmartParkListViewController.m */; };
@@ -36,6 +35,9 @@
 		42F9F04B1C294AB90089B7E1 /* icon_password@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42F9F0491C294AB90089B7E1 /* icon_password@2x.png */; };
 		42F9F04E1C294AD80089B7E1 /* btn_2333@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42F9F04C1C294AD80089B7E1 /* btn_2333@2x.png */; };
 		42F9F04F1C294AD80089B7E1 /* btn_2_selected333@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42F9F04D1C294AD80089B7E1 /* btn_2_selected333@2x.png */; };
+		42FB27311C3232C900546A62 /* NetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FB27301C3232C900546A62 /* NetWorking.m */; settings = {ASSET_TAGS = (); }; };
+		42FB27331C32346D00546A62 /* libbaiduNaviSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FB27321C32346D00546A62 /* libbaiduNaviSDK.a */; settings = {ASSET_TAGS = (); }; };
+		42FB27351C32359B00546A62 /* MyMesaageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FB27341C32359B00546A62 /* MyMesaageViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5903FD681C23F52F00740FBC /* SurrpundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5903FD671C23F52F00740FBC /* SurrpundView.m */; };
 		5903FD6A1C23F56600740FBC /* SurrpundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5903FD691C23F56600740FBC /* SurrpundView.xib */; };
 		5903FD6C1C23F6CC00740FBC /* searchButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5903FD6B1C23F6CC00740FBC /* searchButton.png */; };
@@ -60,7 +62,6 @@
 		5904938D1C1190F600DDBC23 /* cutMaps.png in Resources */ = {isa = PBXBuildFile; fileRef = 5904938B1C1190F600DDBC23 /* cutMaps.png */; };
 		5907E3001C28DE0A00717008 /* MyTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5907E2FE1C28DE0A00717008 /* MyTabCell.m */; };
 		5907E3011C28DE0A00717008 /* MyTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5907E2FF1C28DE0A00717008 /* MyTabCell.xib */; };
-		5907E3041C28DE1B00717008 /* MyMesaageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5907E3031C28DE1B00717008 /* MyMesaageViewController.m */; };
 		5907E30C1C28DE2F00717008 /* bg_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5907E3051C28DE2F00717008 /* bg_1@2x.png */; };
 		5907E30D1C28DE2F00717008 /* icon_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5907E3061C28DE2F00717008 /* icon_1@2x.png */; };
 		5907E30E1C28DE2F00717008 /* icon_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5907E3071C28DE2F00717008 /* icon_2@2x.png */; };
@@ -170,7 +171,6 @@
 		59D190441C0EDF1F0044CE60 /* GTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D190421C0EDF1F0044CE60 /* GTTabBarController.m */; };
 		59D1A53A1C2BE58A00425800 /* ChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D1A5391C2BE58A00425800 /* ChooseView.m */; };
 		59D1A53D1C2BE59A00425800 /* MapViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59D1A53C1C2BE59A00425800 /* MapViewController.mm */; };
-		59D1A5401C2BE5B500425800 /* NetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D1A53F1C2BE5B500425800 /* NetWorking.m */; };
 		59D1A5431C2BE5DE00425800 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D1A5421C2BE5DE00425800 /* MainViewController.m */; };
 		59D1A5461C2BE5F100425800 /* MyNewWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D1A5451C2BE5F100425800 /* MyNewWorking.m */; };
 		59D1A5511C2BE63700425800 /* SurroundListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D1A54E1C2BE63700425800 /* SurroundListViewController.m */; };
@@ -258,7 +258,6 @@
 		421D2C491C2CD903000C000B /* UserLoginBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLoginBody.h; sourceTree = "<group>"; };
 		421D2C4A1C2CD903000C000B /* UserLoginBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLoginBody.m; sourceTree = "<group>"; };
 		4243374B1C28ED39003EAAF5 /* libbaiduNaviSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbaiduNaviSDK.a; sourceTree = "<group>"; };
-		426F293A1C2E207600B01355 /* libbaiduNaviSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbaiduNaviSDK.a; sourceTree = "<group>"; };
 		426F293C1C2E24DB00B01355 /* SmartParkTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartParkTableViewCell.h; sourceTree = "<group>"; };
 		426F293D1C2E24DB00B01355 /* SmartParkTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartParkTableViewCell.m; sourceTree = "<group>"; };
 		426F293E1C2E24DB00B01355 /* SmartParkTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmartParkTableViewCell.xib; sourceTree = "<group>"; };
@@ -286,6 +285,9 @@
 		42F9F0491C294AB90089B7E1 /* icon_password@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_password@2x.png"; sourceTree = "<group>"; };
 		42F9F04C1C294AD80089B7E1 /* btn_2333@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_2333@2x.png"; sourceTree = "<group>"; };
 		42F9F04D1C294AD80089B7E1 /* btn_2_selected333@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_2_selected333@2x.png"; sourceTree = "<group>"; };
+		42FB27301C3232C900546A62 /* NetWorking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorking.m; sourceTree = "<group>"; };
+		42FB27321C32346D00546A62 /* libbaiduNaviSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbaiduNaviSDK.a; sourceTree = "<group>"; };
+		42FB27341C32359B00546A62 /* MyMesaageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMesaageViewController.m; sourceTree = "<group>"; };
 		5903FD661C23F52F00740FBC /* SurrpundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SurrpundView.h; sourceTree = "<group>"; };
 		5903FD671C23F52F00740FBC /* SurrpundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SurrpundView.m; sourceTree = "<group>"; };
 		5903FD691C23F56600740FBC /* SurrpundView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SurrpundView.xib; sourceTree = "<group>"; };
@@ -314,7 +316,6 @@
 		5907E2FE1C28DE0A00717008 /* MyTabCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTabCell.m; sourceTree = "<group>"; };
 		5907E2FF1C28DE0A00717008 /* MyTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTabCell.xib; sourceTree = "<group>"; };
 		5907E3021C28DE1B00717008 /* MyMesaageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMesaageViewController.h; sourceTree = "<group>"; };
-		5907E3031C28DE1B00717008 /* MyMesaageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMesaageViewController.m; sourceTree = "<group>"; };
 		5907E3051C28DE2F00717008 /* bg_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_1@2x.png"; sourceTree = "<group>"; };
 		5907E3061C28DE2F00717008 /* icon_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_1@2x.png"; sourceTree = "<group>"; };
 		5907E3071C28DE2F00717008 /* icon_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_2@2x.png"; sourceTree = "<group>"; };
@@ -521,7 +522,6 @@
 		59D1A53B1C2BE59A00425800 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		59D1A53C1C2BE59A00425800 /* MapViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MapViewController.mm; sourceTree = "<group>"; };
 		59D1A53E1C2BE5B500425800 /* NetWorking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorking.h; sourceTree = "<group>"; };
-		59D1A53F1C2BE5B500425800 /* NetWorking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorking.m; sourceTree = "<group>"; };
 		59D1A5411C2BE5DE00425800 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		59D1A5421C2BE5DE00425800 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		59D1A5441C2BE5F100425800 /* MyNewWorking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNewWorking.h; sourceTree = "<group>"; };
@@ -596,7 +596,7 @@
 				597EFE7C1C197BE2001574A4 /* libBaiduMobStatForSDK.a in Frameworks */,
 				4243374C1C28ED39003EAAF5 /* libbaiduNaviSDK.a in Frameworks */,
 				59E16A361C101D7400FA0363 /* CoreTelephony.framework in Frameworks */,
-				426F293B1C2E207700B01355 /* libbaiduNaviSDK.a in Frameworks */,
+				42FB27331C32346D00546A62 /* libbaiduNaviSDK.a in Frameworks */,
 				597EFDFC1C197A9B001574A4 /* ImageIO.framework in Frameworks */,
 				59E16A281C101CAB00FA0363 /* CoreLocation.framework in Frameworks */,
 				597EFDFA1C197A7D001574A4 /* AudioToolbox.framework in Frameworks */,
@@ -859,7 +859,7 @@
 				597EFE4A1C197BE2001574A4 /* BaiduStatistics */,
 				597EFE6F1C197BE2001574A4 /* inc */,
 				597EFE7A1C197BE2001574A4 /* updatelog.txt */,
-				426F293A1C2E207600B01355 /* libbaiduNaviSDK.a */,
+				42FB27321C32346D00546A62 /* libbaiduNaviSDK.a */,
 			);
 			path = BaiduNavi_iOSSDK_v2.0.5_Lib;
 			sourceTree = "<group>";
@@ -1124,7 +1124,7 @@
 				5992C6001C1673500044E88A /* HUD */,
 				5992C5D61C1673400044E88A /* MJRefresh */,
 				59D1A53E1C2BE5B500425800 /* NetWorking.h */,
-				59D1A53F1C2BE5B500425800 /* NetWorking.m */,
+				42FB27301C3232C900546A62 /* NetWorking.m */,
 				5992C5D31C1672F00044E88A /* MyTool.h */,
 				5992C5D41C1672F00044E88A /* MyTool.m */,
 				5992C5AD1C1671510044E88A /* AFNetworking */,
@@ -1216,7 +1216,7 @@
 				42F9F03A1C2944D50089B7E1 /* RegisterVc */,
 				42F9F0391C2944C80089B7E1 /* LoginVc */,
 				5907E3021C28DE1B00717008 /* MyMesaageViewController.h */,
-				5907E3031C28DE1B00717008 /* MyMesaageViewController.m */,
+				42FB27341C32359B00546A62 /* MyMesaageViewController.m */,
 				5907E2FD1C28DE0A00717008 /* MyTabCell.h */,
 				5907E2FE1C28DE0A00717008 /* MyTabCell.m */,
 				5907E2FF1C28DE0A00717008 /* MyTabCell.xib */,
@@ -1625,7 +1625,6 @@
 				59531EAF1C0E91E200930C4E /* AppDelegate.m in Sources */,
 				5992C6321C1673950044E88A /* UIView+WebCacheOperation.m in Sources */,
 				59533EA91C2E9C4700B7E52C /* ViewController.m in Sources */,
-				5907E3041C28DE1B00717008 /* MyMesaageViewController.m in Sources */,
 				5992C5C91C1671510044E88A /* AFURLRequestSerialization.m in Sources */,
 				5992C5C51C1671510044E88A /* AFHTTPSessionManager.m in Sources */,
 				5907E3001C28DE0A00717008 /* MyTabCell.m in Sources */,
@@ -1654,7 +1653,6 @@
 				421D2C4B1C2CD903000C000B /* UserLoginBaseClass.m in Sources */,
 				59E2EC981C22400500970346 /* SurroundTableViewCell.m in Sources */,
 				421D2C4C1C2CD903000C000B /* UserLoginBody.m in Sources */,
-				59D1A5401C2BE5B500425800 /* NetWorking.m in Sources */,
 				5992C5C61C1671510044E88A /* AFNetworkReachabilityManager.m in Sources */,
 				5992C5D51C1672F00044E88A /* MyTool.m in Sources */,
 				5992C6231C1673950044E88A /* MKAnnotationView+WebCache.m in Sources */,
@@ -1686,8 +1684,10 @@
 				5992C5F51C1673400044E88A /* MJRefreshHeader.m in Sources */,
 				426F29431C2E24F600B01355 /* SmartParkListViewController.m in Sources */,
 				597EFE7E1C197BE2001574A4 /* CFilteringJSONSerializer.m in Sources */,
+				42FB27311C3232C900546A62 /* NetWorking.m in Sources */,
 				5992C5F31C1673400044E88A /* MJRefreshGifFooter.m in Sources */,
 				429835F01C2A974700EAC9B0 /* AboutUsViewController.m in Sources */,
+				42FB27351C32359B00546A62 /* MyMesaageViewController.m in Sources */,
 				5992C5F91C1673400044E88A /* UIScrollView+MJRefresh.m in Sources */,
 				59533EA71C2E9C2E00B7E52C /* ScNewWorking.m in Sources */,
 				5992C5CC1C1671510044E88A /* CSAnimation.m in Sources */,

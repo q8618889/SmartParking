@@ -13,14 +13,17 @@
 #import "InformationViewController.h"
 #import "ChangePasswordViewController.h"
 #import "AboutUsViewController.h"
+#import "SDWebImage/UIButton+WebCache.h"
 
-@interface MyMesaageViewController () <UITableViewDataSource,UITableViewDelegate> {
+@interface MyMesaageViewController () <UITableViewDataSource,UITableViewDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate> {
     
     UIView          *topView;
     UIButton        *logInBtn;
     UIButton        *regist;
     UITableView     *myTab;
+    NSString        *nikeName;
     BOOL  automaticLogin;
+    UIButton * userhearder;
     
 }
 
@@ -40,6 +43,7 @@
         [myTab reloadData];
 
     }
+    nikeName = [NSString stringWithFormat:@"%@",[[NSUserDefaults  standardUserDefaults]objectForKey:@"nickName"]];
 
 }
 - (void)viewDidLoad {
@@ -83,17 +87,17 @@
     
     if (automaticLogin == YES)
     {
-        
-        UIButton * userhearder = [UIButton buttonWithType:UIButtonTypeCustom];
+        //上传头像按钮
+        userhearder = [UIButton buttonWithType:UIButtonTypeCustom];
         userhearder.frame = CGRectMake(20 , 5, RECT_H / 4 - 50, RECT_H / 4 - 50);
+        [userhearder addTarget:self action:@selector(userhearderBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         userhearder.backgroundColor = [UIColor redColor];
         [topView addSubview:userhearder];
         
         
         UILabel * userName = [[UILabel alloc]initWithFrame:CGRectMake(userhearder.frame.origin.y+userhearder.frame.size.width+20, userhearder.frame.origin.y+20, RECT_W-userhearder.frame.size.width-30, 30)];
         userName.font = [UIFont systemFontOfSize:30.0f];
-       // userName.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"userName"];
-        userName.text  = @"昵   称";
+        userName.text  = nikeName;
         [topView addSubview:userName];
         
         UILabel * userPhone = [[UILabel alloc]initWithFrame:CGRectMake(userName.frame.origin.x, userName.frame.origin.y+40, RECT_W-userhearder.frame.size.width-30, 30)];
@@ -166,12 +170,8 @@
             cell.titleLab.text = @"修改密码";
             cell.leftImg.image = [UIImage imageNamed:@"icon_2@2x"];
             break;
-//        case 2:
-//            cell.titleLab.text = @"我的预约";
-//            cell.leftImg.image = [UIImage imageNamed:@"icon_3@2x"];
-//            break;
         case 2:
-            cell.titleLab.text = @"意见反馈";
+            cell.titleLab.text = @"清除缓存";
             cell.leftImg.image = [UIImage imageNamed:@"icon_4@2x"];
             break;
 
@@ -238,20 +238,88 @@
     
     
 }
+//上传头像
+- (void)userhearderBtnClick:(UIButton *)sender {
+    
+    UIActionSheet *act=[[UIActionSheet alloc]initWithTitle:@"温馨提示" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"拍照" otherButtonTitles:@"相册",nil];
+    [act showInView:self.view];
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex;
+{
+    
+    if (buttonIndex == 0)
+    {
+        [self PZButton];
+    }
+    if (buttonIndex == 1)
+    {
+        [self XCButton];
+    }
 }
-*/
+
+-(void)PZButton
+{
+    UIImagePickerController *imagePicker=[[UIImagePickerController alloc] init];
+    imagePicker.delegate=self;
+    //    imagePicker.view.frame=s
+    imagePicker.sourceType=UIImagePickerControllerSourceTypeCamera;
+    if([[[UIDevice
+          currentDevice] systemVersion] floatValue]>=8.0) {
+        
+        imagePicker.modalPresentationStyle=UIModalPresentationOverCurrentContext;
+        
+    }
+    imagePicker.allowsEditing=YES;
+    [self presentViewController:imagePicker animated:YES completion:^{
+        
+    }];
+    
+    
+    
+    
+    
+}
+-(void)XCButton
+{
+    UIImagePickerController *imagePicker=[[UIImagePickerController alloc] init];
+    imagePicker.delegate=self;
+    //    imagePicker.view.frame=s
+    imagePicker.sourceType=UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    imagePicker.allowsEditing=YES;
+    //    [self.view addSubview:imagePicker.view];
+    [self presentViewController:imagePicker animated:YES completion:^{
+        
+    }];
+
+}
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo
+{
+    [SVProgressHUD show];
+    [NetWorking addNetWorkingAddImage:nil imageFile:image url:[NSString stringWithFormat:@"%@/park/upload",WEB_SERVER_IP] block:^(NSMutableDictionary *dictionary, NSString *error) {
+        
+        if ([error isEqualToString:@"error"])
+        {
+            [SVProgressHUD dismissWithError:@"失败请重试!"];
+        }else{
+            
+            [SVProgressHUD dismissWithSuccess:@"上传完成"];
+            NSMutableDictionary * dict = [NSMutableDictionary dictionary];
+            dict = [dictionary objectForKey:@"body"];
+            NSString *body = [dict objectForKey:@"uri"];
+            [userhearder sd_setBackgroundImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",body]] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"bg_1"]];
+            NSLog(@" %@",body);
+            [myTab reloadData];
+            
+        }
+         
+     }];
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 @end
