@@ -1,7 +1,7 @@
 //
 //  UserLoginBody.h
 //
-//  Created by SCMac  on 15/12/24
+//  Created by SCMac  on 15/12/30
 //  Copyright (c) 2015 __MyCompanyName__. All rights reserved.
 //
 
@@ -11,10 +11,12 @@
 
 @interface UserLoginBody : NSObject <NSCoding, NSCopying>
 
-@property (nonatomic, strong) NSString *userName;
+@property (nonatomic, strong) NSString *headerUri;
 @property (nonatomic, strong) NSString *number;
-@property (nonatomic, assign) double bodyIdentifier;
 @property (nonatomic, strong) NSString *passwd;
+@property (nonatomic, strong) NSString *nickname;
+@property (nonatomic, assign) double bodyIdentifier;
+@property (nonatomic, strong) NSString *userName;
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
 - (instancetype)initWithDictionary:(NSDictionary *)dict;

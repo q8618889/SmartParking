@@ -102,7 +102,7 @@
         [topView addSubview:userName];
         
         UILabel * userPhone = [[UILabel alloc]initWithFrame:CGRectMake(userName.frame.origin.x, userName.frame.origin.y+40, RECT_W-userhearder.frame.size.width-30, 30)];
-        userPhone.text = [NSString stringWithFormat:@"手机:%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"number"]];
+        userPhone.text = [NSString stringWithFormat:@"用户名:%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"number"]];
         userPhone.font = [UIFont systemFontOfSize:14.0f];
         [topView addSubview:userPhone];
         
@@ -321,15 +321,18 @@
             NSMutableArray *body = [dict objectForKey:@"uri"];
             NSString *st = body[0];
             [[NSUserDefaults standardUserDefaults] setObject:st forKey:@"uploadPicture"];
-//            [userhearder sd_setBackgroundImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.iotclouddashboard.com/parkpictures/1451459008020userImage.png"]] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"bg_1"]];
             [myTab reloadData];
             
             NSLog(@" %@",st);
+            
+            [ScNewWorking getUpdateHeaderuriUserName:[[NSUserDefaults standardUserDefaults]objectForKey:@"userName"] nickname:@"" headeruri:st block:^(NSMutableDictionary *dictionary, NSString *error) {
+                
+            }];
+            
         }
         
     }];
 
-    
 }
 
 @end

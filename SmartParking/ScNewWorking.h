@@ -25,4 +25,6 @@ typedef void(^DATADICT)(NSMutableDictionary  * dictionary,NSString       * error
 +(void)getNewMessageWithPageSize:(NSInteger)page  longitude:(double)longitude latitude:(double)latitude radius:(double)radius block:(DATAARRAY)block;
 //基本信息
 +(void)getUpdateUserUserName:(NSString *)userName nickname:(NSString *)nickname block:(DATADICT)block;
+//更新头像
++(void)getUpdateHeaderuriUserName:(NSString *)userName nickname:(NSString *)nickname headeruri:(NSString *)headeruri block:(DATADICT)block;
 @end

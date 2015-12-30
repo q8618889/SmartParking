@@ -74,4 +74,13 @@
         block(dictionary,error);
     }];
 }
+
++(void)getUpdateHeaderuriUserName:(NSString *)userName nickname:(NSString *)nickname headeruri:(NSString *)headeruri block:(DATADICT)block
+{
+    
+    [NetWorking addNetWorking:[MyTool dictionaryWithdataArray:@[userName,nickname,headeruri] Array:@[@"userName",@"nickname",@"headeruri"]] url:[NSString stringWithFormat:@"%@/park/update/user",WEB_SERVER_IP] block:^(NSMutableDictionary *dictionary, NSString *error) {
+        
+        block(dictionary,error);
+    }];
+}
 @end

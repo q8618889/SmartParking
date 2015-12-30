@@ -1,17 +1,19 @@
 //
 //  UserLoginBody.m
 //
-//  Created by SCMac  on 15/12/24
+//  Created by SCMac  on 15/12/30
 //  Copyright (c) 2015 __MyCompanyName__. All rights reserved.
 //
 
 #import "UserLoginBody.h"
 
 
-NSString *const kUserLoginBodyUserName = @"userName";
+NSString *const kUserLoginBodyHeaderUri = @"headerUri";
 NSString *const kUserLoginBodyNumber = @"number";
-NSString *const kUserLoginBodyId = @"Id";
 NSString *const kUserLoginBodyPasswd = @"passwd";
+NSString *const kUserLoginBodyNickname = @"nickname";
+NSString *const kUserLoginBodyId = @"Id";
+NSString *const kUserLoginBodyUserName = @"userName";
 
 
 @interface UserLoginBody ()
@@ -22,10 +24,12 @@ NSString *const kUserLoginBodyPasswd = @"passwd";
 
 @implementation UserLoginBody
 
-@synthesize userName = _userName;
+@synthesize headerUri = _headerUri;
 @synthesize number = _number;
-@synthesize bodyIdentifier = _bodyIdentifier;
 @synthesize passwd = _passwd;
+@synthesize nickname = _nickname;
+@synthesize bodyIdentifier = _bodyIdentifier;
+@synthesize userName = _userName;
 
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict
@@ -40,10 +44,12 @@ NSString *const kUserLoginBodyPasswd = @"passwd";
     // This check serves to make sure that a non-NSDictionary object
     // passed into the model class doesn't break the parsing.
     if(self && [dict isKindOfClass:[NSDictionary class]]) {
-            self.userName = [self objectOrNilForKey:kUserLoginBodyUserName fromDictionary:dict];
+            self.headerUri = [self objectOrNilForKey:kUserLoginBodyHeaderUri fromDictionary:dict];
             self.number = [self objectOrNilForKey:kUserLoginBodyNumber fromDictionary:dict];
-            self.bodyIdentifier = [[self objectOrNilForKey:kUserLoginBodyId fromDictionary:dict] doubleValue];
             self.passwd = [self objectOrNilForKey:kUserLoginBodyPasswd fromDictionary:dict];
+            self.nickname = [self objectOrNilForKey:kUserLoginBodyNickname fromDictionary:dict];
+            self.bodyIdentifier = [[self objectOrNilForKey:kUserLoginBodyId fromDictionary:dict] doubleValue];
+            self.userName = [self objectOrNilForKey:kUserLoginBodyUserName fromDictionary:dict];
 
     }
     
@@ -54,10 +60,12 @@ NSString *const kUserLoginBodyPasswd = @"passwd";
 - (NSDictionary *)dictionaryRepresentation
 {
     NSMutableDictionary *mutableDict = [NSMutableDictionary dictionary];
-    [mutableDict setValue:self.userName forKey:kUserLoginBodyUserName];
+    [mutableDict setValue:self.headerUri forKey:kUserLoginBodyHeaderUri];
     [mutableDict setValue:self.number forKey:kUserLoginBodyNumber];
-    [mutableDict setValue:[NSNumber numberWithDouble:self.bodyIdentifier] forKey:kUserLoginBodyId];
     [mutableDict setValue:self.passwd forKey:kUserLoginBodyPasswd];
+    [mutableDict setValue:self.nickname forKey:kUserLoginBodyNickname];
+    [mutableDict setValue:[NSNumber numberWithDouble:self.bodyIdentifier] forKey:kUserLoginBodyId];
+    [mutableDict setValue:self.userName forKey:kUserLoginBodyUserName];
 
     return [NSDictionary dictionaryWithDictionary:mutableDict];
 }
@@ -81,20 +89,24 @@ NSString *const kUserLoginBodyPasswd = @"passwd";
 {
     self = [super init];
 
-    self.userName = [aDecoder decodeObjectForKey:kUserLoginBodyUserName];
+    self.headerUri = [aDecoder decodeObjectForKey:kUserLoginBodyHeaderUri];
     self.number = [aDecoder decodeObjectForKey:kUserLoginBodyNumber];
-    self.bodyIdentifier = [aDecoder decodeDoubleForKey:kUserLoginBodyId];
     self.passwd = [aDecoder decodeObjectForKey:kUserLoginBodyPasswd];
+    self.nickname = [aDecoder decodeObjectForKey:kUserLoginBodyNickname];
+    self.bodyIdentifier = [aDecoder decodeDoubleForKey:kUserLoginBodyId];
+    self.userName = [aDecoder decodeObjectForKey:kUserLoginBodyUserName];
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
 
-    [aCoder encodeObject:_userName forKey:kUserLoginBodyUserName];
+    [aCoder encodeObject:_headerUri forKey:kUserLoginBodyHeaderUri];
     [aCoder encodeObject:_number forKey:kUserLoginBodyNumber];
-    [aCoder encodeDouble:_bodyIdentifier forKey:kUserLoginBodyId];
     [aCoder encodeObject:_passwd forKey:kUserLoginBodyPasswd];
+    [aCoder encodeObject:_nickname forKey:kUserLoginBodyNickname];
+    [aCoder encodeDouble:_bodyIdentifier forKey:kUserLoginBodyId];
+    [aCoder encodeObject:_userName forKey:kUserLoginBodyUserName];
 }
 
 - (id)copyWithZone:(NSZone *)zone
@@ -103,10 +115,12 @@ NSString *const kUserLoginBodyPasswd = @"passwd";
     
     if (copy) {
 
-        copy.userName = [self.userName copyWithZone:zone];
+        copy.headerUri = [self.headerUri copyWithZone:zone];
         copy.number = [self.number copyWithZone:zone];
-        copy.bodyIdentifier = self.bodyIdentifier;
         copy.passwd = [self.passwd copyWithZone:zone];
+        copy.nickname = [self.nickname copyWithZone:zone];
+        copy.bodyIdentifier = self.bodyIdentifier;
+        copy.userName = [self.userName copyWithZone:zone];
     }
     
     return copy;
