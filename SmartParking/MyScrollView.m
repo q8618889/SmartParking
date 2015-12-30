@@ -13,11 +13,11 @@
 {
     _buttonArrays = [NSMutableArray array];
     NSArray * titleArray = [NSArray arrayWithObjects:@"美食",@"加油站",@"汽车美容",@"商场",@"景点",@"酒店",@"银行",@"超市",nil];
-    self.contentSize = CGSizeMake(20+70*8, 30);
+    self.contentSize = CGSizeMake(70*8, 30);
     for (NSInteger i = 0; i< 8; i++)
     {
         
-        UIButton * btn = [[UIButton alloc]initWithFrame:CGRectMake(10+70*i, 0, 70, 30)];
+        UIButton * btn = [[UIButton alloc]initWithFrame:CGRectMake(70*i, 0, 70, 30)];
         [btn setTitle:titleArray[i] forState:0];
         [btn setTitleColor:[UIColor lightGrayColor] forState:0];
         btn.layer.borderWidth =0.5;
