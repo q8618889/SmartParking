@@ -165,9 +165,10 @@
     
 //        NSString * latitude = [[NSUserDefaults standardUserDefaults]objectForKey:@"latitude"];
 //        NSString * longitude = [[NSUserDefaults standardUserDefaults]objectForKey:@"longitude"];
-//    
+//
+
     info.userlatitude = _userlatitude;
-    info.userlongitude = _userlatitude;
+    info.userlongitude = _userlongitude;
     
     info.poilatitude = poi.pt.latitude;
     info.poilongitude = poi.pt.longitude;

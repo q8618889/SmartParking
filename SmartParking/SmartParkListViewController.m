@@ -104,7 +104,9 @@
     AnnPoinBody *ann = _mutArry[indexPath.row];
     [cell.leftImgView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",ann.pictureUri]]placeholderImage:[UIImage imageNamed:@"bg_1"]];
     cell.titLab.text = ann.name;
-    cell.oneLab.text = [NSString stringWithFormat:@"总车位:%.0f,剩余:%.0f",ann.portCount,ann.portLeftCount];
+    //cell.oneLab.text = [NSString stringWithFormat:@"总车位:%.0f,剩余:%.0f",ann.portCount,ann.portLeftCount];
+    cell.oneLab.attributedText = [self attributedTextString:[NSString stringWithFormat:@"总车位:%.0f剩余:%0.f",ann.portCount,ann.portLeftCount] ranges:4 nextRanges:[[NSString stringWithFormat:@"%.0f",ann.portCount]length] labelFont:13 ranges:7+ [[NSString stringWithFormat:@"%.0f",ann.portCount]length]nextRanges:[[NSString stringWithFormat:@"%.0f",ann.portLeftCount] length] labelFont:17 number:ann.portLeftCount];
+    
     if (ann.number == nil) {
         ann.number = [NSString stringWithFormat:@"暂无联系方式"];
     }
@@ -300,6 +302,39 @@
         
     }];
     
+}
+//设置字体颜色
+-(NSMutableAttributedString *)attributedTextString:(NSString *)str ranges:(NSInteger)ranges  nextRanges:(NSInteger )nextRanges labelFont:(CGFloat)labelFont  ranges:(NSInteger)rangeses  nextRanges:(NSInteger )nextRangeses labelFont:(CGFloat)labelFonts  number:(double)number;
+{
+    NSMutableAttributedString * attributedTextString = [[NSMutableAttributedString alloc] initWithString:str];
+    
+    //设置的是字的颜色
+    [attributedTextString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:24.0/255.0 green:93/255.0 blue:191/255.0 alpha:1] range:NSMakeRange(ranges, nextRanges)];
+    if (number < 100)
+    {
+        
+        [attributedTextString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:238.0/255.0 green:44/255.0 blue:40/255.0 alpha:1] range:NSMakeRange(rangeses, nextRangeses)];
+    }else if (number<300&&number>100)
+    {
+        [attributedTextString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:240.0/255.0 green:159/255.0 blue:46/255.0 alpha:1] range:NSMakeRange(rangeses, nextRangeses)];
+
+    }else{
+        [attributedTextString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:38.0/255.0 green:171/255.0 blue:84/255.0 alpha:1] range:NSMakeRange(rangeses, nextRangeses)];
+    }
+    
+    
+    
+    
+    
+    
+    //设置的时字的字体及大小
+    [attributedTextString addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"Arial" size:labelFont] range:NSMakeRange(ranges, nextRanges)];
+    
+    
+    
+    
+        [attributedTextString addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"Arial" size:labelFonts] range:NSMakeRange(rangeses, nextRangeses)];
+    return attributedTextString;
 }
 
 @end

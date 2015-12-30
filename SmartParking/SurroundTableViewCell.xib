@@ -16,17 +16,17 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="louction.png" translatesAutoresizingMaskIntoConstraints="NO" id="iRF-xa-jTS">
-                        <rect key="frame" x="256" y="29" width="15" height="15"/>
+                        <rect key="frame" x="250" y="29" width="15" height="15"/>
                         <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="15" id="NfZ-aF-n4d"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPS-aM-7cu">
-                        <rect key="frame" x="274" y="25" width="46" height="21"/>
+                        <rect key="frame" x="268" y="25" width="52" height="21"/>
                         <animations/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="46" id="5bs-S9-Pod"/>
+                            <constraint firstAttribute="width" constant="52" id="5bs-S9-Pod"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
@@ -73,7 +73,7 @@
                     <constraint firstItem="hPS-aM-7cu" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="6UX-xf-bt8"/>
                     <constraint firstItem="iRF-xa-jTS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="21" id="DNc-M2-JQQ"/>
                     <constraint firstAttribute="trailingMargin" secondItem="skF-jx-nUT" secondAttribute="trailing" constant="-4" id="EFB-UO-DEf"/>
-                    <constraint firstItem="hPS-aM-7cu" firstAttribute="leading" secondItem="mLm-He-X2R" secondAttribute="trailing" constant="14" id="FfG-LU-35B"/>
+                    <constraint firstItem="hPS-aM-7cu" firstAttribute="leading" secondItem="mLm-He-X2R" secondAttribute="trailing" constant="8" id="FfG-LU-35B"/>
                     <constraint firstItem="mLm-He-X2R" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="K7G-Sw-BiX"/>
                     <constraint firstItem="mLm-He-X2R" firstAttribute="top" secondItem="skF-jx-nUT" secondAttribute="bottom" constant="8" symbolic="YES" id="awH-WT-mVi"/>
                     <constraint firstAttribute="bottomMargin" secondItem="9Xm-by-Ax5" secondAttribute="bottom" constant="-4.5" id="ayR-co-dO1"/>

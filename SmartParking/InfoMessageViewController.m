@@ -167,6 +167,8 @@
 //发起导航
 - (void)startNaviWithLongitude:(double)longitude latitude:(double)latitude;
 {
+    NSLog(@"%f-----%f",latitude,longitude);
+
     //节点数组
     NSMutableArray *nodesArray = [[NSMutableArray alloc]    initWithCapacity:2];
     
