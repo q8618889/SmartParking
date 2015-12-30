@@ -91,7 +91,8 @@
         userhearder = [UIButton buttonWithType:UIButtonTypeCustom];
         userhearder.frame = CGRectMake(20 , 5, RECT_H / 4 - 50, RECT_H / 4 - 50);
         [userhearder addTarget:self action:@selector(userhearderBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-        userhearder.backgroundColor = [UIColor redColor];
+        
+          [userhearder sd_setBackgroundImageWithURL:[NSURL URLWithString:[[NSUserDefaults standardUserDefaults]objectForKey:@"uploadPicture"]] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"bg_1"]];
         [topView addSubview:userhearder];
         
         
@@ -299,6 +300,13 @@
 }
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo
 {
+    [self netWorkIng:nil Image:image];
+    [userhearder setImage:image forState:UIControlStateNormal];
+        [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)netWorkIng:(UIImagePickerController *)pick Image:(UIImage *)image {
+    
     [SVProgressHUD show];
     [NetWorking addNetWorkingAddImage:nil imageFile:image url:[NSString stringWithFormat:@"%@/park/upload",WEB_SERVER_IP] block:^(NSMutableDictionary *dictionary, NSString *error) {
         
@@ -310,16 +318,18 @@
             [SVProgressHUD dismissWithSuccess:@"上传完成"];
             NSMutableDictionary * dict = [NSMutableDictionary dictionary];
             dict = [dictionary objectForKey:@"body"];
-            NSString *body = [dict objectForKey:@"uri"];
-            [userhearder sd_setBackgroundImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",body]] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"bg_1"]];
-            NSLog(@" %@",body);
+            NSMutableArray *body = [dict objectForKey:@"uri"];
+            NSString *st = body[0];
+            [[NSUserDefaults standardUserDefaults] setObject:st forKey:@"uploadPicture"];
+//            [userhearder sd_setBackgroundImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.iotclouddashboard.com/parkpictures/1451459008020userImage.png"]] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"bg_1"]];
             [myTab reloadData];
             
+            NSLog(@" %@",st);
         }
-         
-     }];
-    [picker dismissViewControllerAnimated:YES completion:nil];
-}
+        
+    }];
 
+    
+}
 
 @end
