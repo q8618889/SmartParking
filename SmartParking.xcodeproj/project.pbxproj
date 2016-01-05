@@ -13,9 +13,9 @@
 		421D2C401C2CD8AB000C000B /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 421D2C3E1C2CD8AB000C000B /* RegisterViewController.xib */; };
 		421D2C441C2CD8C3000C000B /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 421D2C421C2CD8C3000C000B /* ChangePasswordViewController.m */; };
 		421D2C451C2CD8C3000C000B /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 421D2C431C2CD8C3000C000B /* ChangePasswordViewController.xib */; };
-		422A84DF1C33CBEF006B9386 /* libbaiduNaviSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 422A84DE1C33CBEF006B9386 /* libbaiduNaviSDK.a */; settings = {ASSET_TAGS = (); }; };
-		422A84E41C33CD0F006B9386 /* UserLoginBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 422A84E11C33CD0F006B9386 /* UserLoginBaseClass.m */; settings = {ASSET_TAGS = (); }; };
-		422A84E51C33CD0F006B9386 /* UserLoginBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 422A84E31C33CD0F006B9386 /* UserLoginBody.m */; settings = {ASSET_TAGS = (); }; };
+		422A84DF1C33CBEF006B9386 /* libbaiduNaviSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 422A84DE1C33CBEF006B9386 /* libbaiduNaviSDK.a */; };
+		422A84E41C33CD0F006B9386 /* UserLoginBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 422A84E11C33CD0F006B9386 /* UserLoginBaseClass.m */; };
+		422A84E51C33CD0F006B9386 /* UserLoginBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 422A84E31C33CD0F006B9386 /* UserLoginBody.m */; };
 		4243374C1C28ED39003EAAF5 /* libbaiduNaviSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4243374B1C28ED39003EAAF5 /* libbaiduNaviSDK.a */; };
 		426F293F1C2E24DB00B01355 /* SmartParkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 426F293D1C2E24DB00B01355 /* SmartParkTableViewCell.m */; };
 		426F29401C2E24DB00B01355 /* SmartParkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 426F293E1C2E24DB00B01355 /* SmartParkTableViewCell.xib */; };
@@ -36,8 +36,8 @@
 		42F9F04B1C294AB90089B7E1 /* icon_password@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42F9F0491C294AB90089B7E1 /* icon_password@2x.png */; };
 		42F9F04E1C294AD80089B7E1 /* btn_2333@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42F9F04C1C294AD80089B7E1 /* btn_2333@2x.png */; };
 		42F9F04F1C294AD80089B7E1 /* btn_2_selected333@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42F9F04D1C294AD80089B7E1 /* btn_2_selected333@2x.png */; };
-		42FB27311C3232C900546A62 /* NetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FB27301C3232C900546A62 /* NetWorking.m */; settings = {ASSET_TAGS = (); }; };
-		42FB27351C32359B00546A62 /* MyMesaageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FB27341C32359B00546A62 /* MyMesaageViewController.m */; settings = {ASSET_TAGS = (); }; };
+		42FB27311C3232C900546A62 /* NetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FB27301C3232C900546A62 /* NetWorking.m */; };
+		42FB27351C32359B00546A62 /* MyMesaageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FB27341C32359B00546A62 /* MyMesaageViewController.m */; };
 		5903FD681C23F52F00740FBC /* SurrpundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5903FD671C23F52F00740FBC /* SurrpundView.m */; };
 		5903FD6A1C23F56600740FBC /* SurrpundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5903FD691C23F56600740FBC /* SurrpundView.xib */; };
 		5903FD6C1C23F6CC00740FBC /* searchButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5903FD6B1C23F6CC00740FBC /* searchButton.png */; };
@@ -166,6 +166,7 @@
 		5992C64A1C1820F90044E88A /* pin_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 5992C6471C1820F90044E88A /* pin_green.png */; };
 		5992C64B1C1820F90044E88A /* pin_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 5992C6481C1820F90044E88A /* pin_purple.png */; };
 		5992C64C1C1820F90044E88A /* pin_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 5992C6491C1820F90044E88A /* pin_red.png */; };
+		59A705E11C3BA064001653C9 /* pic_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59A705E01C3BA064001653C9 /* pic_1@2x.png */; };
 		59D18FA51C0ED7080044CE60 /* MessageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D18FA41C0ED7080044CE60 /* MessageListViewController.m */; };
 		59D190431C0EDF1F0044CE60 /* GTTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D190401C0EDF1F0044CE60 /* GTTabBar.m */; };
 		59D190441C0EDF1F0044CE60 /* GTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D190421C0EDF1F0044CE60 /* GTTabBarController.m */; };
@@ -510,6 +511,7 @@
 		5992C6471C1820F90044E88A /* pin_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_green.png; sourceTree = "<group>"; };
 		5992C6481C1820F90044E88A /* pin_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_purple.png; sourceTree = "<group>"; };
 		5992C6491C1820F90044E88A /* pin_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_red.png; sourceTree = "<group>"; };
+		59A705E01C3BA064001653C9 /* pic_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pic_1@2x.png"; sourceTree = "<group>"; };
 		59D18F9F1C0ED53A0044CE60 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		59D18FA31C0ED7080044CE60 /* MessageListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageListViewController.h; sourceTree = "<group>"; };
 		59D18FA41C0ED7080044CE60 /* MessageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListViewController.m; sourceTree = "<group>"; };
@@ -1247,6 +1249,7 @@
 		59D18FAF1C0EDD250044CE60 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				59A705E01C3BA064001653C9 /* pic_1@2x.png */,
 				4243374D1C28F532003EAAF5 /* MYImage */,
 				5903FD6E1C23F90C00740FBC /* Surrpund */,
 				5903FD6B1C23F6CC00740FBC /* searchButton.png */,
@@ -1516,6 +1519,7 @@
 				5992C6461C181B410044E88A /* leftbox.png in Resources */,
 				5992C64B1C1820F90044E88A /* pin_purple.png in Resources */,
 				5992C5AB1C1663160044E88A /* MassageTableViewCell.xib in Resources */,
+				59A705E11C3BA064001653C9 /* pic_1@2x.png in Resources */,
 				59E169E21C10100600FA0363 /* home.png in Resources */,
 				59D1A5671C2BE64900425800 /* InfoTableViewCell.xib in Resources */,
 				5903FD7F1C23F94700740FBC /* btn_1_selected.png in Resources */,
