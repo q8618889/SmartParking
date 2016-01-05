@@ -264,6 +264,8 @@
 
 -(void)PZButton
 {
+    GTTabBarController * gt =  (GTTabBarController *)[UIApplication sharedApplication].delegate.window.rootViewController;
+   // gt.tabBarHidden = NO;
     UIImagePickerController *imagePicker=[[UIImagePickerController alloc] init];
     imagePicker.delegate=self;
     //    imagePicker.view.frame=s
@@ -275,7 +277,7 @@
         
     }
     imagePicker.allowsEditing=YES;
-    [self presentViewController:imagePicker animated:YES completion:^{
+    [gt presentViewController:imagePicker animated:YES completion:^{
         
     }];
     
@@ -286,6 +288,8 @@
 }
 -(void)XCButton
 {
+    
+   
     UIImagePickerController *imagePicker=[[UIImagePickerController alloc] init];
     imagePicker.delegate=self;
     //    imagePicker.view.frame=s

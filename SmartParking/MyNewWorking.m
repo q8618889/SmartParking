@@ -36,13 +36,47 @@
 }
 +(void)searchParkingMessageWithLongitude:(NSString *)longitude latitude:(NSString *)latitude  portLeftCount:(NSString *)portLeftCount distance:(NSString *)distance parkingName:(NSString *)parkingName block:(DATAARRAY)block;
 {
+    
+    if ([distance isEqualToString:@""])
+    {
+        distance = @"10.0";
+    }
+
+    NSNumber * numberLongitude = [NSNumber numberWithDouble:longitude.doubleValue];
+    NSNumber * numberLatitude = [NSNumber numberWithDouble:latitude.doubleValue];
+    NSNumber * numberdistance = [NSNumber numberWithFloat:distance.floatValue*1000.001];
+    NSNumber * numberportLeftCount = [NSNumber numberWithDouble:portLeftCount.doubleValue];
+    NSMutableArray  * dataArray = [NSMutableArray array];
+   
+    NSDictionary * dataDict = [MyTool dictionaryWithdataArray:@[numberLongitude,numberLatitude,numberdistance,numberportLeftCount,parkingName] Array:@[@"userLocationlongitude",@"userLocationlatitude",@"distance",@"portLeftCount",@"parkingName",]];
 
     
-    NSMutableArray  * dataArray = [NSMutableArray array];
-    [NetWorking addNetWorking:[MyTool dictionaryWithdataArray:@[longitude,latitude,distance,portLeftCount,parkingName] Array:@[@"userLocationlongitude",@"userLocationlatitude",@"distance",@"portLeftCount",@"parkingName",]] url:[NSString stringWithFormat:@"%@/park/search/parking",WEB_SERVER_IP] block:^(NSMutableDictionary *dictionary, NSString *error) {
+    
+    
+    if ([portLeftCount isEqualToString:@""])
+    {
+        dataDict = [MyTool dictionaryWithdataArray:@[numberLongitude,numberLatitude,numberdistance,parkingName] Array:@[@"userLocationlongitude",@"userLocationlatitude",@"distance",@"parkingName"]];
+    }
+    
+    if ([parkingName isEqualToString:@""])
+    {
+         dataDict = [MyTool dictionaryWithdataArray:@[numberLongitude,numberLatitude,numberdistance,numberportLeftCount] Array:@[@"userLocationlongitude",@"userLocationlatitude",@"distance",@"portLeftCount"]];
+    }
+    
+    if ([parkingName isEqualToString:@""]&&[portLeftCount isEqualToString:@""])
+    {
+        dataDict = [MyTool dictionaryWithdataArray:@[numberLongitude,numberLatitude,numberdistance] Array:@[@"userLocationlongitude",@"userLocationlatitude",@"distance"]];
+    }
+    
+    
+    [NetWorking addNetWorking:(NSMutableDictionary *)dataDict url:[NSString stringWithFormat:@"%@/park/search/parking",WEB_SERVER_IP] block:^(NSMutableDictionary *dictionary, NSString *error) {
+        
+        
+        
+        
         AnnPoinBaseClass * bc = [AnnPoinBaseClass modelObjectWithDictionary:dictionary];
         [dataArray addObject:bc];
-        NSLog(@"%@",dictionary);
+        NSLog(@"%@",dataDict);
         if (bc.body.count < 1)
         {
             block(dataArray,@"count");
