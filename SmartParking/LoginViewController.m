@@ -76,6 +76,7 @@
             
             [[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:@"login"];
             [[NSUserDefaults standardUserDefaults] setObject:body.headerUri forKey:@"uploadPicture"];
+            [[NSUserDefaults standardUserDefaults] setObject:body.nickname forKey:@"nickName"];
             
             
             
