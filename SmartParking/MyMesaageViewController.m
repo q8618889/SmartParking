@@ -24,6 +24,7 @@
     NSString        *nikeName;
     BOOL  automaticLogin;
     UIButton * userhearder;
+    UIView          *cellView;
     
 }
 
@@ -49,17 +50,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.messageLabel.text = @"我的";
+    self.logoimage.hidden = YES;
     self.navigationController.navigationBarHidden = YES;
 
     self.view.backgroundColor = [UIColor whiteColor];
   
     
-    myTab = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, RECT_W, RECT_H - 118)];
+    myTab = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, RECT_W, RECT_H - 118) style:UITableViewStylePlain];
     myTab.delegate = self;
     myTab.rowHeight = 55;
     myTab.tableFooterView = [[UIView alloc] init];
     myTab.dataSource = self;
     [self.view addSubview:myTab];
+    
+    cellView = [[UIView alloc] initWithFrame:CGRectMake(10, 0, RECT_W - 20, 40)];
+    cellView.backgroundColor = [UIColor colorWithRed:10/255.0 green:74/255.0 blue:146/255.0 alpha:1];
+    
+    UILabel *label = [[UILabel alloc] init];
+    label.text = @"退出";
+    label.textColor = [UIColor whiteColor];
+    label.frame = cellView.bounds;
+    label.font = [UIFont systemFontOfSize:16.0f];
+    label.textAlignment = NSTextAlignmentCenter;
+    [cellView addSubview:label];
     
     
   
@@ -92,7 +105,7 @@
         userhearder.frame = CGRectMake(20 , 5, RECT_H / 4 - 50, RECT_H / 4 - 50);
         [userhearder addTarget:self action:@selector(userhearderBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         
-          [userhearder sd_setBackgroundImageWithURL:[NSURL URLWithString:[[NSUserDefaults standardUserDefaults]objectForKey:@"uploadPicture"]] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"bg_1"]];
+          [userhearder sd_setBackgroundImageWithURL:[NSURL URLWithString:[[NSUserDefaults standardUserDefaults]objectForKey:@"uploadPicture"]] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"pic_1@2x.png"]];
         [topView addSubview:userhearder];
         
         
@@ -124,7 +137,7 @@
     logInBtn.layer.shadowColor = [UIColor whiteColor].CGColor;
     logInBtn.layer.shadowRadius = 20;
     logInBtn.layer.shadowOpacity = 0.9;
-    [logInBtn setTitle:@"登陆" forState:UIControlStateNormal];
+    [logInBtn setTitle:@"登录" forState:UIControlStateNormal];
     logInBtn.titleLabel.font = [UIFont systemFontOfSize:16.0f];
     [logInBtn addTarget:self action:@selector(logInBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [topView addSubview:logInBtn];
@@ -162,6 +175,9 @@
         cell = [[[NSBundle mainBundle]loadNibNamed:@"MyTabCell" owner:nil options:nil]objectAtIndex:0];
     }
     cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
+    if(indexPath.row == 4){
+        tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    }
     switch (indexPath.row) {
         case 0:
             cell.titleLab.text = @"基本信息";
@@ -181,13 +197,7 @@
             cell.leftImg.image = [UIImage imageNamed:@"icon_6@2x"];
             break;
         case 4:
-            cell.titleLab.text = @"退出登陆";
-            cell.titleLab.textColor = [UIColor whiteColor];
-            cell.backgroundColor = [UIColor colorWithRed:10/255.0 green:74/255.0 blue:146/255.0 alpha:1];
-            cell.titleLab.font = [UIFont systemFontOfSize:16.0f];
-            cell.titleLab.textAlignment = NSTextAlignmentCenter;
-            cell.accessoryType=UITableViewCellAccessoryNone;
-
+            [cell addSubview:cellView];
             break;
         default:
             break;

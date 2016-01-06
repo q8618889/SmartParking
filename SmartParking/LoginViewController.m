@@ -19,7 +19,7 @@
     [super viewDidLoad];
     
    
-    
+     self.messageLabel.text = @"登陆";
     self.logoimage.hidden = YES;
     self.backButton.hidden = NO;
     self.navigationController.navigationBarHidden = YES;
@@ -76,11 +76,17 @@
             
             [[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:@"login"];
             [[NSUserDefaults standardUserDefaults] setObject:body.headerUri forKey:@"uploadPicture"];
-            [[NSUserDefaults standardUserDefaults] setObject:body.nickname forKey:@"nickName"];
             
             
             
             
+            
+            if (body.nickname == nil) {
+                NSLog(@"nickNime == nill");
+                [[NSUserDefaults  standardUserDefaults] setObject:@"昵称" forKey:@"nickName"];
+            }else {
+                [[NSUserDefaults standardUserDefaults] setObject:body.nickname forKey:@"nickName"];
+            }
        
             if (_rememberPasswords.selected == NO)
             {

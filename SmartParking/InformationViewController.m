@@ -8,7 +8,7 @@
 
 #import "InformationViewController.h"
 
-@interface InformationViewController ()
+@interface InformationViewController ()<UITextFieldDelegate>
 
 @end
 
@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.logoimage.hidden = YES;
+     self.messageLabel.text = @"基本信息";
     self.backButton.hidden = NO;
     self.navigationController.navigationBarHidden = YES;
     self.view.backgroundColor = [UIColor colorWithRed:232.0f / 255.0f green:234.0f / 255.0f blue:235.0f / 255.0f alpha:1];
@@ -24,9 +25,18 @@
     self.passWorld.text =[[NSUserDefaults standardUserDefaults]objectForKey:@"passwd"];
     self.userName.userInteractionEnabled = NO;
     self.passWorld.userInteractionEnabled = NO;
+    [self.nickName addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     
 }
 
+- (void)textFieldDidChange:(UITextField *)textField
+{
+    if (textField == self.nickName) {
+        if (textField.text.length > 8) {
+            textField.text = [textField.text substringToIndex:8];
+        }
+    }
+}
 
 - (IBAction)sendNerWorking:(UIButton *)sender {
     

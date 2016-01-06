@@ -18,6 +18,7 @@
     [super viewDidLoad];
     self.logoimage.hidden = YES;
     self.backButton.hidden = NO;
+     self.messageLabel.text = @"关于我们";
     // Do any additional setup after loading the view from its nib.
     self.navigationController.navigationBarHidden = YES;
     self.view.backgroundColor = [UIColor colorWithRed:232.0f / 255.0f green:234.0f / 255.0f blue:235.0f / 255.0f alpha:1];
