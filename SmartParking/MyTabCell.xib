@@ -29,14 +29,27 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdm-e4-h7r">
+                        <rect key="frame" x="258" y="16" width="54" height="21"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="54" id="6sY-kk-CVt"/>
+                            <constraint firstAttribute="height" constant="21" id="Kz5-Jx-tyV"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.85085227269999997" green="0.85085227269999997" blue="0.85085227269999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="highlightedColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </label>
                 </subviews>
                 <animations/>
                 <constraints>
+                    <constraint firstItem="gdm-e4-h7r" firstAttribute="top" secondItem="orn-7e-1Bq" secondAttribute="top" id="4hz-w4-kx1"/>
                     <constraint firstAttribute="trailingMargin" secondItem="orn-7e-1Bq" secondAttribute="trailing" constant="56" id="8r1-j4-w0J"/>
                     <constraint firstItem="orn-7e-1Bq" firstAttribute="leading" secondItem="DCN-pr-ovU" secondAttribute="trailing" constant="18" id="Kbd-pp-eI4"/>
                     <constraint firstItem="DCN-pr-ovU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="12" id="OHn-yB-2aW"/>
                     <constraint firstItem="DCN-pr-ovU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="VhE-wU-RQx"/>
                     <constraint firstAttribute="bottomMargin" secondItem="orn-7e-1Bq" secondAttribute="bottom" constant="7.5" id="XtX-E1-co1"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="gdm-e4-h7r" secondAttribute="trailing" id="gvl-Zc-rk1"/>
                     <constraint firstItem="orn-7e-1Bq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="hu6-6m-Fha"/>
                     <constraint firstAttribute="bottomMargin" secondItem="DCN-pr-ovU" secondAttribute="bottom" constant="10" id="k15-a7-XbU"/>
                     <constraint firstItem="orn-7e-1Bq" firstAttribute="leading" secondItem="DCN-pr-ovU" secondAttribute="trailing" constant="18" id="qg6-76-o98"/>
@@ -44,6 +57,7 @@
             </tableViewCellContentView>
             <animations/>
             <connections>
+                <outlet property="detalLab" destination="gdm-e4-h7r" id="aPp-WU-1nv"/>
                 <outlet property="leftImg" destination="DCN-pr-ovU" id="AdK-4M-V3u"/>
                 <outlet property="titleLab" destination="orn-7e-1Bq" id="QOn-TN-6de"/>
             </connections>

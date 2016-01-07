@@ -14,6 +14,7 @@
 #import "ChangePasswordViewController.h"
 #import "AboutUsViewController.h"
 #import "SDWebImage/UIButton+WebCache.h"
+#import "FeedbackViewController.h"
 
 @interface MyMesaageViewController () <UITableViewDataSource,UITableViewDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate> {
     
@@ -175,9 +176,6 @@
         cell = [[[NSBundle mainBundle]loadNibNamed:@"MyTabCell" owner:nil options:nil]objectAtIndex:0];
     }
     cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
-    if(indexPath.row == 4){
-        tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-    }
     switch (indexPath.row) {
         case 0:
             cell.titleLab.text = @"基本信息";
@@ -190,6 +188,9 @@
         case 2:
             cell.titleLab.text = @"清除缓存";
             cell.leftImg.image = [UIImage imageNamed:@"icon_4@2x"];
+            [SDImageCache sharedImageCache];
+            cell.detalLab.text = [NSString stringWithFormat:@"%0.2fM",[self checkTmpSize]];
+            NSLog(@"%f",[self checkTmpSize]);
             break;
 
         case 3:
@@ -219,6 +220,8 @@
     }else if(indexPath.row == 1) {
         ChangePasswordViewController *cha = [ChangePasswordViewController new];
         [self.navigationController pushViewController:cha animated:YES];
+    }else if(indexPath.row == 2) {
+        [self clearTmpPics:indexPath];
     }else if(indexPath.row == 3) {
         AboutUsViewController *abo = [AboutUsViewController new];
         [self.navigationController pushViewController:abo animated:YES];
@@ -231,6 +234,55 @@
     
     
     
+}
+
+#pragma - mark 清除图片缓存
+- (CGFloat)checkTmpSize {
+    float totalSize = 0;
+    NSDirectoryEnumerator *fileEnumerator = [[NSFileManager defaultManager] enumeratorAtPath:[self dirCache]];
+    for (NSString *fileName in fileEnumerator) {
+        NSString *filePath = [[self dirCache] stringByAppendingPathComponent:fileName];
+        NSDictionary *attrs = [[NSFileManager defaultManager] attributesOfItemAtPath:filePath error:nil];
+        unsigned long long length = [attrs fileSize];
+        totalSize += length / 1024.0 / 1024.0;
+    } // NSLog(@"tmp size is %.2f",totalSize);
+    return totalSize;
+}
+//获取Cache目录/////
+-(NSString *)dirCache{
+    NSArray *cacPath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *cachePath = [cacPath objectAtIndex:0];
+    return cachePath;
+}
+- (void)clearTmpPics:(NSIndexPath *)index
+{
+    [[SDImageCache sharedImageCache]clearDisk] ;
+    [self clearCache];
+    [[SDImageCache sharedImageCache] clearMemory];//可有可无
+    
+    UIAlertView * alv = [[UIAlertView alloc]initWithTitle:@"温馨提示" message:@"清理完成" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+    [alv show];
+    MyTabCell * cell = [myTab cellForRowAtIndexPath:index];
+    cell.detalLab.text = @"0.00M";
+    
+}
+//清除缓存
+- (void)clearCache
+{
+    dispatch_async(
+                   dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+                   , ^{
+                       NSString *cachPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+                       
+                       NSArray *files = [[NSFileManager defaultManager] subpathsAtPath:cachPath];
+                       for (NSString *p in files) {
+                           NSError *error;
+                           NSString *path = [cachPath stringByAppendingPathComponent:p];
+                           if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+                               [[NSFileManager defaultManager] removeItemAtPath:path error:&error];
+                           }
+                       }
+                   });
 }
 
 #pragma - mark Btn按钮代理方法

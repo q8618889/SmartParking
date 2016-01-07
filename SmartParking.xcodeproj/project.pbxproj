@@ -32,6 +32,7 @@
 		429835EC1C2A96F500EAC9B0 /* MyBookingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 429835EA1C2A96F500EAC9B0 /* MyBookingsViewController.xib */; };
 		429835F01C2A974700EAC9B0 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 429835EE1C2A974700EAC9B0 /* AboutUsViewController.m */; };
 		429835F11C2A974700EAC9B0 /* AboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 429835EF1C2A974700EAC9B0 /* AboutUsViewController.xib */; };
+		42F51B781C3DEEFD00B6063E /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F51B771C3DEEFD00B6063E /* FeedbackViewController.m */; settings = {ASSET_TAGS = (); }; };
 		42F9F04A1C294AB90089B7E1 /* icon_user@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42F9F0481C294AB90089B7E1 /* icon_user@2x.png */; };
 		42F9F04B1C294AB90089B7E1 /* icon_password@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42F9F0491C294AB90089B7E1 /* icon_password@2x.png */; };
 		42F9F04E1C294AD80089B7E1 /* btn_2333@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42F9F04C1C294AD80089B7E1 /* btn_2333@2x.png */; };
@@ -283,6 +284,8 @@
 		429835ED1C2A974700EAC9B0 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
 		429835EE1C2A974700EAC9B0 /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
 		429835EF1C2A974700EAC9B0 /* AboutUsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutUsViewController.xib; sourceTree = "<group>"; };
+		42F51B761C3DEEFD00B6063E /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
+		42F51B771C3DEEFD00B6063E /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
 		42F9F0481C294AB90089B7E1 /* icon_user@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_user@2x.png"; sourceTree = "<group>"; };
 		42F9F0491C294AB90089B7E1 /* icon_password@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_password@2x.png"; sourceTree = "<group>"; };
 		42F9F04C1C294AD80089B7E1 /* btn_2333@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_2333@2x.png"; sourceTree = "<group>"; };
@@ -705,6 +708,8 @@
 		429835DB1C2A916600EAC9B0 /* Feedback */ = {
 			isa = PBXGroup;
 			children = (
+				42F51B761C3DEEFD00B6063E /* FeedbackViewController.h */,
+				42F51B771C3DEEFD00B6063E /* FeedbackViewController.m */,
 			);
 			name = Feedback;
 			sourceTree = "<group>";
@@ -1647,6 +1652,7 @@
 				5903FD681C23F52F00740FBC /* SurrpundView.m in Sources */,
 				59533E951C2E743B00B7E52C /* CusScrollView.m in Sources */,
 				5992C62F1C1673950044E88A /* UIImage+WebP.m in Sources */,
+				42F51B781C3DEEFD00B6063E /* FeedbackViewController.m in Sources */,
 				5992C62A1C1673950044E88A /* SDWebImageManager.m in Sources */,
 				597EFE831C197BE2001574A4 /* NSCharacterSet_Extensions.m in Sources */,
 				59D1A5461C2BE5F100425800 /* MyNewWorking.m in Sources */,
