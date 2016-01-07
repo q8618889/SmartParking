@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@protocol LoginDelegate<NSObject>
+@optional
+-(void)loginReloadData;
+@end
 @interface LoginViewController : MainViewController
+@property (nonatomic,assign) id<LoginDelegate>delegate;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UIButton *automaticlogin;
 @property (weak, nonatomic) IBOutlet UIButton *rememberPasswords;

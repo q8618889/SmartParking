@@ -16,7 +16,7 @@
 #import "SDWebImage/UIButton+WebCache.h"
 #import "FeedbackViewController.h"
 
-@interface MyMesaageViewController () <UITableViewDataSource,UITableViewDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate> {
+@interface MyMesaageViewController () <UITableViewDataSource,UITableViewDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,LoginDelegate> {
     
     UIView          *topView;
     UIButton        *logInBtn;
@@ -32,24 +32,20 @@
 @end
  
 @implementation MyMesaageViewController
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
     if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"login"] isEqualToString:@"YES"]&&[[[NSUserDefaults standardUserDefaults]objectForKey:@"automaticLogin"]isEqualToString:@"YES"])
     {
         automaticLogin = YES;
         [myTab reloadData];
-
+        
     }else{
         automaticLogin = NO;
         [myTab reloadData];
-
+        
     }
     nikeName = [NSString stringWithFormat:@"%@",[[NSUserDefaults  standardUserDefaults]objectForKey:@"nickName"]];
-
-}
-- (void)viewDidLoad {
-    [super viewDidLoad];
     self.messageLabel.text = @"我的";
     self.logoimage.hidden = YES;
     self.navigationController.navigationBarHidden = YES;
@@ -162,7 +158,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     
-    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"login"] isEqualToString:@"NO"]) {
+    if (automaticLogin == NO) {
         return 4;
     }
     return 5;
@@ -284,11 +280,16 @@
                        }
                    });
 }
-
+-(void)loginReloadData;
+{
+    automaticLogin = YES;
+    [myTab reloadData];
+}
 #pragma - mark Btn按钮代理方法
 - (void)logInBtnClick:(UIButton *)log {
     
     LoginViewController *login = [LoginViewController new];
+    login.delegate =self;
     [self.navigationController pushViewController:login animated:YES];
     
     

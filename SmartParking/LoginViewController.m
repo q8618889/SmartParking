@@ -105,7 +105,7 @@
                 
             }
             
-            
+            [self.delegate loginReloadData];
             
             [self.navigationController popViewControllerAnimated:YES];
         }
