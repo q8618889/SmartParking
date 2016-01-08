@@ -32,7 +32,11 @@
 @end
  
 @implementation MyMesaageViewController
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+      nikeName = [NSString stringWithFormat:@"%@",[[NSUserDefaults  standardUserDefaults]objectForKey:@"nickName"]];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"login"] isEqualToString:@"YES"]&&[[[NSUserDefaults standardUserDefaults]objectForKey:@"automaticLogin"]isEqualToString:@"YES"])
@@ -45,7 +49,7 @@
         [myTab reloadData];
         
     }
-    nikeName = [NSString stringWithFormat:@"%@",[[NSUserDefaults  standardUserDefaults]objectForKey:@"nickName"]];
+  
     self.messageLabel.text = @"我的";
     self.logoimage.hidden = YES;
     self.navigationController.navigationBarHidden = YES;
