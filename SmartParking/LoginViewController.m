@@ -19,7 +19,7 @@
     [super viewDidLoad];
     
    
-     self.messageLabel.text = @"登陆";
+     self.messageLabel.text = @"登录";
     self.logoimage.hidden = YES;
     self.backButton.hidden = NO;
     self.navigationController.navigationBarHidden = YES;
