@@ -26,6 +26,7 @@
     BOOL  automaticLogin;
     UIButton * userhearder;
     UIView          *cellView;
+    UIButton        *btn;
     
 }
 
@@ -36,6 +37,7 @@
 {
     [super viewWillAppear:animated];
       nikeName = [NSString stringWithFormat:@"%@",[[NSUserDefaults  standardUserDefaults]objectForKey:@"nickName"]];
+    
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -64,23 +66,48 @@
     myTab.dataSource = self;
     [self.view addSubview:myTab];
     
-    cellView = [[UIView alloc] initWithFrame:CGRectMake(10, 0, RECT_W - 20, 40)];
+    cellView = [[UIView alloc] initWithFrame:CGRectMake(10, 1222, RECT_W - 20, 40)];
     cellView.backgroundColor = [UIColor colorWithRed:10/255.0 green:74/255.0 blue:146/255.0 alpha:1];
     
-    UILabel *label = [[UILabel alloc] init];
-    label.text = @"退出";
-    label.textColor = [UIColor whiteColor];
-    label.frame = cellView.bounds;
-    label.font = [UIFont systemFontOfSize:16.0f];
-    label.textAlignment = NSTextAlignmentCenter;
-    [cellView addSubview:label];
+    btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setTitle:@"退出" forState:UIControlStateNormal];
+    btn.frame = cellView.bounds;
+    [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    btn.titleLabel.font = [UIFont systemFontOfSize:16.0f];
+    btn.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [cellView addSubview:btn];
     
     
   
     
 }
 
+- (void)btnClick:(UIButton *)sender {
+    
+    NSLog(@"s");
+    [[NSUserDefaults standardUserDefaults] setObject:@"NO" forKey:@"login"];
+    automaticLogin = NO;
+    [myTab reloadData];
+    
+    
+}
+
 #pragma - mark UItableView代理方法
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    
+    if (automaticLogin == NO) {
+        return 0;
+    }
+    return 40;
+}
+
+- (nullable UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    
+    return cellView;
+    
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     
     return RECT_H / 4 - 20;
@@ -165,7 +192,7 @@
     if (automaticLogin == NO) {
         return 4;
     }
-    return 5;
+    return 4;
     
 }
 
@@ -197,15 +224,16 @@
             cell.titleLab.text = @"关于我们";
             cell.leftImg.image = [UIImage imageNamed:@"icon_6@2x"];
             break;
-        case 4:
-            [cell addSubview:cellView];
-            break;
+//        case 4:
+//            [cell addSubview:cellView];
+//            break;
         default:
             break;
     }
     
     return cell;
 }
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -225,12 +253,13 @@
     }else if(indexPath.row == 3) {
         AboutUsViewController *abo = [AboutUsViewController new];
         [self.navigationController pushViewController:abo animated:YES];
-    }else if (indexPath.row == 4){
-       
-        [[NSUserDefaults standardUserDefaults] setObject:@"NO" forKey:@"login"];
-        automaticLogin = NO;
-        [myTab reloadData];
     }
+//    else if (indexPath.row == 4){
+//       
+//        [[NSUserDefaults standardUserDefaults] setObject:@"NO" forKey:@"login"];
+//        automaticLogin = NO;
+//        [myTab reloadData];
+//    }
     
     
     
