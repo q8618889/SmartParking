@@ -32,7 +32,7 @@
 		429835EC1C2A96F500EAC9B0 /* MyBookingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 429835EA1C2A96F500EAC9B0 /* MyBookingsViewController.xib */; };
 		429835F01C2A974700EAC9B0 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 429835EE1C2A974700EAC9B0 /* AboutUsViewController.m */; };
 		429835F11C2A974700EAC9B0 /* AboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 429835EF1C2A974700EAC9B0 /* AboutUsViewController.xib */; };
-		42F51B781C3DEEFD00B6063E /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F51B771C3DEEFD00B6063E /* FeedbackViewController.m */; settings = {ASSET_TAGS = (); }; };
+		42F51B781C3DEEFD00B6063E /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F51B771C3DEEFD00B6063E /* FeedbackViewController.m */; };
 		42F9F04A1C294AB90089B7E1 /* icon_user@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42F9F0481C294AB90089B7E1 /* icon_user@2x.png */; };
 		42F9F04B1C294AB90089B7E1 /* icon_password@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42F9F0491C294AB90089B7E1 /* icon_password@2x.png */; };
 		42F9F04E1C294AD80089B7E1 /* btn_2333@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42F9F04C1C294AD80089B7E1 /* btn_2333@2x.png */; };
@@ -115,6 +115,7 @@
 		597EFE891C197BE2001574A4 /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 597EFE6B1C197BE2001574A4 /* CJSONSerializer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		597EFE8A1C197BE2001574A4 /* CSerializedJSONData.m in Sources */ = {isa = PBXBuildFile; fileRef = 597EFE6D1C197BE2001574A4 /* CSerializedJSONData.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		597EFE8C1C197BE2001574A4 /* updatelog.txt in Resources */ = {isa = PBXBuildFile; fileRef = 597EFE7A1C197BE2001574A4 /* updatelog.txt */; };
+		5987C6BE1C3F4A11005A2631 /* pic_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5987C6BD1C3F4A11005A2631 /* pic_logo@2x.png */; };
 		5992C59A1C15350E0044E88A /* roadkuang-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 5992C5991C15350E0044E88A /* roadkuang-on.png */; };
 		5992C59C1C15523A0044E88A /* cutMaps-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 5992C59B1C15523A0044E88A /* cutMaps-on.png */; };
 		5992C59E1C15527A0044E88A /* userLoction.png in Resources */ = {isa = PBXBuildFile; fileRef = 5992C59D1C15527A0044E88A /* userLoction.png */; };
@@ -418,6 +419,7 @@
 		597EFE771C197BE2001574A4 /* BNStrategyManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNStrategyManagerProtocol.h; sourceTree = "<group>"; };
 		597EFE781C197BE2001574A4 /* BNUIManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNUIManagerProtocol.h; sourceTree = "<group>"; };
 		597EFE7A1C197BE2001574A4 /* updatelog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = updatelog.txt; sourceTree = "<group>"; };
+		5987C6BD1C3F4A11005A2631 /* pic_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pic_logo@2x.png"; sourceTree = "<group>"; };
 		5992C5991C15350E0044E88A /* roadkuang-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "roadkuang-on.png"; sourceTree = "<group>"; };
 		5992C59B1C15523A0044E88A /* cutMaps-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cutMaps-on.png"; sourceTree = "<group>"; };
 		5992C59D1C15527A0044E88A /* userLoction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userLoction.png; sourceTree = "<group>"; };
@@ -1254,6 +1256,7 @@
 		59D18FAF1C0EDD250044CE60 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				5987C6BD1C3F4A11005A2631 /* pic_logo@2x.png */,
 				59A705E01C3BA064001653C9 /* pic_1@2x.png */,
 				4243374D1C28F532003EAAF5 /* MYImage */,
 				5903FD6E1C23F90C00740FBC /* Surrpund */,
@@ -1573,6 +1576,7 @@
 				59D1A56F1C2BE64900425800 /* b27_icon_star_yellow@2x.png in Resources */,
 				5903FD841C23F94700740FBC /* btn_3.png in Resources */,
 				5903FD6C1C23F6CC00740FBC /* searchButton.png in Resources */,
+				5987C6BE1C3F4A11005A2631 /* pic_logo@2x.png in Resources */,
 				5992C5EF1C1673400044E88A /* MJRefresh.bundle in Resources */,
 				59E169F91C10128800FA0363 /* my-on@2x.png in Resources */,
 				59E16A1B1C10162800FA0363 /* search@2x.png in Resources */,
