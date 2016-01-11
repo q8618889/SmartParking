@@ -27,6 +27,7 @@
     UIButton * userhearder;
     UIView          *cellView;
     UIButton        *btn;
+    UILabel         *_userName;
     
 }
 
@@ -37,6 +38,7 @@
 {
     [super viewWillAppear:animated];
       nikeName = [NSString stringWithFormat:@"%@",[[NSUserDefaults  standardUserDefaults]objectForKey:@"nickName"]];
+    _userName.text = nikeName;
     
 }
 - (void)viewDidLoad {
@@ -137,12 +139,13 @@
         [topView addSubview:userhearder];
         
         
-        UILabel * userName = [[UILabel alloc]initWithFrame:CGRectMake(userhearder.frame.origin.y+userhearder.frame.size.width+20, userhearder.frame.origin.y+20, RECT_W-userhearder.frame.size.width-30, 30)];
-        userName.font = [UIFont systemFontOfSize:30.0f];
-        userName.text  = nikeName;
-        [topView addSubview:userName];
+        _userName = [[UILabel alloc]initWithFrame:CGRectMake(userhearder.frame.origin.y+userhearder.frame.size.width+20, userhearder.frame.origin.y+20, RECT_W-userhearder.frame.size.width-30, 30)];
+        _userName.font = [UIFont systemFontOfSize:30.0f];
+        _userName.text  = nikeName;
+        NSLog(@"%@",nikeName);
+        [topView addSubview:_userName];
         
-        UILabel * userPhone = [[UILabel alloc]initWithFrame:CGRectMake(userName.frame.origin.x, userName.frame.origin.y+40, RECT_W-userhearder.frame.size.width-30, 30)];
+        UILabel * userPhone = [[UILabel alloc]initWithFrame:CGRectMake(_userName.frame.origin.x, _userName.frame.origin.y+40, RECT_W-userhearder.frame.size.width-30, 30)];
         userPhone.text = [NSString stringWithFormat:@"用户名:%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"number"]];
         userPhone.font = [UIFont systemFontOfSize:14.0f];
         [topView addSubview:userPhone];
@@ -237,6 +240,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (automaticLogin == NO)
     {
         [self logInBtnClick:nil];
