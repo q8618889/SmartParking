@@ -65,7 +65,7 @@
             [SVProgressHUD dismissWithError:@"账户不存在!"];
             return;
         }else if ([[dictionary objectForKey:@"message"]isEqualToString:@"login successfully"]){
-            [SVProgressHUD dismissWithSuccess:@"登陆成功!"];
+            [SVProgressHUD dismissWithSuccess:@"登录成功!"];
             UserLoginBody * body = [[UserLoginBody alloc]initWithDictionary:[dictionary objectForKey:@"body"]];
             
             [[NSUserDefaults standardUserDefaults] setObject:body.userName forKey:@"userName"];
@@ -111,20 +111,6 @@
         }
     }];
    
-    
-    
-}
--(void)animationButton:(UIButton *)sender {
-    
-}
--(void)LoginMassage:(UIButton *)sender {
-    
-    
-    
-   
-}
--(void)errorLogin:(UIButton *)sender {
-    
     
     
 }

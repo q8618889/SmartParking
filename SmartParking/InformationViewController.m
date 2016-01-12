@@ -27,6 +27,8 @@
     self.passWorld.userInteractionEnabled = NO;
     [self.nickName addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     
+    self.nickName.placeholder = [[NSUserDefaults standardUserDefaults] objectForKey:@"nickName"];
+    
 }
 
 - (void)textFieldDidChange:(UITextField *)textField

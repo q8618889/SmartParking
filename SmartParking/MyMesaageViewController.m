@@ -66,6 +66,7 @@
     myTab.rowHeight = 55;
     myTab.tableFooterView = [[UIView alloc] init];
     myTab.dataSource = self;
+    myTab.scrollEnabled = NO;
     [self.view addSubview:myTab];
     
     cellView = [[UIView alloc] initWithFrame:CGRectMake(10, 1222, RECT_W - 20, 40)];
@@ -140,7 +141,7 @@
         
         
         _userName = [[UILabel alloc]initWithFrame:CGRectMake(userhearder.frame.origin.y+userhearder.frame.size.width+20, userhearder.frame.origin.y+20, RECT_W-userhearder.frame.size.width-30, 30)];
-        _userName.font = [UIFont systemFontOfSize:30.0f];
+        _userName.font = [UIFont systemFontOfSize:20.0f];
         _userName.text  = nikeName;
         NSLog(@"%@",nikeName);
 
