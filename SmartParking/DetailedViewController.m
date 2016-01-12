@@ -93,7 +93,7 @@
         }
         dropCell.contentLab.text = str;
         [self resetContent:dropCell.contentLab];
-        
+        dropCell.selectionStyle =UITableViewCellSelectionStyleNone;
         [dropCell.zbywBtn addTarget:self action:@selector(zbywBtn:) forControlEvents:BUTTONTOUCHUP];
         [dropCell.navigationBtn addTarget:self action:@selector(dhButton:) forControlEvents:BUTTONTOUCHUP];
         return dropCell;
