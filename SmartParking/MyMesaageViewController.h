@@ -10,4 +10,7 @@
 
 @interface MyMesaageViewController : MainViewController
 
+@property (nonatomic ,assign)BOOL  automaticLogin;
+
+
 @end

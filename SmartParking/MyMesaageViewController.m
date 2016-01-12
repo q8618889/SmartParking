@@ -23,10 +23,9 @@
     UIButton        *regist;
     UITableView     *myTab;
     NSString        *nikeName;
-    BOOL  automaticLogin;
-    UIButton * userhearder;
+    UIButton        *userhearder;
     UIView          *cellView;
-    UILabel * _userName;
+    UILabel         *_userName;
     UIButton        *btn;
     
 }
@@ -39,17 +38,29 @@
     [super viewWillAppear:animated];
       nikeName = [NSString stringWithFormat:@"%@",[[NSUserDefaults  standardUserDefaults]objectForKey:@"nickName"]];
     _userName.text = nikeName;
+    
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"login"] isEqualToString:@"YES"]&&[[[NSUserDefaults standardUserDefaults]objectForKey:@"automaticLogin"]isEqualToString:@"YES"])
+    {
+        _automaticLogin = YES;
+        [myTab reloadData];
+        
+    }else{
+        _automaticLogin = NO;
+        [myTab reloadData];
+        
+    }
+    
 
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"login"] isEqualToString:@"YES"]&&[[[NSUserDefaults standardUserDefaults]objectForKey:@"automaticLogin"]isEqualToString:@"YES"])
     {
-        automaticLogin = YES;
+        _automaticLogin = YES;
         [myTab reloadData];
         
     }else{
-        automaticLogin = NO;
+        _automaticLogin = NO;
         [myTab reloadData];
         
     }
@@ -90,7 +101,7 @@
     
     NSLog(@"s");
     [[NSUserDefaults standardUserDefaults] setObject:@"NO" forKey:@"login"];
-    automaticLogin = NO;
+    _automaticLogin = NO;
     [myTab reloadData];
     
     
@@ -100,7 +111,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     
-    if (automaticLogin == NO) {
+    if (_automaticLogin == NO) {
         return 0;
     }
     return 40;
@@ -130,7 +141,7 @@
 
     [topView addSubview:topImg];
     
-    if (automaticLogin == YES)
+    if (_automaticLogin == YES)
     {
         //上传头像按钮
         userhearder = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -195,7 +206,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     
-    if (automaticLogin == NO) {
+    if (_automaticLogin == NO) {
         return 4;
     }
     return 4;
@@ -244,7 +255,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
      [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (automaticLogin == NO)
+    if (_automaticLogin == NO)
     {
         [self logInBtnClick:nil];
         return;
@@ -322,7 +333,7 @@
 }
 -(void)loginReloadData;
 {
-    automaticLogin = YES;
+    _automaticLogin = YES;
     [myTab reloadData];
 }
 #pragma - mark Btn按钮代理方法
