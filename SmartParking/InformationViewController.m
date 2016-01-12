@@ -31,10 +31,22 @@
     
 }
 
+//- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+//{
+//    if (self.nickName == textField)  //判断是否时我们想要限定的那个输入框
+//    {
+//        NSString * toBeString = [self.nickName.text stringByReplacingCharactersInRange:range withString:string];
+//        if (range.location >= 8)
+//        {
+//            return NO;
+//        }
+//        return YES;
+//    }
+
 - (void)textFieldDidChange:(UITextField *)textField
 {
     if (textField == self.nickName) {
-        if (textField.text.length > 8) {
+        if (textField.text.length > 16) {
             textField.text = [textField.text substringToIndex:8];
         }
     }

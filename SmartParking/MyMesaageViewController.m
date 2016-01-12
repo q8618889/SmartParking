@@ -69,13 +69,14 @@
     myTab.scrollEnabled = NO;
     [self.view addSubview:myTab];
     
-    cellView = [[UIView alloc] initWithFrame:CGRectMake(10, 1222, RECT_W - 20, 40)];
-    cellView.backgroundColor = [UIColor colorWithRed:10/255.0 green:74/255.0 blue:146/255.0 alpha:1];
+    cellView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, RECT_W, 40)];
+    
     
     btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setTitle:@"退出" forState:UIControlStateNormal];
-    btn.frame = cellView.bounds;
+    btn.frame = CGRectMake(10, 0, RECT_W - 20, 35);
     [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    btn.backgroundColor = [UIColor colorWithRed:10/255.0 green:74/255.0 blue:146/255.0 alpha:1];
     btn.titleLabel.font = [UIFont systemFontOfSize:16.0f];
     btn.titleLabel.textAlignment = NSTextAlignmentCenter;
     [cellView addSubview:btn];
