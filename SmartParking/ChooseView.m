@@ -31,6 +31,8 @@
         
         _firstTextField  = [[UITextField alloc]initWithFrame:CGRectMake(firstLabel.frame.origin.x+firstLabel.frame.size.width,23 , 80, 25)];
         _firstTextField.layer.borderWidth = 0.5;
+        _firstTextField.keyboardType = UIKeyboardTypeNumberPad;
+
         _firstTextField.layer.borderColor = RGBACOLOR(112, 113, 114, 1).CGColor;
         [self addSubview:_firstTextField];
         
@@ -58,6 +60,7 @@
         
         _secondTextField  = [[UITextField alloc]initWithFrame:CGRectMake(secondLabel.frame.origin.x+secondLabel.frame.size.width,63 , 80, 25)];
         _secondTextField.layer.borderWidth = 0.5;
+        _secondTextField.keyboardType = UIKeyboardTypeNumberPad;
         _secondTextField.layer.borderColor = RGBACOLOR(112, 113, 114, 1).CGColor;
         [self addSubview:_secondTextField];
         
