@@ -154,10 +154,10 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.section == 0) {
+    if (indexPath.row == 0) {
         return 140.0f;
     }else {
-        return _labelHeight+230;
+        return _labelHeight+100;
     }
     
 }
@@ -171,7 +171,7 @@
     [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, lab.text.length)];
     lab.attributedText = attributedString;
     //调节高度
-    CGSize size = CGSizeMake(RECT_W-34, MAXFLOAT);
+    CGSize size = CGSizeMake(RECT_W-110, MAXFLOAT);
     
     CGSize labelSize = [lab sizeThatFits:size];
     _labelHeight = ceilf(labelSize.height);

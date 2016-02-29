@@ -50,7 +50,12 @@
     [super viewDidLoad];
     self.navigationController.navigationBarHidden = YES;
     
-   
+    //适配ios7
+    if( ([[[UIDevice currentDevice] systemVersion] doubleValue]>=7.0))
+    {
+        //        self.edgesForExtendedLayout=UIRectEdgeNone;
+        self.navigationController.navigationBar.translucent = NO;
+    }
     
     self.messageLabel.text = @"智慧停车场";
 
@@ -59,12 +64,7 @@
   
 
   
-    //适配ios7
-    if( ([[[UIDevice currentDevice] systemVersion] doubleValue]>=7.0))
-    {
-        //        self.edgesForExtendedLayout=UIRectEdgeNone;
-        self.navigationController.navigationBar.translucent = NO;
-    }
+
     //[self addCustomGestures];//添加自定义的手势
 }
 #pragma mark- 创建地图以及周边控件
@@ -85,7 +85,7 @@
     
     _mapView.zoomLevel = 18;
     displayParam.isRotateAngleValid = YES;
-    displayParam.locationViewImgName = @"bnavi_icon_location_fixed";
+    //displayParam.locationViewImgName = @"bnavi_icon_location_fixed";
     [_mapView updateLocationViewWithParam:displayParam];
     [self.view addSubview:_mapView];
     
@@ -226,7 +226,7 @@
     
     [self didUpdateBMKUserLocation:_locService.userLocation];
     
-    
+    _mapView.userTrackingMode = BMKUserTrackingModeFollow;
     CLLocationCoordinate2D  cllocation = CLLocationCoordinate2DMake(_locService.userLocation.location.coordinate.latitude, _locService.userLocation.location.coordinate.longitude);
         [_mapView setCenterCoordinate:cllocation];
     _mapView.zoomLevel = 18;
@@ -636,7 +636,6 @@
 -(void)onExitNaviUI:(NSDictionary*)extraInfo;
 {
     [_mapView viewWillAppear];
-    [_mapView mapForceRefresh];
     [BNCoreServices ReleaseInstance];
 }
 - (void)mapView:(BMKMapView *)mapView didSelectAnnotationView:(BMKAnnotationView *)view
@@ -742,8 +741,8 @@
 - (void)didUpdateUserHeading:(BMKUserLocation *)userLocation
 {
     [_mapView updateLocationData:userLocation];
-
     //NSLog(@"heading is %@",userLocation.heading);
+    
 }
 //处理位置坐标更新
 - (void)didUpdateBMKUserLocation:(BMKUserLocation *)userLocation

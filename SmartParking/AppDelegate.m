@@ -46,6 +46,7 @@
     self.loadingViewController = [[ViewController alloc] init];
     [self.mainTabBarController.view addSubview:self.loadingViewController.view];
     [self.window makeKeyAndVisible];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     return YES;
 }
 - (void)applicationWillResignActive:(UIApplication *)application {

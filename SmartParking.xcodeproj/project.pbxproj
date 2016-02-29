@@ -70,6 +70,7 @@
 		5907E3101C28DE2F00717008 /* icon_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5907E3091C28DE2F00717008 /* icon_4@2x.png */; };
 		5907E3111C28DE2F00717008 /* icon_5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5907E30A1C28DE2F00717008 /* icon_5@2x.png */; };
 		5907E3121C28DE2F00717008 /* icon_6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5907E30B1C28DE2F00717008 /* icon_6@2x.png */; };
+		595230501C8411A700D594FB /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5952304F1C8411A700D594FB /* Reachability.m */; };
 		59531EAC1C0E91E200930C4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59531EAB1C0E91E200930C4E /* main.m */; };
 		59531EAF1C0E91E200930C4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59531EAE1C0E91E200930C4E /* AppDelegate.m */; };
 		59531EB71C0E91E200930C4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59531EB61C0E91E200930C4E /* Assets.xcassets */; };
@@ -328,6 +329,8 @@
 		5907E3091C28DE2F00717008 /* icon_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_4@2x.png"; sourceTree = "<group>"; };
 		5907E30A1C28DE2F00717008 /* icon_5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_5@2x.png"; sourceTree = "<group>"; };
 		5907E30B1C28DE2F00717008 /* icon_6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_6@2x.png"; sourceTree = "<group>"; };
+		5952304E1C8411A700D594FB /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		5952304F1C8411A700D594FB /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		59531EA71C0E91E200930C4E /* SmartParking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartParking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59531EAB1C0E91E200930C4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		59531EAD1C0E91E200930C4E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1150,6 +1153,8 @@
 		59D18F8A1C0EBF750044CE60 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				5952304E1C8411A700D594FB /* Reachability.h */,
+				5952304F1C8411A700D594FB /* Reachability.m */,
 				59D18F921C0EC66E0044CE60 /* My */,
 				59D18F911C0EC6130044CE60 /* Surround */,
 				59D18F901C0EC6070044CE60 /* NewMessage */,
@@ -1450,7 +1455,7 @@
 						DevelopmentTeam = 8TGHR5C79C;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -1690,6 +1695,7 @@
 				59D1A5661C2BE64900425800 /* InfoTableViewCell.m in Sources */,
 				5903FD911C24096400740FBC /* MyScrollView.m in Sources */,
 				5992C5F01C1673400044E88A /* MJRefreshComponent.m in Sources */,
+				595230501C8411A700D594FB /* Reachability.m in Sources */,
 				597EFE881C197BE2001574A4 /* CJSONScanner.m in Sources */,
 				5992C6281C1673950044E88A /* SDWebImageDownloader.m in Sources */,
 				5992C5F11C1673400044E88A /* MJRefreshConst.m in Sources */,

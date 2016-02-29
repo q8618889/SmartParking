@@ -8,8 +8,11 @@
 
 #import "ViewController.h"
 #import "AppDelegate.h"
-@interface ViewController ()<UINavigationControllerDelegate>
-
+#import "Reachability.h"
+@interface ViewController ()<UINavigationControllerDelegate,UIAlertViewDelegate>
+@property (nonatomic)Reachability * hostReachability;
+@property (nonatomic) Reachability *internetReachability;
+@property (nonatomic) Reachability *wifiReachability;
 @end
 
 @implementation ViewController
@@ -17,6 +20,21 @@
 - (void)viewDidLoad
 {
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+
+    
+    self.hostReachability = [Reachability reachabilityWithHostName:@"www.baidu.com"];
+    [self.hostReachability startNotifier];
+    [self updateInterfaceWithReachability:self.hostReachability];
+    
+    
+    
+
+    
+    self.internetReachability = [Reachability reachabilityForInternetConnection];
+    [self.internetReachability startNotifier];
+    [self updateInterfaceWithReachability:self.internetReachability];
+
     //此为找到plist文件中得版本号suo'dui所对应的键
     
     NSString *key = (NSString *)kCFBundleVersionKey;
@@ -76,7 +94,89 @@
     
     [super viewDidLoad];
 }
+- (void) reachabilityChanged:(NSNotification *)note
+{
+    Reachability* curReach = [note object];
+    NSParameterAssert([curReach isKindOfClass:[Reachability class]]);
+    [self updateInterfaceWithReachability:curReach];
+}
+- (void)updateInterfaceWithReachability:(Reachability *)reachability
+{
+    if (reachability == self.hostReachability)
+    {
+       // NetworkStatus netStatus = [reachability currentReachabilityStatus];
+        BOOL connectionRequired = [reachability connectionRequired];
+        
+        
+        if (connectionRequired)
+        {
+            NSLog(@"蜂窝数据硬件不可用的！");
+        }
+        else
+        {
+            NSLog(@"蜂窝数据硬件可用的！");
 
+        }
+    }
+    if (reachability == self.internetReachability)
+    {
+        [self otherNetWorking:reachability];
+    }
+    
+
+
+}
+-(void)otherNetWorking:(Reachability *)reachability
+{
+    NetworkStatus netStatus = [reachability currentReachabilityStatus];
+    BOOL connectionRequired = [reachability connectionRequired];
+     NSString* statusString = @"";
+    switch (netStatus)
+    {
+        case NotReachable:        {
+            /*
+             Minor interface detail- connectionRequired may return YES even when the host is unreachable. We cover that up here...
+             */
+            
+            statusString =@"无网络状态";
+
+            UIAlertView * notWorking = [[UIAlertView alloc]initWithTitle:@"网络提示" message:@"系统未检测到网络,会影响部分功能使用。" delegate:self cancelButtonTitle:@"设置" otherButtonTitles:@"取消", nil];
+            notWorking.tag = 404;
+            [notWorking show];
+            connectionRequired = NO;
+            break;
+        }
+            
+        case ReachableViaWWAN:        {
+            UIAlertView * WWANWorking = [[UIAlertView alloc]initWithTitle:@"网络提示" message:@"使用移动蜂窝数据网络，注意控制流量。" delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil];
+            [WWANWorking show];
+            statusString =@"蜂窝数据";
+
+            break;
+        }
+        case ReachableViaWiFi:        {
+            NSLog(@"Reachable WiFi");
+            break;
+        }
+    }
+    
+    if (connectionRequired)
+    {
+       // NSString *connectionRequiredFormatString = NSLocalizedString(@"%@, Connection Required", @"Concatenation of status string with connection requirement");
+    }
+
+}
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (alertView.tag == 404)
+    {
+        if (buttonIndex == 0)
+        {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root"]];
+        }
+    }
+  
+}
 - (void)loadingDone
 {
    // [NSObject cancelPreviousPerformRequestsWithTarget:self];
